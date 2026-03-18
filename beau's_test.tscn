@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ckn5lwq0m4lt"]
+
+[ext_resource type="PackedScene" uid="uid://cd2r8ccrcojic" path="res://player.tscn" id="1_7bnhy"]
+
+[node name="Beau\'s test" type="Node3D" unique_id=1321467922]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1974172389]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5296936, 0, -2.7755127)
+use_collision = true
+size = Vector3(4.3604126, 1, 10.645752)
+
+[node name="Player" parent="." unique_id=11007485 instance=ExtResource("1_7bnhy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5862181, 0)
