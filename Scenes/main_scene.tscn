@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cffgclk7j4j50"]
 
+[ext_resource type="Script" uid="uid://d0bvlanbyrqw1" path="res://Scripts/main_scene.gd" id="1_6l7je"]
 [ext_resource type="Texture2D" uid="uid://dtq3im4jfj2b3" path="res://Assets/finally.png" id="1_52fb6"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_6l7je"]
@@ -14,7 +15,16 @@ sky = SubResource("Sky_jv6wh")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_jv6wh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6ack"]
+albedo_color = Color(18.892157, 18.892157, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_iacmt"]
+material = SubResource("StandardMaterial3D_x6ack")
+
 [node name="MainScene" type="Node3D" unique_id=1876643400]
+script = ExtResource("1_6l7je")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=427842572]
 environment = SubResource("Environment_2c62f")
@@ -23,9 +33,41 @@ environment = SubResource("Environment_2c62f")
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1899305165]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6199827, -1.4188166, 2.2534103)
-size = Vector3(14.994019, 1, 31.52832)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1923505693]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.559139, 0)
+mesh = SubResource("CapsuleMesh_jv6wh")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=61889957]
-transform = Transform3D(1, 0, 0, 0, 0.93825775, 0.34593692, 0, -0.34593692, 0.93825775, 0, 0.79778445, 1.5217919)
+[node name="Ship" type="Node3D" parent="." unique_id=2034254592]
+
+[node name="Cryo_Room" type="Node3D" parent="Ship" unique_id=1322546618]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Ship/Cryo_Room" unique_id=1899305165]
+transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, 0.039886475, 0.004638672, -0.044067383)
+size = Vector3(3.9458618, 0.09277344, 3.8059082)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Ship/Cryo_Room" unique_id=1160433785]
+transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, 0.039886475, 2.4712114, -0.044067383)
+size = Vector3(3.9458618, 0.09277344, 3.8059082)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Ship/Cryo_Room" unique_id=1817817240]
+transform = Transform3D(0, -1.3649999, 0, 1.3649999, 0, 0, 0, 0, 1.3649999, -2.5874877, 1.2439629, -0.044067383)
+size = Vector3(1.9065247, 0.09277344, 3.8059082)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Ship/Cryo_Room" unique_id=1089390028]
+transform = Transform3D(0, -1.3649999, 0, 1.3649999, 0, 0, 0, 0, 1.3649999, 2.6905751, 1.2439629, -0.044067383)
+size = Vector3(1.9065247, 0.09277344, 3.8059082)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Ship/Cryo_Room" unique_id=235924925]
+transform = Transform3D(0, 5.9666036e-08, -1.3649998, 1.3649998, 0, 0, 0, -1.3649998, -5.9666036e-08, -0.016286373, 1.2439629, -2.6828296)
+size = Vector3(1.9065247, 0.09277344, 3.8059082)
+
+[node name="Node3D" type="Node3D" parent="Ship" unique_id=1643811274]
+
+[node name="Space Objects" type="Node3D" parent="." unique_id=1562453782]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Space Objects" unique_id=81903307]
+transform = Transform3D(15.215, 0, 0, 0, 15.215, 0, 0, 0, 15.215, 0, 0, 1000)
+mesh = SubResource("SphereMesh_iacmt")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1620066270]
+transform = Transform3D(-1, -4.3711392e-08, 7.5710346e-08, -5.3631446e-08, 0.99065053, -0.13642436, -6.903919e-08, -0.13642436, -0.99065053, 0.59858036, 1.8215857, -1.9489584)

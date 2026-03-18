@@ -7,7 +7,7 @@ albedo_color = Color(0.31, 0.27125, 0.155, 1)
 metallic = 1.0
 metallic_texture = ExtResource("1_phepx")
 
-[node name="TestMap" type="Node3D" unique_id=1311132722]
+[node name="BensSpecialPlace" type="Node3D" unique_id=1311132722]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=2068310846]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.008880615, 0.013092041)
