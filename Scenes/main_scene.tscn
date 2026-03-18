@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://cffgclk7j4j50"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o3jxj"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+[ext_resource type="Texture2D" uid="uid://dtq3im4jfj2b3" path="res://Assets/finally.png" id="1_52fb6"]
 
-[sub_resource type="Sky" id="Sky_0f027"]
-sky_material = SubResource("ProceduralSkyMaterial_o3jxj")
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_6l7je"]
+panorama = ExtResource("1_52fb6")
+
+[sub_resource type="Sky" id="Sky_jv6wh"]
+sky_material = SubResource("PanoramaSkyMaterial_6l7je")
 
 [sub_resource type="Environment" id="Environment_2c62f"]
 background_mode = 2
-sky = SubResource("Sky_0f027")
+sky = SubResource("Sky_jv6wh")
 tonemap_mode = 2
 glow_enabled = true
 
@@ -23,7 +24,7 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1899305165]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6199827, 0, 2.2534103)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6199827, -1.4188166, 2.2534103)
 size = Vector3(14.994019, 1, 31.52832)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=61889957]
