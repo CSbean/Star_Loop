@@ -1,15 +1,167 @@
 [gd_scene format=3 uid="uid://bddoycfxcquhb"]
 
-[ext_resource type="Texture2D" uid="uid://dtq3im4jfj2b3" path="res://Assets/finally.png" id="1_phepx"]
+[ext_resource type="PackedScene" uid="uid://dx7a0xb2opwj2" path="res://Scenes/enemy.tscn" id="1_6nx4k"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_orl8w"]
-albedo_color = Color(0.31, 0.27125, 0.155, 1)
-metallic = 1.0
-metallic_texture = ExtResource("1_phepx")
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6nx4k"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_efora"]
+sky_material = SubResource("ProceduralSkyMaterial_6nx4k")
+
+[sub_resource type="Environment" id="Environment_bbg7m"]
+background_mode = 2
+sky = SubResource("Sky_efora")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_efora"]
+vertices = PackedVector3Array(-7.7204685, 0.39796877, -28.631142, -7.7204685, 0.39796877, -11.631142, 7.7795315, 0.39796877, -11.631142, 7.7795315, 0.39796877, -28.631142)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q3usi"]
+size = Vector3(2.241211, 0.04675293, 2.4241943)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1qosa"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_bbg7m"]
 
 [node name="BensSpecialPlace" type="Node3D" unique_id=1311132722]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=2068310846]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.008880615, 0.013092041)
-size = Vector3(9, 0.101501465, 11.789978)
-material = SubResource("StandardMaterial3D_orl8w")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=490384060]
+environment = SubResource("Environment_bbg7m")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1107228227]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="NavigationRegion3D2" type="NavigationRegion3D" parent="." unique_id=1020548524]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.008880615, 19.324108)
+navigation_mesh = SubResource("NavigationMesh_efora")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D2" unique_id=1904001891]
+transform = Transform3D(7.41, 0, 0, 0, 7.41, 0, 0, 0, 7.41, 0, 0.008880615, -19.324108)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D2/StaticBody3D" unique_id=2036215850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011230469, -0.02532959, -0.11138916)
+shape = SubResource("BoxShape3D_q3usi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D2/StaticBody3D" unique_id=2053840148]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1366476, -0.019182367, 0, -0.11092455)
+mesh = SubResource("PlaneMesh_1qosa")
+
+[node name="Ship" type="Node3D" parent="." unique_id=2034476668]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.008880615, 19.324108)
+visible = false
+
+[node name="Cryo_Room" type="Node3D" parent="Ship" unique_id=797989794]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Ship/Cryo_Room" unique_id=1143616418]
+transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, 0.039886475, 0.004638672, -0.044067383)
+size = Vector3(3.9458618, 0.09277344, 3.8059082)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Ship/Cryo_Room" unique_id=1475472200]
+transform = Transform3D(1.365, 0, 0, 0, -5.966604e-08, 1.365, 0, -1.365, -5.966604e-08, 0.039886475, 2.2128959, -2.6123962)
+size = Vector3(3.9458618, 0.09277344, 3.8059082)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Ship/Cryo_Room/CSGBox3D2" unique_id=1930426338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010126296, 0, -0.6860659)
+operation = 2
+size = Vector3(1.7726212, 0.09277344, 1.9082642)
+
+[node name="FwdHall" type="Node3D" parent="Ship" unique_id=131643037]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.177622)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Ship/FwdHall" unique_id=471844970]
+transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, 0.039886475, 0.004638672, -0.044067383)
+size = Vector3(3.9458618, 0.09277344, 3.8059082)
+
+[node name="FwdHall2" type="Node3D" parent="Ship" unique_id=1403893167]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -32.128616)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Ship/FwdHall2" unique_id=1589255363]
+transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, 0.10259517, 0.004638672, 0.24973583)
+size = Vector3(6.9567337, 0.09277344, 4.236389)
+
+[node name="RightFwDHall" type="Node3D" parent="Ship" unique_id=1408648867]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3110943, 0, -5.177622)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Ship/RightFwDHall" unique_id=1524052943]
+transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, 0.039886475, 0.004638672, -0.044067383)
+size = Vector3(3.9458618, 0.09277344, 3.8059082)
+
+[node name="LeftFwDHall" type="Node3D" parent="Ship" unique_id=1015680881]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3976974, 0, -5.177622)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Ship/LeftFwDHall" unique_id=1700587679]
+transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, -0.08364487, 0.004638672, -0.044067383)
+size = Vector3(3.9458618, 0.09277344, 3.8059082)
+
+[node name="MainHall" type="Node3D" parent="Ship" unique_id=575511855]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03554523, 0, -10.293939)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Ship/MainHall" unique_id=2119951735]
+transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, -0.022541285, 0.004638672, -0.044067383)
+size = Vector3(16.037544, 0.09277344, 3.8059082)
+
+[node name="LeftHall" type="Node3D" parent="Ship" unique_id=926181301]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.232617, 0, -23.75592)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Ship/LeftHall" unique_id=218994343]
+transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, 2.7447815, 0.004638672, -1.3952856)
+size = Vector3(11.982857, 0.09277344, 3.8059082)
+
+[node name="RightHall" type="Node3D" parent="Ship" unique_id=1428889881]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -12.608293, 0, -23.75592)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Ship/RightHall" unique_id=387063806]
+transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, 2.7447815, 0.004638672, -2.7720795)
+size = Vector3(11.982857, 0.09277344, 3.8059082)
+
+[node name="LeftEngine" type="Node3D" parent="Ship" unique_id=317372337]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.232617, 0, -40.13746)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Ship/LeftEngine" unique_id=1322739124]
+transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, 5.4714384, 0.004638672, 0.92197466)
+size = Vector3(8.594456, 0.09277344, 3.8059082)
+
+[node name="RightEngine" type="Node3D" parent="Ship" unique_id=2133935018]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -12.608293, 0, -40.13746)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Ship/RightEngine" unique_id=245141285]
+transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, 5.364459, 0.004638672, -5.4457645)
+size = Vector3(8.626194, 0.09277344, 3.8059082)
+
+[node name="Node3D" type="Node3D" parent="Ship" unique_id=456764886]
+
+[node name="ReactorRoom" type="Node3D" parent="Ship" unique_id=1060932062]
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Ship/ReactorRoom" unique_id=833634868]
+transform = Transform3D(1.365, 0, 0, 0, -5.966604e-08, 1.365, 0, -1.365, -5.966604e-08, -0.18114889, -1.7404549, -12.924779)
+size = Vector3(10.71715, 0.09277344, 2.6124268)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Ship/ReactorRoom" unique_id=435937805]
+transform = Transform3D(-5.966604e-08, -1.365, -5.966604e-08, 0, -5.966604e-08, 1.365, -1.365, 5.966604e-08, 2.6080856e-15, -7.308063, -1.7404549, -20.912416)
+size = Vector3(11.932156, 0.09277344, 2.6124268)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Ship/ReactorRoom" unique_id=1237612345]
+transform = Transform3D(-1.6851129e-15, -8.940697e-08, 1.365, 5.9666036e-08, 1.365, 8.940697e-08, -1.365, 5.966604e-08, 3.406023e-15, -0.15433025, -3.5395052, -20.912416)
+size = Vector3(11.932156, 0.09277344, 10.738831)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Ship/ReactorRoom" unique_id=232168314]
+transform = Transform3D(-5.966604e-08, -1.365, -5.966604e-08, 0, -5.966604e-08, 1.365, -1.365, 5.966604e-08, 2.6080856e-15, 7.120438, -1.7404549, -20.912416)
+size = Vector3(11.932156, 0.09277344, 2.6124268)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Ship/ReactorRoom" unique_id=923519364]
+transform = Transform3D(1.365, 0, 0, 0, -5.966604e-08, 1.365, 0, -1.365, -5.966604e-08, -0.18114889, -1.7404549, -29.14561)
+size = Vector3(10.71715, 0.09277344, 2.6124268)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="Ship" unique_id=329050823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21514265, 0)
+navigation_mesh = SubResource("NavigationMesh_bbg7m")
+
+[node name="Enemy" parent="." unique_id=888042827 instance=ExtResource("1_6nx4k")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 0, 2, 0)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=866678120]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 8)

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dx7a0xb2opwj2"]
+
+[ext_resource type="Script" uid="uid://dgx1ublns7neu" path="res://Scripts/enemy.gd" id="1_hghv2"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1f0kj"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_afpow"]
+radius = 0.61816406
+height = 1.9755859
+
+[node name="Enemy" type="CharacterBody3D" unique_id=888042827]
+script = ExtResource("1_hghv2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=940075179]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1987585, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_1f0kj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2019255691]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.012207031, 0)
+shape = SubResource("CapsuleShape3D_afpow")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=827950979]
