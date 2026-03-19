@@ -1,13 +1,40 @@
 extends CharacterBody3D
 
 @onready var camera_3d: Camera3D = $Camera3D
+@onready var animation_player: AnimationPlayer = $PlayerSprite/AnimationPlayer
 
-const SPEED = 5.0
+
+var SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
-
+#camra var's
 var look_dir: Vector2
 var camra_sense := 50
+var capMouse := false
+
+var sprinting_toggle = false
+
+func _ready() -> void:
+	change_mouse()
+
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("esc"):
+		change_mouse()
+	
+	if Input.is_action_just_pressed("Player_Sprint"):
+		sprinting_toggle = !sprinting_toggle
+		SPEED = 10
+	
+	if sprinting_toggle and Input.is_action_pressed("move_forward"):
+		animation_player.play("CharacterArmature|Run")
+		
+	elif sprinting_toggle == false and Input.is_action_pressed("move_forward"):
+		animation_player.play("CharacterArmature|Walk")
+	else:
+		animation_player.play("CharacterArmature|Idle")
+	
+	
+	
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -15,7 +42,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
@@ -29,6 +56,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
+
 	rotate_camrea(delta)
 	move_and_slide()
 #for mouse move
@@ -37,8 +65,16 @@ func _input(event: InputEvent) -> void:
 		look_dir = event.relative * 0.01
 #also mouse move
 func rotate_camrea(delta: float, sense_mod: float = 1.0):
-	var input = Input.get_vector("ui_left","ui_right","ui_down","ui_up")
-	look_dir += input
-	rotation.y -= look_dir.x * camra_sense * delta
-	camera_3d.rotation.x = clamp(camera_3d.rotation.x - look_dir.y * camra_sense * sense_mod * delta,-1.5, 1.5)
-	look_dir = Vector2.ZERO
+	if capMouse:
+		var input = Input.get_vector("ui_left","ui_right","ui_down","ui_up")
+		look_dir += input
+		rotation.y -= look_dir.x * camra_sense * delta
+		camera_3d.rotation.x = clamp(camera_3d.rotation.x - look_dir.y * camra_sense * sense_mod * delta,-1.5, 1.5)
+		look_dir = Vector2.ZERO
+
+func change_mouse()->void:
+	capMouse = !capMouse
+	if capMouse:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	else:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
