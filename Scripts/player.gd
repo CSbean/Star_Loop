@@ -21,6 +21,11 @@ func _ready() -> void:
 	change_mouse()
 
 func _process(_delta: float) -> void:
+	if (Input.is_action_just_pressed("reset")):
+		get_tree().reload_current_scene()
+	if (Input.is_action_just_pressed("quit")):
+		get_tree().quit()
+	#dev controls^
 	if Input.is_action_just_pressed("esc"):
 		change_mouse()
 		GameManager.paused = !GameManager.paused
@@ -35,9 +40,10 @@ func _process(_delta: float) -> void:
 				SPEED = 5.0
 			
 		#work on the gun
+		# my guy this should not be a double equals(==) if ur setting a value
 		if animation_player.current_animation == "CharacterArmature|Gun_Shoot" or animation_player.current_animation == "CharacterArmature|Gun_Shoot":
 			pistolVisabilityToggle == true
-			
+			#				       ^^
 		else:
 			pistolVisabilityToggle == false
 		
