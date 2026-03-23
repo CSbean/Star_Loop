@@ -17,15 +17,13 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_efora"]
-vertices = PackedVector3Array(-2.6837454, 0.39717603, -29.410378, -2.6837454, 0.39717603, -34.410378, -4.9337454, 0.39717603, -34.660378, -7.4337454, 0.39717603, -29.160378, -9.433745, 0.39717603, -29.410378, -4.9337454, 0.39717603, -40.160378, -9.433745, 0.39717603, -40.160378, 5.0662546, 0.39717603, -34.660378, 2.8162546, 0.39717603, -34.410378, 2.8162546, 0.39717603, -29.410378, 7.0662546, 0.39717603, -29.160378, 9.566255, 0.39717603, -29.410378, 9.566255, 0.39717603, -40.160378, 5.0662546, 0.39717603, -40.160378, -9.683745, 0.39717603, -28.910378, -10.933745, 0.39717603, -13.1603775, -10.683745, 0.39717603, -12.6603775, -7.6837454, 0.39717603, -12.9103775, -11.933745, 0.39717603, -28.910378, -11.933745, 0.39717603, -13.1603775, 9.816255, 0.39717603, -28.910378, 7.3162546, 0.39717603, -12.9103775, 10.566255, 0.39717603, -12.9103775, 11.816255, 0.39717603, -13.1603775, 6.8162546, 0.39717603, -12.6603775, 7.5662546, 0.39717603, -7.6603775, 7.8162546, 0.39717603, -8.1603775, 10.566255, 0.39717603, -8.1603775, 11.816255, 0.39717603, -28.910378, -6.6837454, -3.102824, -28.410378, -6.6837454, -3.102824, -13.6603775, 6.3162546, -3.102824, -13.6603775, 6.3162546, -3.102824, -28.410378, -0.6837454, 0.39717603, -1.9103775, -2.1837454, 0.39717603, -1.9103775, -2.1837454, 0.39717603, 2.0896225, 2.3162546, 0.39717603, 2.0896225, 2.3162546, 0.39717603, -1.9103775, 0.5662546, 0.39717603, -2.1603775, -7.6837454, 0.39717603, -2.9103775, -3.1837454, 0.39717603, -2.9103775, -2.9337454, 0.39717603, -3.4103775, -7.6837454, 0.39717603, -7.9103775, 0.8162546, 0.39717603, -3.4103775, 7.5662546, 0.39717603, -2.9103775, -0.43374538, 0.39717603, -3.1603775, -10.683745, 0.39717603, -8.1603775)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 4, 2), PackedInt32Array(2, 4, 5), PackedInt32Array(5, 4, 6), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 10), PackedInt32Array(10, 7, 11), PackedInt32Array(11, 7, 13), PackedInt32Array(11, 13, 12), PackedInt32Array(1, 8, 0), PackedInt32Array(0, 8, 9), PackedInt32Array(4, 3, 14), PackedInt32Array(14, 3, 15), PackedInt32Array(15, 3, 16), PackedInt32Array(16, 3, 17), PackedInt32Array(19, 18, 15), PackedInt32Array(15, 18, 14), PackedInt32Array(11, 20, 10), PackedInt32Array(10, 20, 21), PackedInt32Array(21, 20, 22), PackedInt32Array(22, 20, 23), PackedInt32Array(26, 25, 24), PackedInt32Array(21, 22, 24), PackedInt32Array(24, 22, 26), PackedInt32Array(26, 22, 27), PackedInt32Array(20, 28, 23), PackedInt32Array(32, 31, 29), PackedInt32Array(29, 31, 30), PackedInt32Array(35, 34, 33), PackedInt32Array(38, 37, 33), PackedInt32Array(33, 37, 36), PackedInt32Array(33, 36, 35), PackedInt32Array(40, 39, 41), PackedInt32Array(41, 39, 42), PackedInt32Array(41, 42, 43), PackedInt32Array(43, 42, 17), PackedInt32Array(43, 17, 25), PackedInt32Array(25, 17, 24), PackedInt32Array(25, 44, 43), PackedInt32Array(43, 38, 45), PackedInt32Array(45, 38, 33), PackedInt32Array(16, 17, 46), PackedInt32Array(46, 17, 42), PackedInt32Array(43, 45, 41)]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_bbg7m"]
+vertices = PackedVector3Array(-2.5692234, 0.38445473, -18.829563, 2.6807766, 0.38445473, -18.829563, 2.9307766, 0.38445473, -19.829563, 10.930777, 0.38445473, -57.329563, -10.319223, 0.38445473, -57.329563, -2.8192234, 0.38445473, -19.829563, -17.819223, 0.38445473, -62.579563, -17.819223, 0.38445473, -19.829563, 18.430777, 0.38445473, -62.579563, 11.180777, 0.38445473, -62.579563, -10.569223, 0.38445473, -62.579563, 18.430777, 0.38445473, -19.829563, 2.9307766, 0.38445473, -17.829563, -2.8192234, 0.38445473, -17.829563, 4.9307766, 0.38445473, -3.3295631, 4.9307766, 0.38445473, -17.829563, -2.5692234, 0.38445473, -2.8295631, -2.5692234, 0.38445473, 2.4204369, 2.6807766, 0.38445473, 2.4204369, 2.6807766, 0.38445473, -3.0795631, -4.5692234, 0.38445473, -17.829563, -4.5692234, 0.38445473, -3.0795631, -14.819223, 0.38445473, -17.829563, -14.819223, 0.38445473, -10.829563, -12.569223, 0.38445473, -10.579563, -12.569223, 0.38445473, -3.0795631, 12.430777, 0.38445473, -10.579563, 14.680777, 0.38445473, -10.829563, 14.680777, 0.38445473, -17.829563, 12.430777, 0.38445473, -3.3295631)
+polygons = [PackedInt32Array(0, 5, 1), PackedInt32Array(1, 5, 2), PackedInt32Array(2, 5, 4), PackedInt32Array(2, 4, 3), PackedInt32Array(6, 4, 7), PackedInt32Array(7, 4, 5), PackedInt32Array(3, 9, 8), PackedInt32Array(6, 10, 4), PackedInt32Array(8, 11, 3), PackedInt32Array(3, 11, 2), PackedInt32Array(1, 12, 0), PackedInt32Array(0, 12, 13), PackedInt32Array(12, 15, 14), PackedInt32Array(17, 16, 18), PackedInt32Array(18, 16, 19), PackedInt32Array(21, 20, 13), PackedInt32Array(16, 21, 19), PackedInt32Array(19, 21, 14), PackedInt32Array(14, 21, 12), PackedInt32Array(12, 21, 13), PackedInt32Array(23, 22, 24), PackedInt32Array(24, 22, 20), PackedInt32Array(25, 24, 21), PackedInt32Array(21, 24, 20), PackedInt32Array(27, 26, 28), PackedInt32Array(28, 26, 15), PackedInt32Array(29, 14, 26), PackedInt32Array(26, 14, 15)]
 
 [node name="BensSpecialPlace" type="Node3D" unique_id=1311132722]
 
 [node name="Player" parent="." unique_id=11007485 instance=ExtResource("2_tagkh")]
-transform = Transform3D(-0.99817824, 0, 0.06033417, 0, 1, 0, -0.06033417, 0, -0.99817824, 0, 0, -12.970728)
+transform = Transform3D(-0.99817824, 0, 0.06033417, 0, 1, 0, -0.06033417, 0, -0.99817824, -7.8252068, 0, 11.957739)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=490384060]
 environment = SubResource("Environment_bbg7m")
@@ -38,132 +36,155 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.008880615, 19.324108)
 navigation_mesh = SubResource("NavigationMesh_efora")
 
-[node name="Ship" type="Node3D" parent="NavigationRegion3D2" unique_id=2034476668]
+[node name="Navigation" type="Node3D" parent="NavigationRegion3D2" unique_id=40279291]
 
-[node name="Cryo_Room" type="Node3D" parent="NavigationRegion3D2/Ship" unique_id=797989794]
-
-[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/Ship/Cryo_Room" unique_id=1143616418]
-transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, 0.039886475, 0.004638672, -0.044067383)
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/Navigation" unique_id=1978107558]
 use_collision = true
-size = Vector3(3.9458618, 0.09277344, 3.8059082)
+size = Vector3(6.049103, 0.2310791, 5.999634)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D2/Ship/Cryo_Room" unique_id=1475472200]
-transform = Transform3D(1.365, 0, 0, 0, -5.966604e-08, 1.365, 0, -1.365, -5.966604e-08, 0.039886475, 2.2128959, -2.6123962)
+[node name="Electrical" type="Node3D" parent="NavigationRegion3D2" unique_id=662338815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9921722, 0, -6.02007)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/Electrical" unique_id=570453960]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9446907, 0, -0.7625427)
 use_collision = true
-size = Vector3(3.9458618, 0.09277344, 3.8059082)
+size = Vector3(9.938484, 0.2310791, 7.524719)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D2/Ship/Cryo_Room/CSGBox3D2" unique_id=1930426338]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010126296, 0, -0.6860659)
-operation = 2
-size = Vector3(1.7726212, 0.09277344, 1.9082642)
+[node name="Cams" type="Node3D" parent="NavigationRegion3D2" unique_id=790575200]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9921722, 0, -15.244744)
 
-[node name="FwdHall" type="Node3D" parent="NavigationRegion3D2/Ship" unique_id=131643037]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.177622)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/Ship/FwdHall" unique_id=471844970]
-transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, 0.039886475, 0.004638672, -0.044067383)
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/Cams" unique_id=1612503219]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0574226, 0, 0.8992615)
 use_collision = true
-size = Vector3(3.9458618, 0.09277344, 3.8059082)
+size = Vector3(12.163948, 0.2310791, 7.7981567)
 
-[node name="FwdHall2" type="Node3D" parent="NavigationRegion3D2/Ship" unique_id=1403893167]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -32.128616)
+[node name="Medbay" type="Node3D" parent="NavigationRegion3D2" unique_id=1928465729]
+transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, -1, -6.0754633, 0, -7.3323793)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/Ship/FwdHall2" unique_id=1589255363]
-transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, 0.10259517, 0.004638672, 0.24973583)
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/Medbay" unique_id=2041973172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9446907, 0, -0.7625427)
 use_collision = true
-size = Vector3(6.9567337, 0.09277344, 4.236389)
+size = Vector3(9.938484, 0.2310791, 7.524719)
 
-[node name="RightFwDHall" type="Node3D" parent="NavigationRegion3D2/Ship" unique_id=1408648867]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3110943, 0, -5.177622)
+[node name="Comms" type="Node3D" parent="NavigationRegion3D2" unique_id=244032344]
+transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, -1, -6.0754633, 0, -13.346778)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/Ship/RightFwDHall" unique_id=1524052943]
-transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, 0.039886475, 0.004638672, -0.044067383)
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/Comms" unique_id=1811749550]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0574226, 0, 0.8992615)
 use_collision = true
-size = Vector3(3.9458618, 0.09277344, 3.8059082)
+size = Vector3(12.163948, 0.2310791, 7.7981567)
 
-[node name="LeftFwDHall" type="Node3D" parent="NavigationRegion3D2/Ship" unique_id=1015680881]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3976974, 0, -5.177622)
+[node name="FwdHall" type="Node3D" parent="NavigationRegion3D2" unique_id=419372684]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.0197716)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/Ship/LeftFwDHall" unique_id=1700587679]
-transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, -0.08364487, 0.004638672, -0.044067383)
+[node name="Enemy5" parent="NavigationRegion3D2/FwdHall" unique_id=888042827 instance=ExtResource("1_6nx4k")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -0.12877464, 1.1007404, -5.2087)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/FwdHall" unique_id=787903750]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.2203064)
 use_collision = true
-size = Vector3(3.9458618, 0.09277344, 3.8059082)
+size = Vector3(6.049103, 0.2310791, 16.440247)
 
-[node name="MainHall" type="Node3D" parent="NavigationRegion3D2/Ship" unique_id=575511855]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03554523, 0, -10.293939)
+[node name="Hall" type="Node3D" parent="NavigationRegion3D2" unique_id=91683192]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.621464, -1.9073486e-06, -22.459534)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/Ship/MainHall" unique_id=2119951735]
-transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, -0.022541285, 0.004638672, -0.044067383)
+[node name="Enemy" parent="NavigationRegion3D2/Hall" unique_id=1290774343 instance=ExtResource("1_6nx4k")]
+transform = Transform3D(0.86602545, 0, -0.5, 0, 1, 0, 0.5, 0, 0.86602545, 1.0556109, 1.1007423, -7.261528)
+
+[node name="Enemy2" parent="NavigationRegion3D2/Hall" unique_id=134533990 instance=ExtResource("1_6nx4k")]
+transform = Transform3D(0.86602545, 0, -0.5, 0, 1, 0, 0.5, 0, 0.86602545, 1.0556114, 1.1007423, -13.493516)
+
+[node name="Enemy3" parent="NavigationRegion3D2/Hall" unique_id=268623368 instance=ExtResource("1_6nx4k")]
+transform = Transform3D(0.86602545, 0, -0.5, 0, 1, 0, 0.5, 0, 0.86602545, 1.0556109, 1.1007423, -2.1281803)
+
+[node name="Enemy4" parent="NavigationRegion3D2/Hall" unique_id=2113613454 instance=ExtResource("1_6nx4k")]
+transform = Transform3D(0.86602545, 0, -0.5, 0, 1, 0, 0.5, 0, 0.86602545, 1.0556104, 1.1007423, 2.4097738)
+
+[node name="Enemy6" parent="NavigationRegion3D2/Hall" unique_id=1566611141 instance=ExtResource("1_6nx4k")]
+transform = Transform3D(0.86602545, 0, -0.5, 0, 1, 0, 0.5, 0, 0.86602545, 1.0556114, 1.1007423, -19.935303)
+
+[node name="Enemy7" parent="NavigationRegion3D2/Hall" unique_id=2059679603 instance=ExtResource("1_6nx4k")]
+transform = Transform3D(0.86602545, 0, -0.5, 0, 1, 0, 0.5, 0, 0.86602545, -0.94620895, 1.1007423, -19.935303)
+
+[node name="Enemy5" parent="NavigationRegion3D2/Hall" unique_id=1636392012 instance=ExtResource("1_6nx4k")]
+transform = Transform3D(0.86602545, 0, -0.5, 0, 1, 0, 0.5, 0, 0.86602545, 1.0556104, 1.1007423, 11.721996)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/Hall" unique_id=518841808]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3841858e-07, 0, -4.3550315)
 use_collision = true
-size = Vector3(16.037544, 0.09277344, 3.8059082)
+size = Vector3(6.049103, 0.2310791, 37.047245)
 
-[node name="LeftHall" type="Node3D" parent="NavigationRegion3D2/Ship" unique_id=926181301]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.232617, 0, -23.75592)
+[node name="RightHall" type="Node3D" parent="NavigationRegion3D2" unique_id=682015283]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -19.75156, -1.9073486e-06, -52.054405)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/Ship/LeftHall" unique_id=218994343]
-transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, 2.7447815, 0.004638672, -1.3952856)
+[node name="Enemy7" parent="NavigationRegion3D2/RightHall" unique_id=515239002 instance=ExtResource("1_6nx4k")]
+transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, -36.095016, 1.1007423, -13.253641)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/RightHall" unique_id=9645588]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5166607, -3.8146973e-06, -13.785952)
 use_collision = true
-size = Vector3(11.982857, 0.09277344, 3.8059082)
+size = Vector3(6.049103, 0.2310791, 26.14029)
 
-[node name="RightHall" type="Node3D" parent="NavigationRegion3D2/Ship" unique_id=1428889881]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -12.608293, 0, -23.75592)
+[node name="LeftHall" type="Node3D" parent="NavigationRegion3D2" unique_id=1020166041]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 19.92278, -1.9073486e-06, -52.054405)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/Ship/RightHall" unique_id=387063806]
-transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, 2.7447815, 0.004638672, -2.7720795)
+[node name="Enemy8" parent="NavigationRegion3D2/LeftHall" unique_id=1462545691 instance=ExtResource("1_6nx4k")]
+transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, 35.273964, 1.1007423, -13.253639)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/LeftHall" unique_id=1906587032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0960827, 0, -13.860462)
 use_collision = true
-size = Vector3(11.982857, 0.09277344, 3.8059082)
+size = Vector3(6.049103, 0.2310791, 25.606293)
 
-[node name="LeftEngine" type="Node3D" parent="NavigationRegion3D2/Ship" unique_id=317372337]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.232617, 0, -40.13746)
+[node name="LeftEngine" type="Node3D" parent="NavigationRegion3D2" unique_id=1839073109]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 19.92278, -1.9073486e-06, -77.92641)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/Ship/LeftEngine" unique_id=1322739124]
-transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, 5.4714384, 0.004638672, 0.92197466)
+[node name="Enemy9" parent="NavigationRegion3D2/LeftEngine" unique_id=668600110 instance=ExtResource("1_6nx4k")]
+transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, 4.64709, 1.1007423, -22.580803)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/LeftEngine" unique_id=2075518627]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1124077, 0, -21.883091)
 use_collision = true
-size = Vector3(8.594456, 0.09277344, 3.8059082)
+size = Vector3(8.044819, 0.2310791, 14.072491)
 
-[node name="RightEngine" type="Node3D" parent="NavigationRegion3D2/Ship" unique_id=2133935018]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -12.608293, 0, -40.13746)
+[node name="RightEngine" type="Node3D" parent="NavigationRegion3D2" unique_id=153336237]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.184408, -1.9073486e-06, -77.92641)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/Ship/RightEngine" unique_id=245141285]
-transform = Transform3D(1.365, 0, 0, 0, 1.365, 0, 0, 0, 1.365, 5.364459, 0.004638672, -5.4457645)
+[node name="Enemy10" parent="NavigationRegion3D2/RightEngine" unique_id=1129178442 instance=ExtResource("1_6nx4k")]
+transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, 6.7739563, 1.1007423, -22.5808)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/RightEngine" unique_id=884709826]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1124077, 0, -21.883091)
 use_collision = true
-size = Vector3(8.626194, 0.09277344, 3.8059082)
+size = Vector3(8.044819, 0.2310791, 14.072491)
 
-[node name="Node3D" type="Node3D" parent="NavigationRegion3D2/Ship" unique_id=456764886]
+[node name="AftReactor" type="Node3D" parent="NavigationRegion3D2" unique_id=263038246]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.184408, -1.9073486e-06, -77.92641)
 
-[node name="ReactorRoom" type="Node3D" parent="NavigationRegion3D2/Ship" unique_id=1060932062]
+[node name="Enemy8" parent="NavigationRegion3D2/AftReactor" unique_id=1594314899 instance=ExtResource("1_6nx4k")]
+transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, -2.5393248, 1.1007423, -23.705875)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D2/Ship/ReactorRoom" unique_id=833634868]
-transform = Transform3D(1.365, 0, 0, 0, -5.966604e-08, 1.365, 0, -1.365, -5.966604e-08, -0.18114889, -1.7404549, -12.924779)
+[node name="Enemy9" parent="NavigationRegion3D2/AftReactor" unique_id=236082422 instance=ExtResource("1_6nx4k")]
+transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, -13.087719, 1.1007423, -25.707691)
+
+[node name="Enemy10" parent="NavigationRegion3D2/AftReactor" unique_id=996344354 instance=ExtResource("1_6nx4k")]
+transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, -8.268616, 1.1007423, -23.705868)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/AftReactor" unique_id=1819141423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.522249, 0, -24.621979)
 use_collision = true
-size = Vector3(10.71715, 0.09277344, 2.6124268)
+size = Vector3(21.938694, 0.2310791, 8.594717)
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="NavigationRegion3D2/Ship/ReactorRoom" unique_id=435937805]
-transform = Transform3D(-5.966604e-08, -1.365, -5.966604e-08, 0, -5.966604e-08, 1.365, -1.365, 5.966604e-08, 2.6080856e-15, -7.308063, -1.7404549, -20.912416)
+[node name="Reactor" type="Node3D" parent="NavigationRegion3D2" unique_id=606880804]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.184408, -1.9073486e-06, -77.92641)
+
+[node name="Enemy11" parent="NavigationRegion3D2/Reactor" unique_id=1039979736 instance=ExtResource("1_6nx4k")]
+transform = Transform3D(-1.0000001, 0, -1.7320508, 0, 2, 0, 1.7320508, 0, -1.0000001, -9.723832, 3.4368858, -43.90811)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/Reactor" unique_id=153840811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.6297, 0, -40.908524)
 use_collision = true
-size = Vector3(11.932156, 0.09277344, 2.6124268)
-
-[node name="CSGBox3D6" type="CSGBox3D" parent="NavigationRegion3D2/Ship/ReactorRoom" unique_id=1237612345]
-transform = Transform3D(-1.6851129e-15, -8.940697e-08, 1.365, 5.9666036e-08, 1.365, 8.940697e-08, -1.365, 5.966604e-08, 3.406023e-15, -0.15433025, -3.5395052, -20.912416)
-use_collision = true
-size = Vector3(11.932156, 0.09277344, 10.738831)
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="NavigationRegion3D2/Ship/ReactorRoom" unique_id=232168314]
-transform = Transform3D(-5.966604e-08, -1.365, -5.966604e-08, 0, -5.966604e-08, 1.365, -1.365, 5.966604e-08, 2.6080856e-15, 7.120438, -1.7404549, -20.912416)
-use_collision = true
-size = Vector3(11.932156, 0.09277344, 2.6124268)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D2/Ship/ReactorRoom" unique_id=923519364]
-transform = Transform3D(1.365, 0, 0, 0, -5.966604e-08, 1.365, 0, -1.365, -5.966604e-08, -0.18114889, -1.7404549, -29.14561)
-use_collision = true
-size = Vector3(10.71715, 0.09277344, 2.6124268)
-
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="NavigationRegion3D2/Ship" unique_id=329050823]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21514265, 0)
-navigation_mesh = SubResource("NavigationMesh_bbg7m")
-
-[node name="Enemy" parent="." unique_id=888042827 instance=ExtResource("1_6nx4k")]
-transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 0, 1.0918598, 9.880693)
+size = Vector3(25.372124, 0.2310791, 24.49365)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=866678120]
 transform = Transform3D(4.693776e-08, -0.9993188, -0.03690541, -8.736322e-08, -0.03690541, 0.9993188, -1, -4.368161e-08, -8.9035964e-08, 0, 17.61836, -1.0341349)
