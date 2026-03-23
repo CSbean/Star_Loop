@@ -42,10 +42,9 @@ func _process(_delta: float) -> void:
 		#work on the gun
 		# my guy this should not be a double equals(==) if ur setting a value
 		if animation_player.current_animation == "CharacterArmature|Gun_Shoot" or animation_player.current_animation == "CharacterArmature|Gun_Shoot":
-			pistolVisabilityToggle == true
-			#				       ^^
+			pistolVisabilityToggle = true
 		else:
-			pistolVisabilityToggle == false
+			pistolVisabilityToggle = false
 		
 		
 		
