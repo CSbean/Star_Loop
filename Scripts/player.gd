@@ -4,7 +4,7 @@ class_name Player
 @onready var camera_3d: Camera3D = $Camera3D
 @onready var animation_player: AnimationPlayer = $PlayerSprite/AnimationPlayer
 @onready var scifi_pistol: Node3D = $PlayerSprite/RootNode/CharacterArmature/Skeleton3D/BoneAttachment3D/ScifiPistol
-@onready var ray_cast_3d: RayCast3D = $RayCast3D
+@onready var ray_cast_3d: RayCast3D = $Camera3D/RayCast3D
 
 
 var SPEED = 5.0
@@ -41,13 +41,13 @@ func _process(_delta: float) -> void:
 			else:
 				SPEED = 5.0
 			
-	
 
 
-		if animation_player.current_animation == "CharacterArmature|Gun_Shoot" or animation_player.current_animation == "CharacterArmature|Run_Shoot":
-			pistolVisabilityToggle = true
-		else:
-			pistolVisabilityToggle = false
+
+		#if animation_player.current_animation == "CharacterArmature|Gun_Shoot" or animation_player.current_animation == "CharacterArmature|Run_Shoot":
+			#pistolVisabilityToggle = true
+		#else:
+			#pistolVisabilityToggle = false
 		
 		
 		
@@ -59,7 +59,9 @@ func _process(_delta: float) -> void:
 					ray_cast_3d.get_collider().queue_free()
 		elif sprinting_toggle == false and Input.is_action_pressed("shoot"):
 			animation_player.play("CharacterArmature|Gun_Shoot")
-		
+			if ray_cast_3d.is_colliding():
+				if ray_cast_3d.get_collider() is Enemy:
+					ray_cast_3d.get_collider().queue_free()
 		
 		#walking foward
 		elif sprinting_toggle and Input.is_action_pressed("move_forward"):

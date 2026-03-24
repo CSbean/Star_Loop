@@ -1,6 +1,7 @@
 extends CharacterBody3D
 class_name Enemy
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
+@onready var animation_player: AnimationPlayer = $EnemySprite/AnimationPlayer
 
 var health := 100
 var state : String = "Idle"
@@ -17,6 +18,11 @@ var spd := 1.0
 	#print(str(global_position) + "\n")
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
+
+func _process(delta: float) -> void:
+	#look_at(Player.global_position)
+	pass
+
 func _physics_process(delta: float) -> void:
 	navigation_agent_3d.target_position = player.global_position
 	var destination = navigation_agent_3d.get_next_path_position()
