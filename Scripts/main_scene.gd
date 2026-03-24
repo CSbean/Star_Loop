@@ -1,5 +1,5 @@
 extends Node3D
-@onready var ship: Node3D = $Ship
+#@onready var ship: Node3D = $Ship
 @onready var space_objects: Node3D = $"Space Objects"
 var shipSpd := .083
 # Called when the node enters the scene tree for the first time.
