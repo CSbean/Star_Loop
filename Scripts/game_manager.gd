@@ -8,3 +8,6 @@ var paused :bool = false
 #
 #
 #
+
+func update_health()->void:
+	

@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://ckn5lwq0m4lt"]
 
 [ext_resource type="PackedScene" uid="uid://cd2r8ccrcojic" path="res://Scenes/player.tscn" id="1_d37i2"]
+[ext_resource type="PackedScene" uid="uid://dx7a0xb2opwj2" path="res://Scenes/enemy.tscn" id="2_0ao83"]
+[ext_resource type="PackedScene" uid="uid://cwysuvsvdvkp1" path="res://Scenes/ui.tscn" id="3_sq7uq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gstb7"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -15,6 +17,10 @@ sky = SubResource("Sky_115pp")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_0ao83"]
+vertices = PackedVector3Array(-50.029694, 1, -52.275513, -50.029694, 1, 46.724487, 48.970306, 1, 46.724487, 48.970306, 1, -52.275513)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
 [node name="Beau\'s test" type="Node3D" unique_id=1321467922]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=12491700]
@@ -24,11 +30,6 @@ environment = SubResource("Environment_3enwn")
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1974172389]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5296936, 0, -2.7755127)
-use_collision = true
-size = Vector3(100, 1, 100)
-
 [node name="Player" parent="." unique_id=11007485 instance=ExtResource("1_d37i2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5862181, 0)
 
@@ -36,3 +37,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5862181, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5136971, -13.742635)
 use_collision = true
 size = Vector3(2, 2, 2)
+
+[node name="Enemy" parent="." unique_id=888042827 instance=ExtResource("2_0ao83")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2849236, 1.911315, 0)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=206005487]
+navigation_mesh = SubResource("NavigationMesh_0ao83")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1974172389]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5296936, 0, -2.7755127)
+use_collision = true
+size = Vector3(100, 1, 100)
+
+[node name="UI" parent="." unique_id=836688804 instance=ExtResource("3_sq7uq")]

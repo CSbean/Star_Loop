@@ -17,6 +17,7 @@ var capMouse := false
 
 var sprinting_toggle = false
 var pistolVisabilityToggle = false
+var health = 100
 
 func _ready() -> void:
 	change_mouse()
@@ -40,9 +41,10 @@ func _process(_delta: float) -> void:
 			else:
 				SPEED = 5.0
 			
-		#work on the gun
-		# my guy this should not be a double equals(==) if ur setting a value
-		if animation_player.current_animation == "CharacterArmature|Gun_Shoot" or animation_player.current_animation == "CharacterArmature|Gun_Shoot":
+	
+
+
+		if animation_player.current_animation == "CharacterArmature|Gun_Shoot" or animation_player.current_animation == "CharacterArmature|Run_Shoot":
 			pistolVisabilityToggle = true
 		else:
 			pistolVisabilityToggle = false
@@ -52,6 +54,9 @@ func _process(_delta: float) -> void:
 		# animations
 		if sprinting_toggle and Input.is_action_pressed("shoot"):
 			animation_player.play("CharacterArmature|Run_Shoot")
+			if ray_cast_3d.is_colliding():
+				if ray_cast_3d.get_collider() is Enemy:
+					ray_cast_3d.get_collider().queue_free()
 		elif sprinting_toggle == false and Input.is_action_pressed("shoot"):
 			animation_player.play("CharacterArmature|Gun_Shoot")
 		

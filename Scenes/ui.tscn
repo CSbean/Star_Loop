@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cwysuvsvdvkp1"]
+
+[ext_resource type="Script" uid="uid://k5o1euceqf2c" path="res://Scripts/ui.gd" id="1_jxero"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jxero"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_qdvrb"]
+font_size = 64
+
+[node name="UI" type="Control" unique_id=836688804]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jxero")
+
+[node name="crosshair" type="Label" parent="." unique_id=723237597]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "+"
+label_settings = SubResource("LabelSettings_jxero")
+horizontal_alignment = 1
+
+[node name="Health" type="Label" parent="." unique_id=1005274569]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -88.0
+offset_right = 125.0
+grow_vertical = 0
+text = "100"
+label_settings = SubResource("LabelSettings_qdvrb")
