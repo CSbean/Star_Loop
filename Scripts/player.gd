@@ -4,6 +4,7 @@ class_name Player
 @onready var camera_3d: Camera3D = $Camera3D
 @onready var animation_player: AnimationPlayer = $PlayerSprite/AnimationPlayer
 @onready var scifi_pistol: Node3D = $PlayerSprite/RootNode/CharacterArmature/Skeleton3D/BoneAttachment3D/ScifiPistol
+@onready var ray_cast_3d: RayCast3D = $RayCast3D
 
 
 var SPEED = 5.0
