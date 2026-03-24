@@ -5,7 +5,7 @@ class_name Enemy
 var health := 100
 var state : String = "Idle"
 var player : CharacterBody3D
-var spd := 5.0
+var spd := 1.0
 
 #func _unhandled_input(event: InputEvent) -> void:
 	#if (event.is_action_pressed("ui_accept")):
