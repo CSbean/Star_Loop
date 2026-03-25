@@ -2,11 +2,13 @@ extends CharacterBody3D
 class_name Enemy
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
 @onready var animation_player: AnimationPlayer = $EnemySprite/AnimationPlayer
+@onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
 
 var health := 100
 var state : String = "Idle"
 var player : CharacterBody3D
-var spd := 1.0
+var spd := 2.5
+
 
 #func _unhandled_input(event: InputEvent) -> void:
 	#if (event.is_action_pressed("ui_accept")):
@@ -18,9 +20,9 @@ var spd := 1.0
 	#print(str(global_position) + "\n")
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
+	animation_player.play("AlienArmature|Alien_Run")
 
 func _process(delta: float) -> void:
-	#look_at(Player.global_position)
 	pass
 
 func _physics_process(delta: float) -> void:
@@ -31,7 +33,24 @@ func _physics_process(delta: float) -> void:
 	
 	self.velocity = direction * spd
 	
+	look_at(player.global_position)
+	
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	move_and_slide()
+
+
+
+
+
+
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	print(body.name)
+
+
+func _on_area_3d_area_entered(area: Area3D) -> void:
+	print(area.name)
