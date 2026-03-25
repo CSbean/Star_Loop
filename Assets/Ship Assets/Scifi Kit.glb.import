@@ -1,0 +1,915 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cc7tvl2nv4ryh"
+path="res://.godot/imported/Scifi Kit.glb-a97abc09869166b5d0741aa00ba6ae71.scn"
+
+[deps]
+
+source_file="res://Assets/Ship Assets/Scifi Kit.glb"
+dest_files=["res://.godot/imported/Scifi Kit.glb-a97abc09869166b5d0741aa00ba6ae71.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"Accent": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/Ship Assets/Accent.tres",
+"use_external/path": "uid://dpbm7rkn14vjd"
+},
+"Black": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/Ship Assets/Black.tres",
+"use_external/path": "uid://dg6bibp3wg4do"
+},
+"DarkAccent": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/Ship Assets/DarkAccent.tres",
+"use_external/path": "uid://b0ficdvl0j4o"
+},
+"DarkGrey": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/Ship Assets/DarkGrey.tres",
+"use_external/path": "uid://cgkf0wsydaao8"
+},
+"Glass": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/Ship Assets/Glass.tres",
+"use_external/path": "uid://cix2n66jo500n"
+},
+"Light": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/Ship Assets/Light.tres",
+"use_external/path": "uid://c8y12j4y0w7sa"
+},
+"Main": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/Ship Assets/Main.tres",
+"use_external/path": "uid://nxre84tlcdhy"
+},
+"Pipes": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Assets/Ship Assets/Pipes.tres",
+"use_external/path": "uid://c0kpalvloe700"
+}
+},
+"meshes": {
+"Root Scene_Column_1": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Column_1.res",
+"save_to_file/path": "uid://be8csx0w6pgs"
+},
+"Root Scene_Column_2": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Column_2.res",
+"save_to_file/path": "uid://chqcb5hgf4cok"
+},
+"Root Scene_Column_3": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Column_3.res",
+"save_to_file/path": "uid://der5ijnhfycie"
+},
+"Root Scene_Column_Slim": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Column_Slim.res",
+"save_to_file/path": "uid://hbxbtvco863s"
+},
+"Root Scene_Details_Arrow": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Arrow.res",
+"save_to_file/path": "uid://bv43v3khd8of6"
+},
+"Root Scene_Details_Arrow_2": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Arrow_2.res",
+"save_to_file/path": "uid://cvtpeuacag6p0"
+},
+"Root Scene_Details_Basic_1": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Basic_1.res",
+"save_to_file/path": "uid://vb21ej5pd4is"
+},
+"Root Scene_Details_Basic_2": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Basic_2.res",
+"save_to_file/path": "uid://cfwgl3gam1hv"
+},
+"Root Scene_Details_Basic_3": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Basic_3.res",
+"save_to_file/path": "uid://ctns60vk3axkj"
+},
+"Root Scene_Details_Basic_4": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Basic_4.res",
+"save_to_file/path": "uid://bnrcv4b8e04c2"
+},
+"Root Scene_Details_Cylinder": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Cylinder.res",
+"save_to_file/path": "uid://tykaw5ctpcoh"
+},
+"Root Scene_Details_Cylinder_Long": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Cylinder_Long.res",
+"save_to_file/path": "uid://cvgwv1nud2gp3"
+},
+"Root Scene_Details_Dots": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Dots.res",
+"save_to_file/path": "uid://ba24n785a70dv"
+},
+"Root Scene_Details_Hexagon": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Hexagon.res",
+"save_to_file/path": "uid://bswepn5vmmrm3"
+},
+"Root Scene_Details_Output": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Output.res",
+"save_to_file/path": "uid://buhl4qid4n2xy"
+},
+"Root Scene_Details_Output_Small": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Output_Small.res",
+"save_to_file/path": "uid://c63uxj5rh2cfa"
+},
+"Root Scene_Details_Pipes_Long": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Pipes_Long.res",
+"save_to_file/path": "uid://bb14ln2poox50"
+},
+"Root Scene_Details_Pipes_Medium": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Pipes_Medium.res",
+"save_to_file/path": "uid://ciu2p4g43irrt"
+},
+"Root Scene_Details_Pipes_Small": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Pipes_Small.res",
+"save_to_file/path": "uid://beov3mjov5fyf"
+},
+"Root Scene_Details_Plate_Details": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Plate_Details.res",
+"save_to_file/path": "uid://cybw5vk0namm7"
+},
+"Root Scene_Details_Plate_Large": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Plate_Large.res",
+"save_to_file/path": "uid://lbslt03qbr1y"
+},
+"Root Scene_Details_Plate_Long": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Plate_Long.res",
+"save_to_file/path": "uid://couc40eo4ka1x"
+},
+"Root Scene_Details_Plate_Small": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Plate_Small.res",
+"save_to_file/path": "uid://bei4hyf37e825"
+},
+"Root Scene_Details_Triangles": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Triangles.res",
+"save_to_file/path": "uid://bqkq8r33y1ci5"
+},
+"Root Scene_Details_Vent_1": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Vent_1.res",
+"save_to_file/path": "uid://cq278f0yegsca"
+},
+"Root Scene_Details_Vent_2": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Vent_2.res",
+"save_to_file/path": "uid://bl3r7fs1ylng"
+},
+"Root Scene_Details_Vent_3": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Vent_3.res",
+"save_to_file/path": "uid://b1kttcvu8db8r"
+},
+"Root Scene_Details_Vent_4": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Vent_4.res",
+"save_to_file/path": "uid://cu0hy0h24jkc"
+},
+"Root Scene_Details_Vent_5": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_Vent_5.res",
+"save_to_file/path": "uid://bndm3ptn1nfoh"
+},
+"Root Scene_Details_X": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Details_X.res",
+"save_to_file/path": "uid://bxtdhfdasqd1i"
+},
+"Root Scene_DoorDoubleLong_Wall_SideA": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_DoorDoubleLong_Wall_SideA.res",
+"save_to_file/path": "uid://vifgxd5j2oge"
+},
+"Root Scene_DoorDouble_Wall_SideA": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_DoorDouble_Wall_SideA.res",
+"save_to_file/path": "uid://lhigfdcevsik"
+},
+"Root Scene_DoorDouble_Wall_SideB": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_DoorDouble_Wall_SideB.res",
+"save_to_file/path": "uid://ceiywkqpmfgkr"
+},
+"Root Scene_DoorSingleLong_Wall_SideA": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_DoorSingleLong_Wall_SideA.res",
+"save_to_file/path": "uid://6v3i4qlnhimc"
+},
+"Root Scene_DoorSingle_Wall_SideA": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_DoorSingle_Wall_SideA.res",
+"save_to_file/path": "uid://chr704nsx3ui8"
+},
+"Root Scene_DoorSingle_Wall_SideB": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_DoorSingle_Wall_SideB.res",
+"save_to_file/path": "uid://1hfipn63vssl"
+},
+"Root Scene_Door_Double_L": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Door_Double_L.res",
+"save_to_file/path": "uid://be4gtbg8kau6o"
+},
+"Root Scene_Door_Double_R": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Door_Double_R.res",
+"save_to_file/path": "uid://btgpcw7wkwgie"
+},
+"Root Scene_Door_Single": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Door_Single.res",
+"save_to_file/path": "uid://bkb1xrmg4vdfr"
+},
+"Root Scene_FloorTile_Basic": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_FloorTile_Basic.res",
+"save_to_file/path": "uid://dq3c08mg5532u"
+},
+"Root Scene_FloorTile_Basic2": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_FloorTile_Basic2.res",
+"save_to_file/path": "uid://bm1gmfhjf8par"
+},
+"Root Scene_FloorTile_Corner": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_FloorTile_Corner.res",
+"save_to_file/path": "uid://b5uao4r6jmb54"
+},
+"Root Scene_FloorTile_Double": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_FloorTile_Double.res",
+"save_to_file/path": "uid://b0xddfl1y41eu"
+},
+"Root Scene_FloorTile_Empty": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_FloorTile_Empty.res",
+"save_to_file/path": "uid://c86yhflx4wixa"
+},
+"Root Scene_FloorTile_InnerCorner": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_FloorTile_InnerCorner.res",
+"save_to_file/path": "uid://td1jn7kg84p1"
+},
+"Root Scene_FloorTile_Side": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_FloorTile_Side.res",
+"save_to_file/path": "uid://bvgkmd8440h1x"
+},
+"Root Scene_LongWindow_Wall_SideA": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_LongWindow_Wall_SideA.res",
+"save_to_file/path": "uid://be24wi3a74ua1"
+},
+"Root Scene_LongWindow_Wall_SideB": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_LongWindow_Wall_SideB.res",
+"save_to_file/path": "uid://cd5toga1ancb"
+},
+"Root Scene_Pipes": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Pipes.res",
+"save_to_file/path": "uid://cynidpqbdpavm"
+},
+"Root Scene_Props_Base": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Props_Base.res",
+"save_to_file/path": "uid://bh3iqvd6ec5p1"
+},
+"Root Scene_Props_Capsule": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Props_Capsule.res",
+"save_to_file/path": "uid://c2na312edgled"
+},
+"Root Scene_Props_ChestBottom": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Props_ChestBottom.res",
+"save_to_file/path": "uid://dow68uey6v42t"
+},
+"Root Scene_Props_ChestTop": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Props_ChestTop.res",
+"save_to_file/path": "uid://b3v3g30x4ytl"
+},
+"Root Scene_Props_Computer": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Props_Computer.res",
+"save_to_file/path": "uid://b4lwe87mv7l3q"
+},
+"Root Scene_Props_ComputerSmall": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Props_ComputerSmall.res",
+"save_to_file/path": "uid://clghtt1v4w6bd"
+},
+"Root Scene_Props_ContainerFull": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Props_ContainerFull.res",
+"save_to_file/path": "uid://ddkshqf1kpmbw"
+},
+"Root Scene_Props_Crate": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Props_Crate.res",
+"save_to_file/path": "uid://b0vm4sx2p50bk"
+},
+"Root Scene_Props_CrateLong": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Props_CrateLong.res",
+"save_to_file/path": "uid://dfuc88pcbeb8c"
+},
+"Root Scene_Props_Laser": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Props_Laser.res",
+"save_to_file/path": "uid://b6vyabvi8vbo5"
+},
+"Root Scene_Props_Pod": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Props_Pod.res",
+"save_to_file/path": "uid://ct3q86b8s72k"
+},
+"Root Scene_Props_Shelf": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Props_Shelf.res",
+"save_to_file/path": "uid://bm03ko7lwwhvs"
+},
+"Root Scene_Props_Shelf_Tall": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Props_Shelf_Tall.res",
+"save_to_file/path": "uid://bpe8pitcmfcp8"
+},
+"Root Scene_Props_Statue": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Props_Statue.res",
+"save_to_file/path": "uid://5tyqotencnw5"
+},
+"Root Scene_Props_Teleporter_1": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Props_Teleporter_1.res",
+"save_to_file/path": "uid://7ruusah86bkk"
+},
+"Root Scene_Props_Teleporter_2": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Props_Teleporter_2.res",
+"save_to_file/path": "uid://y1xrv33ys46l"
+},
+"Root Scene_Props_Vessel": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Props_Vessel.res",
+"save_to_file/path": "uid://bxho3atpelhw8"
+},
+"Root Scene_Props_Vessel_Short": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Props_Vessel_Short.res",
+"save_to_file/path": "uid://d12y1kkfus7bn"
+},
+"Root Scene_Props_Vessel_Tall": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Props_Vessel_Tall.res",
+"save_to_file/path": "uid://bspxhpxaj3f8f"
+},
+"Root Scene_RoofTile_Corner_Pipes": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_RoofTile_Corner_Pipes.res",
+"save_to_file/path": "uid://hh13jhrhpcp7"
+},
+"Root Scene_RoofTile_Details": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_RoofTile_Details.res",
+"save_to_file/path": "uid://dbo6xfx2ehd0k"
+},
+"Root Scene_RoofTile_Empty": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_RoofTile_Empty.res",
+"save_to_file/path": "uid://c8ni48elb4mvj"
+},
+"Root Scene_RoofTile_InnerCorner_Pipes": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_RoofTile_InnerCorner_Pipes.res",
+"save_to_file/path": "uid://bf8i2nvf38ujq"
+},
+"Root Scene_RoofTile_OrangeVent": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_RoofTile_OrangeVent.res",
+"save_to_file/path": "uid://b5w5yeqo4xyjc"
+},
+"Root Scene_RoofTile_Pipes1": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_RoofTile_Pipes1.res",
+"save_to_file/path": "uid://b6i5oo2kxrknq"
+},
+"Root Scene_RoofTile_Pipes2": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_RoofTile_Pipes2.res",
+"save_to_file/path": "uid://lgxsmhh76pu7"
+},
+"Root Scene_RoofTile_Plate": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_RoofTile_Plate.res",
+"save_to_file/path": "uid://vr7il5webxou"
+},
+"Root Scene_RoofTile_Plate2": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_RoofTile_Plate2.res",
+"save_to_file/path": "uid://dmiukehefn83i"
+},
+"Root Scene_RoofTile_Sides_Pipes": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_RoofTile_Sides_Pipes.res",
+"save_to_file/path": "uid://cxxemyrb71c35"
+},
+"Root Scene_RoofTile_SmallVents": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_RoofTile_SmallVents.res",
+"save_to_file/path": "uid://bql1owesvtrm1"
+},
+"Root Scene_RoofTile_Vents": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_RoofTile_Vents.res",
+"save_to_file/path": "uid://b4cegvl6c0e3i"
+},
+"Root Scene_SmallWindows_Wall_SideA": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_SmallWindows_Wall_SideA.res",
+"save_to_file/path": "uid://gjoeujswp2dt"
+},
+"Root Scene_SmallWindows_Wall_SideB": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_SmallWindows_Wall_SideB.res",
+"save_to_file/path": "uid://r8jotts3rcag"
+},
+"Root Scene_Staircase": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Staircase.res",
+"save_to_file/path": "uid://beco645yhy4m2"
+},
+"Root Scene_ThreeWindows_Wall_SideA": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_ThreeWindows_Wall_SideA.res",
+"save_to_file/path": "uid://dfckyyjpdrbfl"
+},
+"Root Scene_ThreeWindows_Wall_SideB": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_ThreeWindows_Wall_SideB.res",
+"save_to_file/path": "uid://db2q7073t1wg1"
+},
+"Root Scene_Wall_1": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Wall_1.res",
+"save_to_file/path": "uid://cgfqw1cl7w4ua"
+},
+"Root Scene_Wall_2": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Wall_2.res",
+"save_to_file/path": "uid://b2u4vh6d0flex"
+},
+"Root Scene_Wall_3": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Wall_3.res",
+"save_to_file/path": "uid://mws35u3p3v1f"
+},
+"Root Scene_Wall_4": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Wall_4.res",
+"save_to_file/path": "uid://d3aavfscymwf7"
+},
+"Root Scene_Wall_5": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Wall_5.res",
+"save_to_file/path": "uid://cnnaqpssec1kb"
+},
+"Root Scene_Wall_Empty": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Wall_Empty.res",
+"save_to_file/path": "uid://set5nd4at1n5"
+},
+"Root Scene_Window_Wall_SideB": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Ship Assets/Root Scene_Window_Wall_SideB.res",
+"save_to_file/path": "uid://c3og65t1c02xj"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1

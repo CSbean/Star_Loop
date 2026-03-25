@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cgkf0wsydaao8"]
+
+[resource]
+resource_name = "DarkGrey"
+albedo_color = Color(0.5266551, 0.5266551, 0.5266551, 1)
+metallic = 0.4
+metadata/extras = {
+"fromFBX": {
+"isTruePBR": false,
+"shadingModel": "Phong"
+}
+}

@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dpbm7rkn14vjd"]
+
+[resource]
+resource_name = "Accent"
+albedo_color = Color(0.7725492, 0.5803922, 0.28627464, 1)
+metallic = 0.4
+metadata/extras = {
+"fromFBX": {
+"isTruePBR": false,
+"shadingModel": "Phong"
+}
+}

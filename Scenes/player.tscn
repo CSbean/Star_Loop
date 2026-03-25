@@ -11022,6 +11022,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.674528, -0.26102138)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00047194958, 2.1368265e-05)
 target_position = Vector3(0, 0, -50)
 
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D" unique_id=1350062279]
+transform = Transform3D(1, 0, -2.9802326e-08, 0, 1, 0, 2.9802326e-08, 0, 1, 0, -0.0020887852, -0.018989593)
+visible = false
+light_energy = 16.0
+spot_range = 786.637
+spot_attenuation = 2.0
+spot_angle = 33.53
+spot_angle_attenuation = 5.4641457
+
 [node name="PlayerSprite" type="Node3D" parent="." unique_id=994443223]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 

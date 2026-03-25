@@ -5,6 +5,7 @@ class_name Player
 @onready var animation_player: AnimationPlayer = $PlayerSprite/AnimationPlayer
 @onready var scifi_pistol: Node3D = $PlayerSprite/RootNode/CharacterArmature/Skeleton3D/BoneAttachment3D/ScifiPistol
 @onready var ray_cast_3d: RayCast3D = $Camera3D/RayCast3D
+@onready var spot_light_3d: SpotLight3D = $Camera3D/SpotLight3D
 
 
 var SPEED = 5.0
@@ -14,7 +15,7 @@ const JUMP_VELOCITY = 4.5
 var look_dir: Vector2
 var camra_sense := 50
 var capMouse := false
-
+var flashOn := false
 var sprinting_toggle = false
 var pistolVisabilityToggle = false
 var health = 100
@@ -23,6 +24,9 @@ func _ready() -> void:
 	change_mouse()
 
 func _process(_delta: float) -> void:
+	if (Input.is_action_just_pressed("Flashlight")):
+		flashOn = !flashOn
+		spot_light_3d.visible = flashOn
 	if (Input.is_action_just_pressed("reset")):
 		get_tree().reload_current_scene()
 	if (Input.is_action_just_pressed("quit")):
