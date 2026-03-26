@@ -11012,7 +11012,7 @@ _data = {
 script = ExtResource("1_4flbx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1151526745]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.1)
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 1, -0.1)
 shape = SubResource("CapsuleShape3D_sh265")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=426829416]
@@ -11645,5 +11645,5 @@ libraries/ = SubResource("AnimationLibrary_llqmx")
 [node name="Area3D" type="Area3D" parent="." unique_id=1386733936]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D" unique_id=1226755628]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.1)
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 1, -0.1)
 shape = SubResource("CapsuleShape3D_sh265")

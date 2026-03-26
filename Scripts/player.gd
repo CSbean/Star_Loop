@@ -6,6 +6,8 @@ class_name Player
 @onready var scifi_pistol: Node3D = $PlayerSprite/RootNode/CharacterArmature/Skeleton3D/BoneAttachment3D/ScifiPistol
 @onready var ray_cast_3d: RayCast3D = $Camera3D/RayCast3D
 @onready var spot_light_3d: SpotLight3D = $Camera3D/SpotLight3D
+@onready var ui: Control = $"../UI"
+
 
 
 var SPEED = 5.0
@@ -35,8 +37,8 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("esc"):
 		change_mouse()
 		GameManager.paused = !GameManager.paused
-
-
+	
+	
 	if GameManager.paused == false:
 		if Input.is_action_just_pressed("Player_Sprint"):
 			sprinting_toggle = !sprinting_toggle
@@ -45,15 +47,8 @@ func _process(_delta: float) -> void:
 			else:
 				SPEED = 5.0
 			
-
-
-
-		#if animation_player.current_animation == "CharacterArmature|Gun_Shoot" or animation_player.current_animation == "CharacterArmature|Run_Shoot":
-			#pistolVisabilityToggle = true
-		#else:
-			#pistolVisabilityToggle = false
-		
-		
+	
+	
 		
 		# animations
 		if sprinting_toggle and Input.is_action_pressed("shoot"):
@@ -82,8 +77,6 @@ func _process(_delta: float) -> void:
 		elif Input.is_action_pressed("move_left"):
 			animation_player.play("CharacterArmature|Run_Left")
 			
-		#if Input.is_action_pressed("shoot"):
-		#	animation_player.play("CharacterArmature|Gun_Shoot")
 		
 		
 		else:
@@ -135,3 +128,11 @@ func change_mouse()->void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+func take_damage_p(num:int)->void:
+	health -= num
+	ui.update_health(health)
+	if health <= 0:
+		ui.lose()
+		change_mouse()
+	
