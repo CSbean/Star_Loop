@@ -11641,3 +11641,9 @@ transform = Transform3D(-2.1827873e-10, -0.004999999, 2.8194336e-11, 0.005, -2.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerSprite" unique_id=358784650]
 libraries/ = SubResource("AnimationLibrary_llqmx")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1386733936]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D" unique_id=1226755628]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.1)
+shape = SubResource("CapsuleShape3D_sh265")
