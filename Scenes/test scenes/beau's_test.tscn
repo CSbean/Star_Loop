@@ -24,7 +24,7 @@ polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 [node name="Beau\'s test" type="Node3D" unique_id=1321467922]
 
 [node name="Player" parent="." unique_id=11007485 instance=ExtResource("1_d37i2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5862181, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5862181, -5.6844444)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=12491700]
 environment = SubResource("Environment_3enwn")
