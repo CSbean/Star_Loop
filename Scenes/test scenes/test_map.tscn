@@ -8,8 +8,10 @@
 [ext_resource type="ArrayMesh" uid="uid://ct3q86b8s72k" path="res://Assets/Ship Assets/Root Scene_Props_Pod.res" id="3_dwn3m"]
 [ext_resource type="ArrayMesh" uid="uid://bkgh6f4a1mqog" path="res://Assets/Ship Assets/Root Scene_Details_Plate_Details.res" id="3_ki8ce"]
 [ext_resource type="PackedScene" uid="uid://cwysuvsvdvkp1" path="res://Scenes/ui.tscn" id="3_r6bqr"]
+[ext_resource type="ArrayMesh" uid="uid://p8207jm37mh7" path="res://Assets/Ship Assets/Root Scene_Wall_1.res" id="3_vn61f"]
 [ext_resource type="Texture2D" uid="uid://dtq3im4jfj2b3" path="res://Assets/finally.png" id="4_7o34i"]
 [ext_resource type="ArrayMesh" uid="uid://be16tbegs1vi3" path="res://Assets/Ship Assets/Root Scene_FloorTile_Basic.res" id="4_wfnyu"]
+[ext_resource type="ArrayMesh" uid="uid://b353egjafiouj" path="res://Assets/Ship Assets/Root Scene_Props_ComputerSmall.res" id="5_yhb6n"]
 [ext_resource type="PackedScene" uid="uid://cc7tvl2nv4ryh" path="res://Assets/Ship Assets/Scifi Kit.glb" id="6_x43i3"]
 [ext_resource type="ArrayMesh" uid="uid://c8r1jkwas27mj" path="res://Assets/Ship Assets/Root Scene_Props_Crate.res" id="8_e6ses"]
 [ext_resource type="ArrayMesh" uid="uid://cuahcuu6164lc" path="res://Assets/Ship Assets/Root Scene_DoorSingle_Wall_SideA.res" id="11_x43i3"]
@@ -20,6 +22,9 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mfe8"]
 transparency = 1
 albedo_color = Color(0.13333334, 1, 0.99607843, 0.4745098)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_abdmj"]
+albedo_color = Color(18.892157, 18.892157, 18.892157, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yeexx"]
 transparency = 1
@@ -97,6 +102,30 @@ size = Vector3(6.049103, 0.2310791, 5.999634)
 [node name="Camms" type="Node3D" parent="NavigationRegion3D2" unique_id=662338815]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9921722, 0, -6.02007)
 
+[node name="RootSceneFloorTileBasic5" type="MeshInstance3D" parent="NavigationRegion3D2/Camms" unique_id=1787289893]
+transform = Transform3D(-621.0323, 0, 0, 0, -1.48196e-05, 100.00004, 0, -339.03293, -4.3711416e-06, 3.0301714, 0.09648281, -8.304796)
+mesh = ExtResource("4_wfnyu")
+
+[node name="RootSceneWall2" type="MeshInstance3D" parent="NavigationRegion3D2/Camms" unique_id=686876604]
+transform = Transform3D(-283.76788, -8.742277e-06, -3.8213703e-13, 0, -4.3711384e-06, 99.99998, -2.4807776e-05, 99.99998, 4.3711384e-06, 3.0032644, -0.04700965, -5.0695467)
+mesh = ExtResource("3_vn61f")
+surface_material_override/3 = SubResource("StandardMaterial3D_abdmj")
+
+[node name="RootSceneWall3" type="MeshInstance3D" parent="NavigationRegion3D2/Camms" unique_id=1154004635]
+transform = Transform3D(283.76785, 1.7484552e-05, 7.6427395e-13, 1.7357835e-19, -4.3711384e-06, 99.99998, 4.9615548e-05, -99.99998, -4.3711384e-06, 3.0032644, -0.04700965, -11.568652)
+mesh = ExtResource("3_vn61f")
+surface_material_override/3 = SubResource("StandardMaterial3D_abdmj")
+
+[node name="RootSceneWindowWallSideB7" type="MeshInstance3D" parent="NavigationRegion3D2/Camms" unique_id=627704671]
+transform = Transform3D(-8.55456e-06, -100, -5.0941003e-06, 3.4531692e-20, -4.371137e-06, 116.539505, -195.70557, 4.3711393e-06, 2.2267033e-13, 8.815828, 0.08708227, -8.267623)
+mesh = ExtResource("2_f1414")
+surface_material_override/3 = SubResource("StandardMaterial3D_yeexx")
+
+[node name="RootSceneWindowWallSideB8" type="MeshInstance3D" parent="NavigationRegion3D2/Camms" unique_id=1146575910]
+transform = Transform3D(2.5663681e-05, 100.00001, 5.094102e-06, -9.438996e-20, -4.371137e-06, 116.53949, 195.70557, -1.3113417e-05, -6.6801073e-13, 8.349091, 0.08708227, -8.267623)
+mesh = ExtResource("2_f1414")
+surface_material_override/3 = SubResource("StandardMaterial3D_yeexx")
+
 [node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D2/Camms" unique_id=1612503219]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 3.0574222, 0, -8.325412)
 use_collision = true
@@ -115,22 +144,32 @@ size = Vector3(12.032597, 0.2310791, 5.575714)
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="NavigationRegion3D2/Camms" unique_id=170742784]
 transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, 9.03125, 2.6928844, -8.229948)
+visible = false
 use_collision = true
 size = Vector3(8.010377, 0.2310791, 5.575714)
 
+[node name="RootScenePropsComputerSmall" type="MeshInstance3D" parent="NavigationRegion3D2/Camms" unique_id=210422403]
+transform = Transform3D(-4.371139e-06, 100, 0, 4.371139e-06, 1.9106856e-13, 100, 100, 4.371139e-06, -4.371139e-06, 5.84534, 0.118226364, -8.998199)
+mesh = ExtResource("5_yhb6n")
+
 [node name="Electrical" type="Node3D" parent="NavigationRegion3D2" unique_id=1186494495]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 5.992172, 0, -6.02007)
+
+[node name="RootSceneWall1" type="MeshInstance3D" parent="NavigationRegion3D2/Electrical" unique_id=657353391]
+transform = Transform3D(283.7679, 0, 0, 0, -4.3711393e-06, 100.00001, 0, -100.00001, -4.3711393e-06, 3.0032644, -0.047009654, -4.5121975)
+mesh = ExtResource("3_vn61f")
+surface_material_override/3 = SubResource("StandardMaterial3D_abdmj")
 
 [node name="RootSceneFloorTileBasic3" type="MeshInstance3D" parent="NavigationRegion3D2/Electrical" unique_id=895180423]
 transform = Transform3D(-475.7389, 0, 0, 0, -1.4808082e-05, 100.000046, 0, -338.7694, -4.371142e-06, 2.362752, 0.09648282, -0.67023945)
 mesh = ExtResource("4_wfnyu")
 
-[node name="RootSceneFloorTileBasic5" type="MeshInstance3D" parent="NavigationRegion3D2/Electrical" unique_id=1787289893]
-transform = Transform3D(-665.30884, 0, 0, 0, -1.9547495e-05, 100.000046, 0, -447.19458, -4.371142e-06, 3.0301723, 0.09648282, -8.617195)
-mesh = ExtResource("4_wfnyu")
-
 [node name="RootSceneFloorTileBasic4" type="MeshInstance3D" parent="NavigationRegion3D2/Electrical" unique_id=2027584561]
 transform = Transform3D(-475.7389, 0, 0, 0, 4.442424e-05, -100.000046, 0, 338.76944, 1.3113425e-05, 2.362752, 4.420548, -0.67023945)
+mesh = ExtResource("4_wfnyu")
+
+[node name="RootSceneFloorTileBasic6" type="MeshInstance3D" parent="NavigationRegion3D2/Electrical" unique_id=332463114]
+transform = Transform3D(-609.3918, 0, 0, 0, 5.929876e-05, -100.000046, 0, 452.19922, 1.3113425e-05, 2.638095, 4.420548, -7.945269)
 mesh = ExtResource("4_wfnyu")
 
 [node name="RootSceneDoorSingleWallSideA3" type="MeshInstance3D" parent="NavigationRegion3D2/Electrical" unique_id=944042486]
@@ -223,6 +262,10 @@ size = Vector3(9.938484, 0.2310791, 5.575714)
 
 [node name="Medbay" type="Node3D" parent="NavigationRegion3D2" unique_id=1928465729]
 transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, -1, -6.0754633, 0, -7.3323793)
+
+[node name="RootSceneRoofTilePipes1" type="MeshInstance3D" parent="NavigationRegion3D2/Medbay" unique_id=1004801910]
+transform = Transform3D(-421.00882, 0, 0, 0, 1.4517849e-05, 364.54132, 0, -332.1297, 1.5934607e-05, 2.603489, -4.915897, -0.39520264)
+mesh = ExtResource("14_wfnyu")
 
 [node name="RootScenePropsPod" type="MeshInstance3D" parent="NavigationRegion3D2/Medbay" unique_id=293089065]
 transform = Transform3D(-156.63983, 0, 0, 0, 6.8005647e-06, -131.28561, 0, 155.5788, 5.7386765e-06, 2.2865248, 0.03479038, 1.581471)
@@ -470,9 +513,9 @@ use_collision = true
 size = Vector3(24.169636, 0.2310791, 12.320391)
 
 [node name="CSGBox3D14" type="CSGBox3D" parent="NavigationRegion3D2/RightHall" unique_id=1895101961]
-transform = Transform3D(-4.3711392e-08, 0.99999994, 4.3711385e-08, 0, -4.3711385e-08, 0.99999994, 0.99999994, 4.3711392e-08, 1.9106855e-15, -1.837965, 5.7023, -10.946398)
+transform = Transform3D(-4.3711715e-08, 0.9999999, 4.3711385e-08, 0, -4.3711385e-08, 0.9999999, 0.9999999, 4.3711715e-08, 1.910692e-15, -1.8379612, 5.702299, -9.94479)
 use_collision = true
-size = Vector3(47.040577, 0.2310791, 12.320391)
+size = Vector3(45.037376, 0.2310791, 12.320391)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="NavigationRegion3D2/RightHall" unique_id=920733840]
 transform = Transform3D(0.9999998, -2.9605944e-15, 0, 2.9605944e-15, 0.9999998, 3.5293036e-22, 0, -8.2358214e-23, 0.9999998, -5.4547462, 12.065808, -11.333267)
@@ -676,7 +719,3 @@ transform = Transform3D(1.615, 0, 0, 0, 1.615, 0, 0, 0, 1.615, 11.163809, 1.1922
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1397359031]
 environment = SubResource("Environment_fav6h")
-
-[node name="RootSceneRoofTilePipes1" type="MeshInstance3D" parent="." unique_id=1004801910]
-transform = Transform3D(505.2622, 0, 0, 0, -1.74232e-05, -437.4943, 0, 398.59637, -1.9123483e-05, -10.415807, 5.8907986, 10.998645)
-mesh = ExtResource("14_wfnyu")

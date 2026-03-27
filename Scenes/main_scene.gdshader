@@ -10,7 +10,7 @@ uniform float shadow_oblateness : hint_range(0.0, 1.0) = 0.5;
 uniform float frame_drag_strength : hint_range(0.0, 1.0) = 0.5;
 uniform float doppler_beaming = 0.5;
 uniform float warp_falloff : hint_range(0.5, 8.0) = 2.5;
-uniform float warp_strength : hint_range(0.0, 20.0) = 1.0;
+uniform float warp_strength : hint_range(0.0, 2000.0) = 1.0;
 uniform float warp_inner_edge : hint_range(0.0, 0.9) = 0.3;
 
 uniform vec3 color_core : source_color = vec3(0.88, 0.96, 1.00);
