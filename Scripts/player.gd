@@ -21,6 +21,7 @@ var flashOn := false
 var sprinting_toggle = false
 var pistolVisabilityToggle = false
 var health = 100
+var inventorySlot = 1
 
 func _ready() -> void:
 	change_mouse()
@@ -82,8 +83,12 @@ func _process(_delta: float) -> void:
 		else:
 			animation_player.play("CharacterArmature|Idle")
 		
-		
-		
+		if Input.is_action_just_pressed("inventory down"):
+			inventorySlot += 1
+			ui.invChange(inventorySlot)
+			print("don")
+		if Input.is_action_just_pressed("inventory up"):
+			inventorySlot -= 1
 
 func _physics_process(delta: float) -> void:
 	if GameManager.paused == false:
@@ -135,4 +140,6 @@ func take_damage_p(num:int)->void:
 	if health <= 0:
 		ui.lose()
 		change_mouse()
-	
+
+func inventoryChange(num:int)->void:
+	pass

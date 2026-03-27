@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cwysuvsvdvkp1"]
 
 [ext_resource type="Script" uid="uid://k5o1euceqf2c" path="res://Scripts/ui.gd" id="1_jxero"]
+[ext_resource type="Texture2D" uid="uid://cg00fy1425cuc" path="res://Assets/pistiolimg-removebg-preview.png" id="2_qdvrb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jxero"]
 font_size = 24
@@ -45,3 +46,12 @@ offset_right = 125.0
 grow_vertical = 0
 text = "100"
 label_settings = SubResource("LabelSettings_qdvrb")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=114671122]
+layout_mode = 0
+offset_left = 914.0
+offset_top = 525.0
+offset_right = 1610.0
+offset_bottom = 883.0
+scale = Vector2(0.3423177, 0.3423177)
+texture = ExtResource("2_qdvrb")
