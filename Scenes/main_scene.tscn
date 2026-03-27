@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d0bvlanbyrqw1" path="res://Scripts/main_scene.gd" id="1_6l7je"]
 [ext_resource type="Texture2D" uid="uid://dtq3im4jfj2b3" path="res://Assets/finally.png" id="1_52fb6"]
+[ext_resource type="Shader" uid="uid://qjgbvwd70cvu" path="res://Scenes/main_scene.gdshader" id="3_jv6wh"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_6l7je"]
 panorama = ExtResource("1_52fb6")
@@ -15,11 +16,46 @@ sky = SubResource("Sky_jv6wh")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6ack"]
-albedo_color = Color(18.892157, 18.892157, 0, 1)
-
 [sub_resource type="SphereMesh" id="SphereMesh_iacmt"]
-material = SubResource("StandardMaterial3D_x6ack")
+radius = 8.0
+height = 6.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x6ack"]
+render_priority = 0
+shader = ExtResource("3_jv6wh")
+shader_parameter/radius = 0.0
+shader_parameter/spin = 0.4
+shader_parameter/shadow_asymmetry = 0.5
+shader_parameter/shadow_oblateness = 0.5
+shader_parameter/frame_drag_strength = 0.5
+shader_parameter/doppler_beaming = 0.475
+shader_parameter/warp_falloff = 3.1250001246875
+shader_parameter/warp_strength = 20.0
+shader_parameter/warp_inner_edge = 0.3
+shader_parameter/color_core = Color(0.88, 0.96, 1, 1)
+shader_parameter/brightness_core = 22.0
+shader_parameter/color_hot = Color(0.2, 0.6, 1, 1)
+shader_parameter/brightness_hot = 10.0
+shader_parameter/color_mid = Color(0.05, 0.35, 1, 1)
+shader_parameter/brightness_mid = 6.5
+shader_parameter/color_cool = Color(0.1, 0.45, 0.95, 1)
+shader_parameter/brightness_cool = 4.0
+shader_parameter/color_outer = Color(0.95, 0.55, 0.15, 1)
+shader_parameter/brightness_outer = 2.2
+shader_parameter/color_edge = Color(0.7, 0.08, 0.02, 1)
+shader_parameter/brightness_edge = 5.0
+shader_parameter/gradient_stop0 = 0.08
+shader_parameter/gradient_stop1 = 0.25
+shader_parameter/gradient_stop2 = 0.55
+shader_parameter/gradient_stop3 = 0.8
+shader_parameter/color_saturation = 1.5
+shader_parameter/grav_redshift_strength = 0.85
+shader_parameter/turbulence_strength = 0.28
+shader_parameter/turbulence_scale = 2.5
+shader_parameter/turbulence_speed = 0.35
+shader_parameter/density_heat_strength = 1.0
+shader_parameter/density_heat_power = 0.10000000149012
+shader_parameter/rs = 1.32500005967762
 
 [node name="MainScene" type="Node3D" unique_id=1876643400]
 script = ExtResource("1_6l7je")
@@ -33,10 +69,22 @@ visible = false
 shadow_enabled = true
 
 [node name="Space Objects" type="Node3D" parent="." unique_id=1562453782]
+visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Space Objects" unique_id=81903307]
-transform = Transform3D(15.215, 0, 0, 0, 15.215, 0, 0, 0, 15.215, 0, 0, 1000)
+transform = Transform3D(1.925, 0, 0, 0, 1.925, 0, 0, 0, 1.925, 0, 0, 1000)
 mesh = SubResource("SphereMesh_iacmt")
+surface_material_override/0 = SubResource("ShaderMaterial_x6ack")
+
+[node name="^ Very laggy up close" type="Label" parent="Space Objects" unique_id=2054853711]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1620066270]
-transform = Transform3D(-1, -4.3711392e-08, 7.5710346e-08, -5.3631446e-08, 0.99065053, -0.13642436, -6.903919e-08, -0.13642436, -0.99065053, 0.59858036, 1.8215857, -1.9489584)
+transform = Transform3D(-1, -4.3711392e-08, 7.5710346e-08, -5.3631446e-08, 0.99065053, -0.13642436, -6.903919e-08, -0.13642436, -0.99065053, 0.59858036, 1.8215857, 965.16516)
+
+[node name="resetTime" type="Timer" parent="." unique_id=1449098792]
+wait_time = 180.0
+one_shot = true
+autostart = true

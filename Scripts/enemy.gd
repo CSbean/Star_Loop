@@ -7,7 +7,7 @@ class_name Enemy
 var health := 100
 var state : String = "Idle"
 var player : CharacterBody3D
-var spd := 2.5
+var spd := 5.0
 var canHitPlayer = false
 
 func _ready() -> void:
