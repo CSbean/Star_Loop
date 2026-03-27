@@ -75,11 +75,6 @@ transform = Transform3D(1.6975025, -0.15903872, -0.8937655, 0.51563364, 1.728742
 mesh = SubResource("SphereMesh_iacmt")
 surface_material_override/0 = SubResource("ShaderMaterial_x6ack")
 
-[node name="^ Very laggy up close" type="Label" parent="Space Objects" unique_id=2054853711]
-visible = false
-offset_right = 40.0
-offset_bottom = 23.0
-
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1620066270]
 transform = Transform3D(-1, -4.3711392e-08, 7.5710346e-08, -5.3631446e-08, 0.99065053, -0.13642436, -6.903919e-08, -0.13642436, -0.99065053, 0.59858036, 1.8215857, 965.16516)
 

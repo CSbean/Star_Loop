@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk8yq1enk6121"
-path.s3tc="res://.godot/imported/pistiolimg.png-153676890c829af2d9950ef637007b93.s3tc.ctex"
+uid="uid://d4lu7m2q284cj"
+path.s3tc="res://.godot/imported/CockpitControlCenter_BaseColor.png-29738935195f7b3b0bd8cf6f5af2ddc5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/pistiolimg.png"
-dest_files=["res://.godot/imported/pistiolimg.png-153676890c829af2d9950ef637007b93.s3tc.ctex"]
+source_file="res://Assets/Ship Assets/Contorl/CockpitControlCenter_BaseColor.png"
+dest_files=["res://.godot/imported/CockpitControlCenter_BaseColor.png-29738935195f7b3b0bd8cf6f5af2ddc5.s3tc.ctex"]
 
 [params]
 
