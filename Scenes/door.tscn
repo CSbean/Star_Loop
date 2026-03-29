@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dbmtlj0718kli"]
+
+[ext_resource type="Script" uid="uid://n63bx17hc7ir" path="res://Scripts/door.gd" id="1_p0e35"]
+[ext_resource type="ArrayMesh" uid="uid://bkb1xrmg4vdfr" path="res://Assets/Ship Assets/Root Scene_Door_Single.res" id="2_fahql"]
+
+[node name="Door" type="Node3D" unique_id=1128866559]
+script = ExtResource("1_p0e35")
+
+[node name="RootSceneDoorSingle" type="MeshInstance3D" parent="." unique_id=1270133276]
+transform = Transform3D(200, 0, 0, 0, -8.742278e-06, 200, 0, -200, -8.742278e-06, -0.050115228, -0.9033003, 1.7585123)
+mesh = ExtResource("2_fahql")

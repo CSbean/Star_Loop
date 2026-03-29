@@ -1,7 +1,6 @@
 extends Control
 
-"res://Assets/pistiolimg-removebg-preview.png"
-var badPic = preload("res://Assets/pistiolimg.png")
+var badPic = preload("res://Assets/pistiolimg-removebg-preview.png")
 
 
 @onready var health: Label = $Health
