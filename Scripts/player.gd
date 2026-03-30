@@ -8,8 +8,6 @@ class_name Player
 @onready var spot_light_3d: SpotLight3D = $Camera3D/SpotLight3D
 @onready var ui: Control = $"../UI"
 
-
-
 var SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
@@ -22,6 +20,8 @@ var sprinting_toggle = false
 var pistolVisabilityToggle = false
 var health = 100
 var inventorySlot = 1
+# 0=no door acsees, 1=white, 2=green, 3=yellow, 4=red
+var keycard = 0
 
 func _ready() -> void:
 	change_mouse()
@@ -114,10 +114,14 @@ func _physics_process(delta: float) -> void:
 
 		rotate_camrea(delta)
 		move_and_slide()
+
+
 #for mouse move
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion: 
 		look_dir = event.relative * 0.01
+
+
 #also mouse move
 func rotate_camrea(delta: float, sense_mod: float = 1.0):
 	if capMouse:

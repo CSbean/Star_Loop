@@ -9,10 +9,7 @@ var paused :bool = false
 #Alien by Quaternius
 #Cockpit control center by Poly by Google [CC-BY]
 #Ceiling Light by Ryan Donaldson [CC-BY]
+#Pickup Key Card by Quaternius
+#Pickup Health by Quaternius
+#Bullets Pickup by Quaternius
 #
-#
-#
-#
-
-func update_health()->void:
-	pass

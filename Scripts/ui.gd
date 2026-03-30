@@ -1,7 +1,7 @@
 extends Control
 
 var badPic = preload("res://Assets/pistiolimg-removebg-preview.png")
-
+var nearby : bool
 
 @onready var health: Label = $Health
 @onready var texture_rect: TextureRect = $TextureRect
