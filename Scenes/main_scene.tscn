@@ -71,7 +71,7 @@ shadow_enabled = true
 [node name="Space Objects" type="Node3D" parent="." unique_id=1562453782]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Space Objects" unique_id=81903307]
-transform = Transform3D(1.6975025, -0.15903872, -0.8937655, 0.51563364, 1.7287425, 0.671711, 0.74714935, -0.8317334, 1.5670389, 0, 0, 997.6124)
+transform = Transform3D(13.130293, -1.2301751, -6.913336, 3.9884598, 13.371937, 5.1957293, 5.7792497, -6.433513, 12.121151, 0, 0, 997.6124)
 mesh = SubResource("SphereMesh_iacmt")
 surface_material_override/0 = SubResource("ShaderMaterial_x6ack")
 
