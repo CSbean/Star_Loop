@@ -1,10 +1,9 @@
 [gd_scene format=4 uid="uid://bwmtkmwv42ju3"]
 
+[ext_resource type="Script" uid="uid://dalcocninsa6i" path="res://Scripts/keycard.gd" id="1_1y4ih"]
 [ext_resource type="Texture2D" uid="uid://c5456sqy5iiba" path="res://Assets/Pickup Key Card_Atlas.png" id="1_04gs5"]
-[ext_resource type="Texture2D" uid="uid://co5vthwxv5krp" path="res://Assets/white-Pickup Key Card_Atlas.png" id="1_sli2r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sli2r"]
-albedo_texture = ExtResource("1_sli2r")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jqjcy"]
 resource_name = "Atlas"
@@ -51,13 +50,24 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_sgriw")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_1y4ih"]
+size = Vector3(1.5, 1.5, 1.5)
+
 [node name="keycard" type="Node3D" unique_id=213014571]
+script = ExtResource("1_1y4ih")
 
 [node name="Root Scene" type="Node3D" parent="." unique_id=2087599402]
 
 [node name="RootNode" type="Node3D" parent="Root Scene" unique_id=1206021300]
 
 [node name="Pickup_KeyCard" type="MeshInstance3D" parent="Root Scene/RootNode" unique_id=664147258]
-transform = Transform3D(100, 0, 0, 0, 100, -4.371139e-06, 0, 4.371139e-06, 100, 0, 0, 0)
+transform = Transform3D(25, 0, 0, 0, 25, -1.0927847e-06, 0, 1.0927847e-06, 25, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_sli2r")
 mesh = SubResource("ArrayMesh_1iurx")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1559340025]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1724214196]
+shape = SubResource("BoxShape3D_1y4ih")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

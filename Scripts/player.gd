@@ -52,6 +52,10 @@ func _process(_delta: float) -> void:
 	
 		
 		# animations
+		#interacting
+		if Input.is_action_pressed("interact"):
+			animation_player.play("CharacterArmature|Interact")
+		#shooting
 		if sprinting_toggle and Input.is_action_pressed("shoot"):
 			animation_player.play("CharacterArmature|Run_Shoot")
 			if ray_cast_3d.is_colliding():
@@ -62,7 +66,9 @@ func _process(_delta: float) -> void:
 			if ray_cast_3d.is_colliding():
 				if ray_cast_3d.get_collider() is Enemy:
 					ray_cast_3d.get_collider().queue_free()
-		
+		#interacting
+		if Input.is_action_pressed("interact"):
+			animation_player.play("CharacterArmature|Interact")
 		#walking foward
 		elif sprinting_toggle and Input.is_action_pressed("move_forward"):
 			animation_player.play("CharacterArmature|Run")
@@ -77,11 +83,11 @@ func _process(_delta: float) -> void:
 		#walking left
 		elif Input.is_action_pressed("move_left"):
 			animation_player.play("CharacterArmature|Run_Left")
-			
-		
-		
+
 		else:
 			animation_player.play("CharacterArmature|Idle")
+			
+		
 		
 		if Input.is_action_just_pressed("inventory down"):
 			inventorySlot += 1
