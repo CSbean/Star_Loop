@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d0bvlanbyrqw1" path="res://Scripts/main_scene.gd" id="1_6l7je"]
 [ext_resource type="Texture2D" uid="uid://dtq3im4jfj2b3" path="res://Assets/finally.png" id="1_52fb6"]
 [ext_resource type="Shader" uid="uid://qjgbvwd70cvu" path="res://Scenes/main_scene.gdshader" id="3_jv6wh"]
+[ext_resource type="PackedScene" uid="uid://bddoycfxcquhb" path="res://Scenes/test scenes/test_map.tscn" id="4_x6ack"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_6l7je"]
 panorama = ExtResource("1_52fb6")
@@ -75,10 +76,11 @@ transform = Transform3D(13.130293, -1.2301751, -6.913336, 3.9884598, 13.371937, 
 mesh = SubResource("SphereMesh_iacmt")
 surface_material_override/0 = SubResource("ShaderMaterial_x6ack")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1620066270]
-transform = Transform3D(-1, -4.3711392e-08, 7.5710346e-08, -5.3631446e-08, 0.99065053, -0.13642436, -6.903919e-08, -0.13642436, -0.99065053, 0.59858036, 1.8215857, 965.16516)
-
 [node name="resetTime" type="Timer" parent="." unique_id=1449098792]
 wait_time = 180.0
 one_shot = true
 autostart = true
+
+[node name="Ship" type="Node3D" parent="." unique_id=1605910709]
+
+[node name="BensSpecialPlace" parent="Ship" unique_id=1311132722 instance=ExtResource("4_x6ack")]

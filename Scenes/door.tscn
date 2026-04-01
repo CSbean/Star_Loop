@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://n63bx17hc7ir" path="res://Scripts/door.gd" id="1_p0e35"]
 [ext_resource type="ArrayMesh" uid="uid://c2mojphab3q3g" path="res://Assets/Ship Assets/Root Scene_Door_Single.res" id="2_fahql"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p0e35"]
+albedo_color = Color(1.8247963, 1.8247963, 1.8247963, 1)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_p0e35"]
 size = Vector3(0.015686035, 0.004333496, 0.028030396)
 
@@ -100,6 +103,7 @@ script = ExtResource("1_p0e35")
 [node name="RootSceneDoorSingle" type="MeshInstance3D" parent="." unique_id=1270133276]
 transform = Transform3D(200, 0, 0, 0, -8.742278e-06, 200, 0, -200, -8.742278e-06, 0, -2.7144938, 0.8591578)
 mesh = ExtResource("2_fahql")
+surface_material_override/3 = SubResource("StandardMaterial3D_p0e35")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1707965043]
 transform = Transform3D(200, 0, 0, 0, -8.742278e-06, 200, 0, -200, -8.742278e-06, 0, 0, 0)
