@@ -10107,6 +10107,7 @@ tracks/61/keys = PackedFloat32Array(0, 1, 0.0038770088, 0.19860761, -0.34576175,
 [sub_resource type="Animation" id="Animation_hu6xn"]
 resource_name = "CharacterArmature|Walk"
 length = 1.3333334
+loop_mode = 1
 tracks/0/type = "position_3d"
 tracks/0/imported = true
 tracks/0/enabled = true
@@ -11008,11 +11009,39 @@ _data = {
 &"CharacterArmature|Wave": SubResource("Animation_4wo4t")
 }
 
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_cvnsp"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cvnsp"]
+animation = &"CharacterArmature|Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vgqql"]
+animation = &"CharacterArmature|Gun_Shoot"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6t5aa"]
+animation = &"CharacterArmature|Walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vgqql"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_cvnsp"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6t5aa"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fkybt"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_x3wgy"]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_6t5aa"]
-states/StateMachine/node = SubResource("AnimationNodeStateMachine_cvnsp")
-states/StateMachine/position = Vector2(343.6, 68.8)
+states/End/position = Vector2(758.4, 94.56)
+states/Start/position = Vector2(211.2, 94.4)
+states/idle/node = SubResource("AnimationNodeAnimation_cvnsp")
+states/idle/position = Vector2(486.25598, 55.246834)
+states/shoot/node = SubResource("AnimationNodeAnimation_vgqql")
+states/shoot/position = Vector2(644.28235, 72.046844)
+states/walking/node = SubResource("AnimationNodeAnimation_6t5aa")
+states/walking/position = Vector2(486.26877, 193.64684)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_vgqql"), "idle", "walking", SubResource("AnimationNodeStateMachineTransition_cvnsp"), "walking", "idle", SubResource("AnimationNodeStateMachineTransition_6t5aa"), "idle", "shoot", SubResource("AnimationNodeStateMachineTransition_fkybt"), "shoot", "idle", SubResource("AnimationNodeStateMachineTransition_x3wgy")]
+graph_offset = Vector2(-88.917694, 16.04684)
 
 [node name="Player" type="CharacterBody3D" unique_id=11007485 groups=["Player"]]
 script = ExtResource("1_4flbx")
@@ -11647,6 +11676,7 @@ transform = Transform3D(-2.1827873e-10, -0.004999999, 2.8194336e-11, 0.005, -2.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerSprite" unique_id=358784650]
 libraries/ = SubResource("AnimationLibrary_llqmx")
+autoplay = &"CharacterArmature|Idle"
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1386733936]
 
@@ -11655,4 +11685,6 @@ transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 1, -0.1)
 shape = SubResource("CapsuleShape3D_sh265")
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=1237754146]
+root_node = NodePath("../PlayerSprite")
 tree_root = SubResource("AnimationNodeStateMachine_6t5aa")
+anim_player = NodePath("../PlayerSprite/AnimationPlayer")

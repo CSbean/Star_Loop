@@ -7,7 +7,7 @@ class_name Player
 @onready var ray_cast_3d: RayCast3D = $Camera3D/RayCast3D
 @onready var spot_light_3d: SpotLight3D = $Camera3D/SpotLight3D
 @onready var ui: Control = $"../UI"
-@onready var animation_tree: AnimationTree = $AnimationTree
+@onready var animation_tree : AnimationNodeStateMachinePlayback= $AnimationTree["parameters/playback"]
 
 var SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -21,6 +21,7 @@ var sprinting_toggle = false
 var pistolVisabilityToggle = false
 var health = 100
 var inventorySlot = 1
+var is_walking := false
 # 0=no door acsees, 1=white, 2=green, 3=yellow, 4=red
 var keycard = 0
 
@@ -54,49 +55,59 @@ func _process(_delta: float) -> void:
 		
 		# animations
 		#interacting
-		if Input.is_action_pressed("interact"):
-			animation_player.play("CharacterArmature|Interact")
-		#shooting
-		if sprinting_toggle and Input.is_action_pressed("shoot"):
-			animation_player.play("CharacterArmature|Run_Shoot")
-			if ray_cast_3d.is_colliding():
-				if ray_cast_3d.get_collider() is Enemy:
-					ray_cast_3d.get_collider().queue_free()
-		elif sprinting_toggle == false and Input.is_action_pressed("shoot"):
-			animation_player.play("CharacterArmature|Gun_Shoot")
-			if ray_cast_3d.is_colliding():
-				if ray_cast_3d.get_collider() is Enemy:
-					ray_cast_3d.get_collider().queue_free()
-		#interacting
-		if Input.is_action_pressed("interact"):
-			animation_player.play("CharacterArmature|Interact")
-		#walking foward
-		elif sprinting_toggle and Input.is_action_pressed("move_forward"):
-			animation_player.play("CharacterArmature|Run")
-		elif sprinting_toggle == false and Input.is_action_pressed("move_forward"):
-			animation_player.play("CharacterArmature|Walk")
+		#if Input.is_action_pressed("interact"):
+			#animation_player.play("CharacterArmature|Interact")
+		##shooting
+		#if sprinting_toggle and Input.is_action_pressed("shoot"):
+			#animation_player.play("CharacterArmature|Run_Shoot")
+			#if ray_cast_3d.is_colliding():
+				#if ray_cast_3d.get_collider() is Enemy:
+					#ray_cast_3d.get_collider().queue_free()
+		#elif sprinting_toggle == false and Input.is_action_pressed("shoot"):
+			#animation_player.play("CharacterArmature|Gun_Shoot")
+			#if ray_cast_3d.is_colliding():
+				#if ray_cast_3d.get_collider() is Enemy:
+					#ray_cast_3d.get_collider().queue_free()
+		##interacting
+		#if Input.is_action_pressed("interact"):
+			#animation_player.play("CharacterArmature|Interact")
+		##walking foward
+		#elif sprinting_toggle and Input.is_action_pressed("move_forward"):
+			#animation_player.play("CharacterArmature|Run")
+		#elif sprinting_toggle == false and Input.is_action_pressed("move_forward"):
+			#animation_player.play("CharacterArmature|Walk")
+			#
 			
-		#walking backwards
-		elif Input.is_action_pressed("move_back"):
-			animation_player.play("CharacterArmature|Run_Back")
-		#walking right
-		elif Input.is_action_pressed("move_right"):
-			animation_player.play("CharacterArmature|Run_Right")
-		#walking left
-		elif Input.is_action_pressed("move_left"):
-			animation_player.play("CharacterArmature|Run_Left")
-
+		if Input.is_action_pressed("move_forward"):
+			animation_tree.travel("walking")
 		else:
-			animation_player.play("CharacterArmature|Idle")
-			
+			animation_tree.travel("idle")
 		
-		
-		if Input.is_action_just_pressed("inventory down"):
-			inventorySlot += 1
-			ui.invChange(inventorySlot)
-			print("don")
-		if Input.is_action_just_pressed("inventory up"):
-			inventorySlot -= 1
+		if Input.is_action_pressed("shoot"):
+			animation_tree.travel("shoot")
+		else:
+			animation_tree.travel("idle")
+		##walking backwards
+		#elif Input.is_action_pressed("move_back"):
+			#animation_player.play("CharacterArmature|Run_Back")
+		##walking right
+		#elif Input.is_action_pressed("move_right"):
+			#animation_player.play("CharacterArmature|Run_Right")
+		##walking left
+		#elif Input.is_action_pressed("move_left"):
+			#animation_player.play("CharacterArmature|Run_Left")
+#
+		#else:
+			#animation_player.play("CharacterArmature|Idle")
+			#
+		#
+		#
+		#if Input.is_action_just_pressed("inventory down"):
+			#inventorySlot += 1
+			#ui.invChange(inventorySlot)
+			#print("don")
+		#if Input.is_action_just_pressed("inventory up"):
+			#inventorySlot -= 1
 
 func _physics_process(delta: float) -> void:
 	if GameManager.paused == false:
