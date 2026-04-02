@@ -48,4 +48,6 @@ func _process(_delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	if (isOpen):
+		print("a")
 		animation_player.play("Close")
+		isOpen = false
