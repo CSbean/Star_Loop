@@ -49,12 +49,12 @@ func _process(_delta: float) -> void:
 			else:
 				SPEED = 5.0
 			
-	
-	
-		
+
+
 		# animations
 		#interacting
 		if Input.is_action_pressed("interact"):
+			
 			animation_player.play("CharacterArmature|Interact")
 		#shooting
 		if sprinting_toggle and Input.is_action_pressed("shoot"):
@@ -153,5 +153,5 @@ func take_damage_p(num:int)->void:
 		ui.lose()
 		change_mouse()
 
-func inventoryChange(num:int)->void:
-	pass
+func update_key(key:int)->void:
+	keycard = key
