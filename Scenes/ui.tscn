@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://k5o1euceqf2c" path="res://Scripts/ui.gd" id="1_jxero"]
 [ext_resource type="Texture2D" uid="uid://cg00fy1425cuc" path="res://Assets/pistiolimg-removebg-preview.png" id="2_qdvrb"]
-[ext_resource type="Texture2D" uid="uid://c71co2yrw006r" path="res://Assets/redcard-Transparint.png" id="3_nf4gj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jxero"]
 font_size = 24
@@ -57,18 +56,13 @@ offset_bottom = 883.0
 scale = Vector2(0.3423177, 0.3423177)
 texture = ExtResource("2_qdvrb")
 
-[node name="TextureRect2" type="TextureRect" parent="." unique_id=102592962]
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=327917247]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
+anchors_preset = 2
 anchor_top = 1.0
-anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -467.0
-offset_top = -80.0
-offset_right = -289.0
-offset_bottom = 47.0
-grow_horizontal = 2
+offset_top = -125.0
+offset_right = 555.0
+offset_bottom = 230.00024
 grow_vertical = 0
-scale = Vector2(0.7698779, 0.7698779)
-texture = ExtResource("3_nf4gj")
+scale = Vector2(0.126, 0.126)

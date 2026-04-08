@@ -1,6 +1,7 @@
 extends Node
 
 var paused :bool = false
+var keycardNum = 0
 
 #credits
 # Astronaut by Quaternius

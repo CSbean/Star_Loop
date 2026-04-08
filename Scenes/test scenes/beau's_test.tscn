@@ -54,4 +54,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2849236, 0.53497994, 0)
 
 [node name="keycard" parent="." unique_id=213014571 instance=ExtResource("4_vho53")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4882064, -9.610832)
-img = 4
+img = 2

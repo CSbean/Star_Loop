@@ -7,8 +7,11 @@ var redCardPic = preload("res://Assets/redcard-Transparint.png")
 
 @onready var health: Label = $Health
 @onready var texture_rect: TextureRect = $TextureRect
+@onready var texture_rect_2: TextureRect = $TextureRect2
 
-
+func _process(_delta: float) -> void:
+	texture_rect_2.position.y = 523 
+	
 func update_health(num:int)->void:
 	health.text = str(num)
 

@@ -34,6 +34,7 @@ func _on_area_3d_body_exited(body: Node3D) -> void:
 func _process(_delta: float) -> void:
 	if (playerNearby):
 		if(Input.is_action_just_pressed("interact")):
-			if img >= player2.keycard:
+			if img >= GameManager.keycardNum:
+				GameManager.keycardNum =img
 				player2.keycard = img
 				print(img)
