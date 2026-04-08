@@ -115,5 +115,7 @@ libraries/ = SubResource("AnimationLibrary_ab4ky")
 [node name="Timer" type="Timer" parent="." unique_id=1634314500]
 wait_time = 6.4
 
+[node name="Node" type="Node" parent="." unique_id=1034215134]
+
 [connection signal="animation_changed" from="AnimationPlayer" to="." method="_on_animation_player_animation_changed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

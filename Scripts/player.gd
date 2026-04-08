@@ -33,6 +33,7 @@ func _process(_delta: float) -> void:
 		spot_light_3d.visible = flashOn
 	if (Input.is_action_just_pressed("reset")):
 		get_tree().reload_current_scene()
+		GameManager.paused = false
 	if (Input.is_action_just_pressed("quit")):
 		get_tree().quit()
 	#dev controls^

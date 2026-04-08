@@ -188,6 +188,11 @@ material = SubResource("StandardMaterial3D_ylabq")
 [node name="Door" parent="Ship/Navigation" unique_id=1607450983 instance=ExtResource("26_n6rtp")]
 transform = Transform3D(1, 0, 0, 0, 0.9007281, 0, 0, 0, 1, -0.47399586, 1.6824739, -4.8271875)
 keycard = 4
+isOpen = false
+enemyPos1 = Vector3(0, 0, 0)
+enemyPos2 = Vector3(0, 0, 0)
+enemyPos3 = Vector3(0, 0, 0)
+enemyPos4 = Vector3(0, 0, 0)
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="Ship/Navigation" unique_id=167365806]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1119726, 2.527653, -4.514233)
@@ -296,6 +301,11 @@ mesh = ExtResource("18_svcei")
 [node name="Door" parent="Ship/Camms" unique_id=1460703074 instance=ExtResource("26_n6rtp")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 0.7683339, 0, 1, 0, -4.371139e-08, -2.9868886, 1.5114397, -8.398799)
 keycard = 1
+isOpen = false
+enemyPos1 = Vector3(0, 0, 0)
+enemyPos2 = Vector3(0, 0, 0)
+enemyPos3 = Vector3(0, 0, 0)
+enemyPos4 = Vector3(0, 0, 0)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Ship/Camms" unique_id=1419044371]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26768255, 1.7907947, -6.269247)
@@ -460,6 +470,11 @@ mesh = ExtResource("12_n6rtp")
 [node name="Door" parent="Ship/Electrical" unique_id=1906550873 instance=ExtResource("26_n6rtp")]
 transform = Transform3D(-4.371139e-08, 0, -1.0583286, 0, 0.8093475, 0, 1, 0, -4.6261015e-08, -3.0248232, 1.5037178, -0.9126694)
 keycard = 3
+isOpen = false
+enemyPos1 = Vector3(0, 0, 0)
+enemyPos2 = Vector3(0, 0, 0)
+enemyPos3 = Vector3(0, 0, 0)
+enemyPos4 = Vector3(0, 0, 0)
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="Ship/Electrical" unique_id=1527786444]
 transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 1.9948192, 0.5117185, 1.8854353)
@@ -616,8 +631,16 @@ visible = false
 use_collision = true
 
 [node name="Door" parent="Ship/Medbay" unique_id=122950931 instance=ExtResource("26_n6rtp")]
-transform = Transform3D(4.326487e-08, 3.1426413e-15, -1, 8.652974e-08, -0.82238585, 0, -0.9897848, -7.189526e-08, -4.371139e-08, -2.2458527, -1.5046202, -0.26815793)
+transform = Transform3D(4.4985253e-08, 5.302269e-15, -0.845, 1.5539622e-07, -0.80334544, 6.203184e-22, -1.0291426, -1.213018e-07, -3.6936125e-08, -2.2458527, -1.4657967, -0.26815793)
 keycard = 1
+isOpen = false
+enemyPos1 = Vector3(-2.911, 0, 3.43)
+enemyPos2 = Vector3(0, 0, 0)
+enemyPos3 = Vector3(0, 0, 0)
+enemyPos4 = Vector3(0, 0, 0)
+
+[node name="Node3D" type="Node3D" parent="Ship/Medbay/Door" unique_id=1097339398]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.911, 0, 3.43)
 
 [node name="Comms" type="Node3D" parent="Ship" unique_id=244032344]
 transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, -1, -6.0754633, 0, -13.346778)
@@ -703,6 +726,11 @@ mesh = ExtResource("3_ki8ce")
 [node name="Door" parent="Ship/Comms" unique_id=1427598898 instance=ExtResource("26_n6rtp")]
 transform = Transform3D(4.50769e-08, -6.308251e-08, -1, 0, -0.72157985, 8.742278e-08, -1.0312393, 0, -4.371139e-08, -2.2820656, -1.6151925, 1.0736766)
 keycard = 1
+isOpen = false
+enemyPos1 = Vector3(0, 0, 0)
+enemyPos2 = Vector3(0, 0, 0)
+enemyPos3 = Vector3(0, 0, 0)
+enemyPos4 = Vector3(0, 0, 0)
 
 [node name="RootScenePropsComputerSmall4" type="MeshInstance3D" parent="Ship/Comms" unique_id=1639857380]
 transform = Transform3D(1.0239398e-05, 348.9655, -5.5993724e-13, -1.0239399e-05, -6.6676347e-13, -146.52785, 234.2501, -1.5253768e-05, -6.404935e-06, 8.169467, -0.118226364, 1.1048079)
@@ -886,6 +914,11 @@ size = Vector3(0.01587207, 0.0029414063, 0.027837891)
 [node name="Door" parent="Ship/Hall" unique_id=661905179 instance=ExtResource("26_n6rtp")]
 transform = Transform3D(-3.6216107e-08, 0, 1, 0, 0.7459958, 0, -0.8285279, 0, -4.371139e-08, -3.1218362, 1.5776426, -4.8350973)
 keycard = 10
+isOpen = false
+enemyPos1 = Vector3(0, 0, 0)
+enemyPos2 = Vector3(0, 0, 0)
+enemyPos3 = Vector3(0, 0, 0)
+enemyPos4 = Vector3(0, 0, 0)
 
 [node name="Node3D" type="Node3D" parent="Ship/Hall" unique_id=195090952]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19.542032, 0.006317448, 8.508746)
