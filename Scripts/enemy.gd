@@ -3,6 +3,7 @@ class_name Enemy
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
 @onready var animation_player: AnimationPlayer = $EnemySprite/AnimationPlayer
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
+@onready var looker: RayCast3D = $Looker
 
 var health := 100
 var state : String = "Idle"
@@ -19,22 +20,25 @@ func _process(_delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	if GameManager.paused == false:
-		navigation_agent_3d.target_position = player.global_position
 		var destination = navigation_agent_3d.get_next_path_position()
 		var local_destination = destination - self.global_position
 		var direction = local_destination.normalized()
 		
 		self.velocity = direction * spd
 		
-		look_at(player.global_position)
+		look_at(player.global_position, Vector3.UP)
 		
-		
-		# Add the gravity.
 		if not is_on_floor():
 			velocity += get_gravity() * delta
 		move_and_slide()
-
-
+		var x = randi_range(0,360)
+		var y = randi_range(0,360)
+		looker.rotate_y(x)
+		looker.rotate_x(y)
+		print(looker.get_collider())
+		if (looker.get_collider() is Player):
+			navigation_agent_3d.target_position = player.global_position
+			
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is Player:

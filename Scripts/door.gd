@@ -10,10 +10,6 @@ var enemyScene : PackedScene = preload("res://Scenes/enemy.tscn")
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
 @onready var root_scene_door_single: MeshInstance3D = $RootSceneDoorSingle
 @onready var timer: Timer = $Timer
-@export var enemyPos1 : Vector3
-@export var enemyPos2 : Vector3
-@export var enemyPos3 : Vector3
-@export var enemyPos4 : Vector3
 var isMoving := false
 var hasBeenOpened := false
 const YELLOW_DOOR = preload("uid://dvpcoiews1m4i")
@@ -46,9 +42,6 @@ func _process(_delta: float) -> void:
 					timer.start(6.4)
 					animation_player.play("Open")
 					isOpen = true
-					if !(hasBeenOpened):
-						#spawn_enemies()
-						pass
 					hasBeenOpened = true
 				else:
 					isOpen = false
@@ -59,31 +52,5 @@ func _process(_delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	if (isOpen):
-		print("a")
 		animation_player.play("Close")
 		isOpen = false
-
-func spawn_enemies() -> void:
-	var currScale = scale
-	scale = Vector3.ONE
-	if (enemyPos1 != null):
-		var newEnemy : Enemy = enemyScene.instantiate()
-		node.add_child(newEnemy)
-		newEnemy.global_position = enemyPos1
-		newEnemy.scale = Vector3.ONE
-	if (enemyPos2 != null):
-		var newEnemy : Enemy = enemyScene.instantiate()
-		node.add_child(newEnemy)
-		newEnemy.global_position = enemyPos2
-		newEnemy.scale = Vector3.ONE
-	if (enemyPos3 != null):
-		var newEnemy : Enemy = enemyScene.instantiate()
-		node.add_child(newEnemy)
-		newEnemy.global_position = enemyPos3
-		newEnemy.scale = Vector3.ONE
-	if (enemyPos4 != null):
-		var newEnemy : Enemy = enemyScene.instantiate()
-		node.add_child(newEnemy)
-		newEnemy.global_position = enemyPos4
-		newEnemy.scale = Vector3.ONE
-	scale = currScale
