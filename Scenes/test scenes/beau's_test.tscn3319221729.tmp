@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cd2r8ccrcojic" path="res://Scenes/player.tscn" id="1_d37i2"]
 [ext_resource type="PackedScene" uid="uid://dx7a0xb2opwj2" path="res://Scenes/enemy.tscn" id="2_0ao83"]
+[ext_resource type="PackedScene" uid="uid://cwysuvsvdvkp1" path="res://Scenes/ui.tscn" id="3_sq7uq"]
 [ext_resource type="PackedScene" uid="uid://bwmtkmwv42ju3" path="res://Scenes/keycard.tscn" id="4_vho53"]
 [ext_resource type="Texture2D" uid="uid://0mjruwe7cih7" path="res://Assets/green-Pickup Key Card_Atlas.png" id="5_yvudw"]
 [ext_resource type="Texture2D" uid="uid://cnewc8mb10yk0" path="res://Assets/red-Pickup Key Card_Atlas.png" id="6_klomi"]
@@ -50,6 +51,8 @@ size = Vector3(100, 1, 100)
 
 [node name="Enemy" parent="." unique_id=888042827 instance=ExtResource("2_0ao83")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2849236, 0.53497994, 0)
+
+[node name="UI" parent="." unique_id=836688804 instance=ExtResource("3_sq7uq")]
 
 [node name="keycard" parent="." unique_id=213014571 instance=ExtResource("4_vho53")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9658318, 1.408741, -6.926296)
