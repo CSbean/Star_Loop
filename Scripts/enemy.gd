@@ -35,7 +35,6 @@ func _physics_process(delta: float) -> void:
 		var y = randi_range(0,360)
 		looker.rotate_y(x)
 		looker.rotate_x(y)
-		print(looker.get_collider())
 		if (looker.get_collider() is Player):
 			navigation_agent_3d.target_position = player.global_position
 			

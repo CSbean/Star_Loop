@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hdphecjhh7ie"
-path="res://.godot/imported/Screenshot_2026-04-08_122521-removebg-preview.png-cb71b8672bb9122150842f926b68fc43.ctex"
+uid="uid://cbip6wbexx8wx"
+path="res://.godot/imported/mexico.png-ecdfc7b591faaf59c60979c7fd230fa5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/keycard Images/Screenshot_2026-04-08_122521-removebg-preview.png"
-dest_files=["res://.godot/imported/Screenshot_2026-04-08_122521-removebg-preview.png-cb71b8672bb9122150842f926b68fc43.ctex"]
+source_file="res://Assets/keycard Images/mexico.png"
+dest_files=["res://.godot/imported/mexico.png-ecdfc7b591faaf59c60979c7fd230fa5.ctex"]
 
 [params]
 
