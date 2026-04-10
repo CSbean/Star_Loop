@@ -13,4 +13,4 @@ var keycardNum = 0
 #Pickup Key Card by Quaternius
 #Pickup Health by Quaternius
 #Bullets Pickup by Quaternius
-#
+#Coil Gun by Vas Pupin [CC-BY] via Poly Pizza
