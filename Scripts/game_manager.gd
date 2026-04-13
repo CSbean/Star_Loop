@@ -14,3 +14,17 @@ var keycardNum = 0
 #Pickup Health by Quaternius
 #Bullets Pickup by Quaternius
 #Coil Gun by Vas Pupin [CC-BY] via Poly Pizza
+#Space engine by Poly by Google [CC-BY] via Poly Pizza
+#Sci Fi Engine by Dipper98
+#
+#
+#
+#
+#
+##Method 1: Automatic Generation (Editor)
+#Select your MeshInstance3D node in the Scene tree.
+#In the 3D viewport toolbar, click the Mesh button.
+#Choose Create Trimesh Static Sibling for complex, accurate collisions (like terrain).
+#Choose Create Convex Static Sibling for simpler, high-performance collisions (like boxes or walls).
+#Result: Godot automatically creates a StaticBody3D with a CollisionShape3D as a sibling node.
+#
