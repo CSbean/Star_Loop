@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://k5o1euceqf2c" path="res://Scripts/ui.gd" id="1_jxero"]
 [ext_resource type="Texture2D" uid="uid://cg00fy1425cuc" path="res://Assets/pistiolimg-removebg-preview.png" id="2_qdvrb"]
 [ext_resource type="Texture2D" uid="uid://c7tiqnk1ejsjs" path="res://Assets/keycard Images/whitePic.png" id="3_nf4gj"]
+[ext_resource type="FontFile" uid="uid://utlrlorup56u" path="res://Assets/Orbitron-VariableFont_wght.ttf" id="4_2246s"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jxero"]
 font_size = 24
@@ -346,9 +347,9 @@ label_settings = SubResource("LabelSettings_qdvrb")
 
 [node name="GunText" type="TextureRect" parent="." unique_id=114671122]
 layout_mode = 0
-offset_left = 914.0
+offset_left = 880.00006
 offset_top = 525.0
-offset_right = 1610.0
+offset_right = 1576.0
 offset_bottom = 883.0
 scale = Vector2(0.3423177, 0.3423177)
 texture = ExtResource("2_qdvrb")
@@ -384,3 +385,15 @@ mesh = SubResource("ArrayMesh_wm0nv")
 [node name="barrel" type="MeshInstance3D" parent="Keycards/Root Scene/RootNode/weapon_scifi_shotgun" unique_id=905166948]
 transform = Transform3D(1, 6.691841e-08, 1.8385674e-07, 7.1054274e-15, 0.93969256, -0.3420203, -1.9565627e-07, 0.3420203, 0.93969256, 0.46734777, -0.05930373, 0.085633315)
 mesh = SubResource("ArrayMesh_rsn1v")
+
+[node name="Timer" type="Polygon2D" parent="." unique_id=947987071]
+color = Color(0.5084974, 0.5084975, 0.50849724, 1)
+polygon = PackedVector2Array(448, 0, 512, 64, 640, 64, 704, 0)
+
+[node name="TimerLabel" type="Label" parent="Timer" unique_id=1112565795]
+offset_left = 528.0
+offset_right = 723.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("4_2246s")
+theme_override_font_sizes/font_size = 52
+text = "143"

@@ -21,8 +21,17 @@ var sprinting_toggle = false
 var pistolVisabilityToggle = false
 var health = 100
 var inventorySlot = 1
-# 0=no door acsees, 1=white, 2=green, 3=yellow, 4=red
+## 0=no door acsees, 1=white, 2=green, 3=yellow, 4=red
 var keycard = 0
+
+### TO-DO LIST 
+	#Finish MAP!!!!! - Beau
+	#Get time loop working - Ben
+	#Add Ammo - Ben
+	#Add win/lose ui
+	#Add SFX
+	#Add Start Screen UI + Settings
+	
 
 func _ready() -> void:
 	change_mouse()
@@ -70,14 +79,6 @@ func _process(_delta: float) -> void:
 					ray_cast_3d.get_collider().queue_free()
 		
 		
-		
-		if Input.is_action_just_pressed("inventory down"):
-			inventorySlot += 1
-			ui.invChange(inventorySlot)
-			print("don")
-		if Input.is_action_just_pressed("inventory up"):
-			inventorySlot -= 1
-
 func _physics_process(delta: float) -> void:
 	if GameManager.paused == false:
 		# Add the gravity.

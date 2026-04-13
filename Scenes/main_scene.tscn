@@ -59,6 +59,15 @@ shader_parameter/density_heat_strength = 1.0
 shader_parameter/density_heat_power = 0.10000000149012
 shader_parameter/rs = 0.7
 
+[sub_resource type="Animation" id="Animation_x6ack"]
+resource_name = "new_animation"
+length = 150.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iacmt"]
+_data = {
+&"new_animation": SubResource("Animation_x6ack")
+}
+
 [node name="MainScene" type="Node3D" unique_id=1876643400]
 script = ExtResource("1_6l7je")
 
@@ -72,7 +81,7 @@ shadow_enabled = true
 [node name="Space Objects" type="Node3D" parent="." unique_id=1562453782]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Space Objects" unique_id=81903307]
-transform = Transform3D(13.130293, -1.2301751, -6.913336, 3.9884598, 13.371937, 5.1957293, 5.7792497, -6.433513, 12.121151, 0, 0, 997.6124)
+transform = Transform3D(13.130293, -1.2301751, -6.913336, 3.9884598, 13.371937, 5.1957293, 5.7792497, -6.433513, 12.121151, 0, 0, 1734.1683)
 mesh = SubResource("SphereMesh_iacmt")
 surface_material_override/0 = SubResource("ShaderMaterial_x6ack")
 
@@ -84,3 +93,7 @@ autostart = true
 [node name="Ship" type="Node3D" parent="." unique_id=1605910709]
 
 [node name="BensSpecialPlace" parent="Ship" unique_id=1311132722 instance=ExtResource("4_x6ack")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1308420402]
+libraries/ = SubResource("AnimationLibrary_iacmt")
+autoplay = &"new_animation"
