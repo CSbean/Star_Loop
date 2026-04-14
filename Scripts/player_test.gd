@@ -1,6 +1,14 @@
 extends CharacterBody3D
 #class_name Player
 
+#
+#Hush Angel
+#
+#
+#
+#
+#
+
 @onready var camera_3d: Camera3D = $Camera3D
 @onready var animation_player: AnimationPlayer = $PlayerSprite/AnimationPlayer
 @onready var scifi_pistol: Node3D = $PlayerSprite/RootNode/CharacterArmature/Skeleton3D/BoneAttachment3D/ScifiPistol
