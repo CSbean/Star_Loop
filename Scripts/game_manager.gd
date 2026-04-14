@@ -16,8 +16,8 @@ var keycardNum = 0
 #Coil Gun by Vas Pupin [CC-BY] via Poly Pizza
 #Space engine by Poly by Google [CC-BY] via Poly Pizza
 #Sci Fi Engine by Dipper98
-#
-#
+#Ammo Shotgun by CreativeTrio
+#Ammo Sniper by CreativeTrio
 #
 #
 #

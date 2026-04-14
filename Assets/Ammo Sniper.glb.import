@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c4tjc0p50uggg"
-path="res://.godot/imported/Space engine.glb-d7086bf2a4552c16f3385341dfb88c4e.scn"
+uid="uid://bjya3y7lryxks"
+path="res://.godot/imported/Ammo Sniper.glb-2f9131dc1d0ab1f55ab7c17c52082556.scn"
 
 [deps]
 
-source_file="res://Assets/Space engine.glb"
-dest_files=["res://.godot/imported/Space engine.glb-d7086bf2a4552c16f3385341dfb88c4e.scn"]
+source_file="res://Assets/Ammo Sniper.glb"
+dest_files=["res://.godot/imported/Ammo Sniper.glb-2f9131dc1d0ab1f55ab7c17c52082556.scn"]
 
 [params]
 

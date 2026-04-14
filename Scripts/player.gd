@@ -10,7 +10,10 @@ class_name Player
 @onready var animation_tree: AnimationTree = $AnimationTree
 
 var SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+const JUMP_VELOCITY = 4.
+var shotgunRounds := 0
+var pistolRounds := 0
+var rifleRounds := 0
 
 #camra var's
 var look_dir: Vector2
@@ -20,6 +23,7 @@ var flashOn := false
 var sprinting_toggle = false
 var pistolVisabilityToggle = false
 var health = 100
+##AR = 0, Shotgun = 1, Pistol = 2
 var inventorySlot = 1
 ## 0=no door acsees, 1=white, 2=green, 3=yellow, 4=red
 var keycard = 0
@@ -28,15 +32,16 @@ var keycard = 0
 	#Finish MAP!!!!! - Beau
 	#Get time loop working - Ben
 	#Add Ammo - Ben
-	#Add win/lose ui
-	#Add SFX
-	#Add Start Screen UI + Settings
+	#Add win/lose ui - Ben
+	#Add SFX - Beau
+	#Add Start Screen UI + Settings - Ben
 	
 
 func _ready() -> void:
 	change_mouse()
 
 func _process(_delta: float) -> void:
+	print(pistolRounds)
 	if (Input.is_action_just_pressed("Flashlight")):
 		flashOn = !flashOn
 		spot_light_3d.visible = flashOn
@@ -67,17 +72,24 @@ func _process(_delta: float) -> void:
 
 			animation_player.play("CharacterArmature|Interact")
 		#shooting
-		if sprinting_toggle and Input.is_action_pressed("shoot"):
+		if(Input.is_action_just_pressed("shoot")):
 			animation_player.play("CharacterArmature|Run_Shoot")
 			if ray_cast_3d.is_colliding():
 				if ray_cast_3d.get_collider() is Enemy:
-					ray_cast_3d.get_collider().queue_free()
-		elif sprinting_toggle == false and Input.is_action_pressed("shoot"):
-			animation_player.play("CharacterArmature|Gun_Shoot")
-			if ray_cast_3d.is_colliding():
-				if ray_cast_3d.get_collider() is Enemy:
-					ray_cast_3d.get_collider().queue_free()
-		
+					var enemy : Enemy = ray_cast_3d.get_collider()
+					if (inventorySlot == 0):
+						if (rifleRounds > 0):
+							rifleRounds -= 1
+							enemy.health -= 30
+					elif (inventorySlot == 1):
+						if (shotgunRounds > 0):
+							shotgunRounds -= 1
+							enemy.health -= 500/(self.global_position.distance_to(enemy.global_position))
+					elif (inventorySlot == 2):
+						if (pistolRounds > 0):
+							enemy.health -= 40
+							pistolRounds -= 1
+			
 		
 func _physics_process(delta: float) -> void:
 	if GameManager.paused == false:
@@ -133,7 +145,3 @@ func take_damage_p(num:int)->void:
 	if health <= 0:
 		ui.lose()
 		change_mouse()
-
-func update_key(key:int)->void:
-	pass
-	#keycard = key

@@ -37,7 +37,9 @@ func _physics_process(delta: float) -> void:
 		looker.rotate_x(y)
 		if (looker.get_collider() is Player):
 			navigation_agent_3d.target_position = player.global_position
-			
+		
+		if (health <= 0):
+			self.queue_free()
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is Player:
