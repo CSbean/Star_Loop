@@ -1,6 +1,7 @@
 extends Node3D
 #Preliminary code to have the door open for the player
 #All doors will have to be instantiated from this scene
+## 0=no door acsees, 1=white, 2=green, 3=yellow, 4=red
 @export var keycard : int
 var player : Player
 var nearby := false
