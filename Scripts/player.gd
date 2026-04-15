@@ -31,7 +31,7 @@ var keycard = 0
 ### TO-DO LIST 
 	#Finish MAP!!!!! - Beau
 	#Get time loop working - Ben
-	#Add Ammo - Ben
+	#Add Ammo - Ben - Done
 	#Add win/lose ui - Ben
 	#Add SFX - Beau
 	#Add Start Screen UI + Settings - Ben
