@@ -3,9 +3,10 @@ extends Node
 var paused :bool = false
 var keycardNum = 0
 
-#credits
-# Astronaut by Quaternius
-# Scifi Pistol by Quaternius
+###credits
+#Ship Assets by Quaternius
+#Astronaut by Quaternius
+#Scifi Pistol by Quaternius
 #Sci-Fi Shotgun by burunduk [CC-BY] via Poly Pizza
 #Alien by Quaternius
 #Cockpit control center by Poly by Google [CC-BY]
@@ -20,6 +21,22 @@ var keycardNum = 0
 #Ammo Sniper by CreativeTrio
 #
 #
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #
 ##Method 1: Automatic Generation (Editor)
 #Select your MeshInstance3D node in the Scene tree.

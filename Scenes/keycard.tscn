@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://bwmtkmwv42ju3"]
 
 [ext_resource type="Script" uid="uid://dalcocninsa6i" path="res://Scripts/keycard.gd" id="1_1y4ih"]
-[ext_resource type="Texture2D" uid="uid://c5456sqy5iiba" path="res://Assets/Pickup Key Card_Atlas.png" id="1_04gs5"]
-[ext_resource type="Texture2D" uid="uid://co5vthwxv5krp" path="res://Assets/white-Pickup Key Card_Atlas.png" id="2_1y4ih"]
+[ext_resource type="Texture2D" uid="uid://c5456sqy5iiba" path="res://Assets/keycard Images/Pickup Key Card_Atlas.png" id="1_04gs5"]
+[ext_resource type="Texture2D" uid="uid://co5vthwxv5krp" path="res://Assets/keycard Images/white-Pickup Key Card_Atlas.png" id="2_1y4ih"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1y4ih"]
 size = Vector3(1.5, 1.5, 1.5)

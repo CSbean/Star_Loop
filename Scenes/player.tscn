@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c1pylbiopkyv0" path="res://Scripts/player.gd" id="1_4flbx"]
 [ext_resource type="PackedScene" uid="uid://cwysuvsvdvkp1" path="res://Scenes/ui.tscn" id="2_6t5aa"]
-[ext_resource type="PackedScene" uid="uid://uxgjnu5adkd4" path="res://Assets/Scifi Pistol.glb" id="2_cvnsp"]
+[ext_resource type="PackedScene" uid="uid://uxgjnu5adkd4" path="res://Assets/Gun assets/Scifi Pistol.glb" id="2_cvnsp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
 
@@ -11674,7 +11674,7 @@ transform = Transform3D(-0.32974344, -0.0025433414, -0.9440669, 0.8942997, -0.32
 bone_name = "Wrist.R"
 bone_idx = 34
 
-[node name="ScifiPistol" parent="PlayerSprite/RootNode/CharacterArmature/Skeleton3D/BoneAttachment3D" unique_id=2106636435 instance=ExtResource("2_cvnsp")]
+[node name="ScifiPistol" parent="PlayerSprite/RootNode/CharacterArmature/Skeleton3D/BoneAttachment3D" unique_id=271094977 instance=ExtResource("2_cvnsp")]
 transform = Transform3D(-2.1827873e-10, -0.004999999, 2.8194336e-11, 0.005, -2.0372681e-10, 2.910383e-11, 0, -2.0691004e-11, 0.004999999, -6.765872e-05, 0.001288299, -0.00031268527)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerSprite" unique_id=358784650]

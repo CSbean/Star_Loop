@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cpij1nn6bh4gq"]
 
-[ext_resource type="PackedScene" uid="uid://icial7a444qy" path="res://Assets/Pickup Health.glb" id="1_7r188"]
+[ext_resource type="PackedScene" uid="uid://icial7a444qy" path="res://Assets/Gun assets/Pickup Health.glb" id="1_7r188"]
 [ext_resource type="Script" uid="uid://cqatn6dqyywbb" path="res://Scripts/ammo.gd" id="1_uunpu"]
-[ext_resource type="PackedScene" uid="uid://2t03vhjm2ho8" path="res://Assets/Bullets Pickup.glb" id="2_uunpu"]
-[ext_resource type="PackedScene" uid="uid://bjya3y7lryxks" path="res://Assets/Ammo Sniper.glb" id="3_j57vc"]
-[ext_resource type="PackedScene" uid="uid://gypgfoqnogqv" path="res://Assets/Ammo Shotgun.glb" id="4_dl8qa"]
+[ext_resource type="PackedScene" uid="uid://2t03vhjm2ho8" path="res://Assets/Gun assets/Bullets Pickup.glb" id="2_uunpu"]
+[ext_resource type="PackedScene" uid="uid://bjya3y7lryxks" path="res://Assets/Gun assets/Ammo Sniper.glb" id="3_j57vc"]
+[ext_resource type="PackedScene" uid="uid://gypgfoqnogqv" path="res://Assets/Gun assets/Ammo Shotgun.glb" id="4_dl8qa"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mx48c"]
 size = Vector3(1.5882568, 2.0233154, 1.305542)
@@ -16,17 +16,17 @@ script = ExtResource("1_uunpu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03302002, 0.13391769, 0.0048217773)
 shape = SubResource("BoxShape3D_mx48c")
 
-[node name="Medkit" parent="." unique_id=1919941488 instance=ExtResource("1_7r188")]
+[node name="Medkit" parent="." unique_id=772751660 instance=ExtResource("1_7r188")]
 visible = false
 
-[node name="PistolAmmo" parent="." unique_id=1410636541 instance=ExtResource("2_uunpu")]
+[node name="PistolAmmo" parent="." unique_id=618211410 instance=ExtResource("2_uunpu")]
 visible = false
 
-[node name="RifleAmmo" parent="." unique_id=361554162 instance=ExtResource("3_j57vc")]
+[node name="RifleAmmo" parent="." unique_id=2002970416 instance=ExtResource("3_j57vc")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.043230593, 0, 0.27516186)
 visible = false
 
-[node name="ShotgunAmmo" parent="." unique_id=1650628128 instance=ExtResource("4_dl8qa")]
+[node name="ShotgunAmmo" parent="." unique_id=1081824879 instance=ExtResource("4_dl8qa")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.15364629, 0, -0.29506522)
 visible = false
 

@@ -17,7 +17,7 @@ var rifleRounds := 0
 
 #camra var's
 var look_dir: Vector2
-var camra_sense := 50
+var camra_sense := 50#50
 var capMouse := false
 var flashOn := false
 var sprinting_toggle = false
@@ -41,7 +41,6 @@ func _ready() -> void:
 	change_mouse()
 
 func _process(_delta: float) -> void:
-	print(pistolRounds)
 	if (Input.is_action_just_pressed("Flashlight")):
 		flashOn = !flashOn
 		spot_light_3d.visible = flashOn
@@ -77,6 +76,7 @@ func _process(_delta: float) -> void:
 			if ray_cast_3d.is_colliding():
 				if ray_cast_3d.get_collider() is Enemy:
 					var enemy : Enemy = ray_cast_3d.get_collider()
+					print(inventorySlot)
 					if (inventorySlot == 0):
 						if (rifleRounds > 0):
 							rifleRounds -= 1

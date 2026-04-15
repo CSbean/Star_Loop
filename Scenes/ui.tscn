@@ -1,9 +1,10 @@
 [gd_scene format=4 uid="uid://cwysuvsvdvkp1"]
 
 [ext_resource type="Script" uid="uid://k5o1euceqf2c" path="res://Scripts/ui.gd" id="1_jxero"]
-[ext_resource type="Texture2D" uid="uid://cg00fy1425cuc" path="res://Assets/pistiolimg-removebg-preview.png" id="2_qdvrb"]
+[ext_resource type="Texture2D" uid="uid://cg00fy1425cuc" path="res://Assets/Gun assets/pistiolimg-removebg-preview.png" id="2_qdvrb"]
 [ext_resource type="Texture2D" uid="uid://c7tiqnk1ejsjs" path="res://Assets/keycard Images/whitePic.png" id="3_nf4gj"]
 [ext_resource type="FontFile" uid="uid://utlrlorup56u" path="res://Assets/Orbitron-VariableFont_wght.ttf" id="4_2246s"]
+[ext_resource type="FontFile" uid="uid://cghhnoa1eyfux" path="res://Assets/SFX & VFX/Orbitron,Saira_Stencil/Saira_Stencil/SairaStencil-VariableFont_wdth,wght.ttf" id="5_q7pk6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jxero"]
 font_size = 24
@@ -397,3 +398,14 @@ offset_bottom = 73.0
 theme_override_fonts/font = ExtResource("4_2246s")
 theme_override_font_sizes/font_size = 52
 text = "143"
+
+[node name="ammoLabel" type="Label" parent="." unique_id=2011456160]
+layout_mode = 0
+offset_left = 792.00006
+offset_top = 535.99994
+offset_right = 1337.0
+offset_bottom = 1362.0
+scale = Vector2(0.17006701, 0.13095368)
+theme_override_fonts/font = ExtResource("5_q7pk6")
+theme_override_font_sizes/font_size = 524
+text = "10"

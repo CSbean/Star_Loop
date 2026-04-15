@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cy584fim1x8y8"
+path="res://.godot/imported/breathing.wav-51ba6cd273ae2180238bc244ee44d04e.sample"
+
+[deps]
+
+source_file="res://Assets/SFX & VFX/sfx/breathing.wav"
+dest_files=["res://.godot/imported/breathing.wav-51ba6cd273ae2180238bc244ee44d04e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
