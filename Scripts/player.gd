@@ -14,6 +14,9 @@ const JUMP_VELOCITY = 4.
 var shotgunRounds := 0
 var pistolRounds := 0
 var rifleRounds := 0
+var hasRifle := false
+var hasShotgun := false
+var hasPistol := false
 
 #camra var's
 var look_dir: Vector2
@@ -31,11 +34,11 @@ var keycard = 0
 ### TO-DO LIST 
 	#Finish MAP!!!!! - Beau
 	#Get time loop working - Ben
-	#Add Ammo - Ben - Done
+	#Add Ammo - Ben - DONE
 	#Add win/lose ui - Ben
 	#Add SFX - Beau
 	#Add Start Screen UI + Settings - Ben
-	
+	#Add Bossfight
 
 func _ready() -> void:
 	change_mouse()
@@ -74,21 +77,21 @@ func _process(_delta: float) -> void:
 		if(Input.is_action_just_pressed("shoot")):
 			animation_player.play("CharacterArmature|Run_Shoot")
 			if ray_cast_3d.is_colliding():
-				if ray_cast_3d.get_collider() is Enemy:
-					var enemy : Enemy = ray_cast_3d.get_collider()
-					print(inventorySlot)
-					if (inventorySlot == 0):
-						if (rifleRounds > 0):
-							rifleRounds -= 1
-							enemy.health -= 30
-					elif (inventorySlot == 1):
-						if (shotgunRounds > 0):
-							shotgunRounds -= 1
-							enemy.health -= 500/(self.global_position.distance_to(enemy.global_position))
-					elif (inventorySlot == 2):
-						if (pistolRounds > 0):
-							enemy.health -= 40
-							pistolRounds -= 1
+				if (inventorySlot == 0):
+					if (rifleRounds > 0):
+						rifleRounds -= 1
+						if (ray_cast_3d.get_collider() is Enemy):
+							ray_cast_3d.get_collider().health -= 30
+				elif (inventorySlot == 1):
+					if (shotgunRounds > 0):
+						shotgunRounds -= 1
+						if (ray_cast_3d.get_collider() is Enemy):
+							ray_cast_3d.get_collider().health -= 500/(self.global_position.distance_to(ray_cast_3d.get_collider().global_position))
+				elif (inventorySlot == 2):
+					if (pistolRounds > 0):
+						pistolRounds -= 1
+						if (ray_cast_3d.get_collider() is Enemy):
+							ray_cast_3d.get_collider().health -= 40
 			
 		
 func _physics_process(delta: float) -> void:

@@ -12,8 +12,8 @@ var redPic = preload("res://Assets/keycard Images/Redcardpic.png")
 var whitePic = preload("res://Assets/keycard Images/whitePic.png")
 var yellowPic = preload("res://Assets/keycard Images/yellowcardpic.png")
 @onready var keycard: Sprite2D = $Keycards/keycard
-## 0 is pistol, 1 - shotgun, 2 - AK
-var selectedGun := 0
+## 2 is pistol, 1 - shotgun, 0 - AK
+var selectedGun := 2
 @onready var health: Label = $Health
 @onready var gun_text: TextureRect = $GunText
 @onready var ammo_label: Label = $ammoLabel
@@ -32,6 +32,8 @@ func _process(_delta: float) -> void:
 		keycard.texture = yellowPic
 	elif (GameManager.keycardNum == 4):
 		keycard.texture = redPic
+	gun_text.visible = player.hasPistol
+	ammo_label.visible = player.hasPistol
 	if (Input.is_action_just_pressed("inventory up")):
 		selectedGun +=1
 		if (selectedGun >= 3):
@@ -39,6 +41,10 @@ func _process(_delta: float) -> void:
 		player.inventorySlot = selectedGun
 	if (Input.is_action_just_pressed("inventory down")):
 		selectedGun -=1
+		if (selectedGun == 1) and !(player.hasShotgun):
+			selectedGun +=1
+		elif (selectedGun == 0) and !(player.hasRifle):
+			selectedGun +=1
 		if (selectedGun <= -1):
 			selectedGun = 0
 		player.inventorySlot = selectedGun

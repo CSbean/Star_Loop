@@ -2,6 +2,45 @@
 
 [ext_resource type="Script" uid="uid://ca6nwn066cada" path="res://Scripts/UI Scripts/StartScreen.gd" id="1_7aale"]
 [ext_resource type="Texture2D" uid="uid://bteme5q742bs6" path="res://Assets/blackholesun.jpg" id="2_pt772"]
+[ext_resource type="FontFile" uid="uid://utlrlorup56u" path="res://Assets/Orbitron-VariableFont_wght.ttf" id="3_pt772"]
+
+[sub_resource type="Animation" id="Animation_mmqgp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.78431374, 0.09803922, 0.09803922, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lsrb6"]
+resource_name = "titleAnim"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:theme_override_colors/font_color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.78431374, 0.09803922, 0.09803922, 0), Color(0.78431374, 0.09803922, 0.09803922, 1), Color(0.78431374, 0.09803922, 0.09803922, 1), Color(0.78431374, 0.09803922, 0.09803922, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sh1a5"]
+_data = {
+&"RESET": SubResource("Animation_mmqgp"),
+&"titleAnim": SubResource("Animation_lsrb6")
+}
 
 [node name="StartScreen" type="Control" unique_id=1665942493]
 layout_mode = 3
@@ -14,11 +53,62 @@ script = ExtResource("1_7aale")
 
 [node name="BGimg" type="Sprite2D" parent="." unique_id=1701636570]
 texture_filter = 1
+texture_repeat = 3
 position = Vector2(575.9999, 325.24994)
 scale = Vector2(1.7544377, 1.7467191)
 texture = ExtResource("2_pt772")
 
-[node name="Control" type="Control" parent="." unique_id=2006878942]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Menu" type="Panel" parent="." unique_id=455130638]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 440.0
+offset_right = 1072.0
+offset_bottom = 634.0
+
+[node name="Settings" type="Button" parent="Menu" unique_id=120780036]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 16.0
+offset_right = 217.0
+offset_bottom = 188.95218
+scale = Vector2(0.97487646, 1.0176224)
+theme_override_fonts/font = ExtResource("3_pt772")
+theme_override_font_sizes/font_size = 46
+text = "Settings"
+
+[node name="Start" type="Button" parent="Menu" unique_id=1050500611]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 16.0
+offset_right = 924.0
+offset_bottom = 186.0
+scale = Vector2(0.76415616, 1.0304277)
+theme_override_colors/font_color = Color(0.6044637, 0.60446376, 0.60446376, 1)
+theme_override_fonts/font = ExtResource("3_pt772")
+theme_override_font_sizes/font_size = 124
+text = "Wake Up..."
+
+[node name="Quit" type="Button" parent="Menu" unique_id=275038551]
+layout_mode = 0
+offset_left = 766.0
+offset_top = 16.0
+offset_right = 974.0
+offset_bottom = 192.0
+theme_override_fonts/font = ExtResource("3_pt772")
+theme_override_font_sizes/font_size = 46
+text = "Quit"
+
+[node name="Title" type="Label" parent="." unique_id=2105903574]
+layout_mode = 0
+offset_left = 55.0
+offset_top = -5.0
+offset_right = 1076.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.78431374, 0.09803922, 0.09803922, 0)
+theme_override_fonts/font = ExtResource("3_pt772")
+theme_override_font_sizes/font_size = 140
+text = "STAR_LOOP"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=178058440]
+libraries/ = SubResource("AnimationLibrary_sh1a5")
+autoplay = &"titleAnim"
