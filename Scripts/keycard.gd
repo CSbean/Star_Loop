@@ -10,9 +10,9 @@ var player2 : Player
 func _ready() -> void:
 	player2 = get_tree().get_first_node_in_group("Player")
 	if (img == 2):
-		texture = load("res://Assets/green-Pickup Key Card_Atlas.png")
+		texture = load("res://Assets/keycard Images/green-Pickup Key Card_Atlas.png")
 	elif (img == 4):
-		texture = load("res://Assets/red-Pickup Key Card_Atlas.png")
+		texture = load("res://Assets/keycard Images/red-Pickup Key Card_Atlas.png")
 	elif(img == 3):
 		texture= load("res://Assets/keycard Images/yellowcardpic.png")
 	pickup_key_card.get_surface_override_material(0).albedo_texture = texture

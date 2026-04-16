@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://1yvmqv36iioi"
+path="res://.godot/imported/AMONG US - OST - MAIN THEME SONG [HQ].mp3-7cc5feedaeaa81fe48201d247b67c533.mp3str"
+
+[deps]
+
+source_file="res://Assets/SFX & VFX/sfx/AMONG US - OST - MAIN THEME SONG [HQ].mp3"
+dest_files=["res://.godot/imported/AMONG US - OST - MAIN THEME SONG [HQ].mp3-7cc5feedaeaa81fe48201d247b67c533.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

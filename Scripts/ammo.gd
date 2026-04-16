@@ -1,4 +1,5 @@
 extends Area3D
+## 1 = medkit, 2 = pistol ammo, 3 = rifle ammo, 4 = shotgun ammo
 @export var type : int = 0
 @onready var medkit: Node3D = $Medkit
 @onready var pistol_ammo: Node3D = $PistolAmmo
