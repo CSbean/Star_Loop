@@ -35,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://dbmtlj0718kli" path="res://Scenes/door.tscn" id="31_cbevn"]
 [ext_resource type="PackedScene" uid="uid://c4tjc0p50uggg" path="res://Assets/Ship Assets/RS-25.glb" id="32_3mr8n"]
 [ext_resource type="PackedScene" uid="uid://cpij1nn6bh4gq" path="res://Scenes/ammo.tscn" id="33_e1ih4"]
+[ext_resource type="PackedScene" uid="uid://u7er52behax" path="res://Scenes/gun_pickup.tscn" id="36_3mr8n"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gstb7"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -1216,9 +1217,57 @@ mesh = ExtResource("29_6b23c")
 transform = Transform3D(-156.80981, -3.4546683e-06, -4.117075e-13, 0, -1.727334e-06, 107.73816, -1.370875e-05, 39.516796, 4.7093845e-06, 8.210621, 0.4426613, -26.875366)
 mesh = ExtResource("30_oiejj")
 
+[node name="RootSceneWall10" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=766482425]
+transform = Transform3D(-82.94209, -3.454669e-06, -4.117076e-13, 0, -1.727334e-06, 107.73816, -7.251033e-06, 39.516796, 4.7093845e-06, 33.49952, 0.22060394, -9.315582)
+mesh = ExtResource("30_oiejj")
+
+[node name="RootSceneWall12" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=1511635065]
+transform = Transform3D(83.149765, 9.094947e-13, 4.3368087e-19, 0, -1.727334e-06, 107.73816, 1.8189894e-12, -39.516796, -4.7093845e-06, 33.49952, 0.14934921, -8.334871)
+mesh = ExtResource("30_oiejj")
+
+[node name="RootSceneWall13" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=22719735]
+transform = Transform3D(96.60389, 9.094947e-13, 5.963112e-19, 0, -1.727334e-06, 113.38951, 1.8189894e-12, -39.516796, -4.956413e-06, 43.604977, 0.091114044, -8.334894)
+mesh = ExtResource("30_oiejj")
+
+[node name="RootSceneWall11" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=242039560]
+transform = Transform3D(-82.94209, -3.454669e-06, -4.117076e-13, 0, -1.727334e-06, 107.73816, -7.251033e-06, 39.516796, 4.7093845e-06, 43.32389, 0.22060394, -9.31901)
+mesh = ExtResource("30_oiejj")
+
 [node name="RootSceneRoofTileCornerPipes" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=1772870931]
 transform = Transform3D(-291.605, 2.5820233e-05, -1.1124967e-12, 0, -1.29101145e-05, -291.125, -2.5492922e-05, -295.349, 1.2725477e-05, 1.0884247, 5.381119, -29.454819)
 mesh = ExtResource("30_3m713")
+
+[node name="RootSceneDoorSingleLongWallSideA5" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=930927432]
+transform = Transform3D(166.08984, 4.5474735e-13, 1.8973538e-19, 0, -2.0059338e-06, 116.98946, 2.728484e-12, -45.89042, -5.1137727e-06, 38.415184, 0.05304718, -8.329626)
+mesh = ExtResource("28_jamva")
+
+[node name="RootSceneDoorSingleWallSideB8" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=1787397013]
+transform = Transform3D(-165.07454, -3.4546688e-06, -4.1143884e-13, 0, -1.727334e-06, 107.667854, -1.4431274e-05, 39.516796, 4.7063113e-06, 38.452156, 0.22138596, -9.319193)
+mesh = ExtResource("7_oiejj")
+
+[node name="RootSceneWall14" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=1875394407]
+transform = Transform3D(-82.94209, -3.454669e-06, -4.117076e-13, 0, -1.727334e-06, 107.73816, -7.251033e-06, 39.516796, 4.7093845e-06, -0.5679836, 0.22060394, -9.074711)
+mesh = ExtResource("30_oiejj")
+
+[node name="RootSceneWall15" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=1744698798]
+transform = Transform3D(83.149765, 9.094947e-13, 5.6920614e-19, 0, -1.727334e-06, 107.73816, 1.8189894e-12, -39.516796, -4.7093845e-06, -0.5679817, 0.14934921, -8.094002)
+mesh = ExtResource("30_oiejj")
+
+[node name="RootSceneWall16" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=392609196]
+transform = Transform3D(96.60389, 9.094947e-13, 5.963112e-19, 0, -1.727334e-06, 113.38951, 1.8189894e-12, -39.516796, -4.956413e-06, 9.537473, 0.09111786, -8.094025)
+mesh = ExtResource("30_oiejj")
+
+[node name="RootSceneWall17" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=512639998]
+transform = Transform3D(-82.94209, -3.454669e-06, -4.117076e-13, 0, -1.727334e-06, 107.73816, -7.251033e-06, 39.516796, 4.7093845e-06, 9.25639, 0.22060394, -9.07814)
+mesh = ExtResource("30_oiejj")
+
+[node name="RootSceneDoorSingleLongWallSideA6" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=377993938]
+transform = Transform3D(166.08984, 4.5474735e-13, 3.7947076e-19, 0, -2.0059338e-06, 116.98946, 3.637979e-12, -45.89042, -5.1137727e-06, 4.347685, 0.053050995, -8.088751)
+mesh = ExtResource("28_jamva")
+
+[node name="RootSceneDoorSingleWallSideB9" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=1560008384]
+transform = Transform3D(-165.07454, -3.454669e-06, -4.1143887e-13, 0, -1.727334e-06, 107.667854, -1.4431278e-05, 39.516796, 4.7063113e-06, 4.384653, 0.22138596, -9.078321)
+mesh = ExtResource("7_oiejj")
 
 [node name="LeftEngine" type="Node3D" parent="Ship" unique_id=587282216]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.188464, 0.09497753, -85.251144)
@@ -1233,6 +1282,11 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -7.9
 transform = Transform3D(0.008652347, 0.0028557244, -0.9999584, -0.9999569, 0.0033511475, -0.008642764, 0.0033263252, 0.9999903, 0.0028845998, -7.3134503, 3.3741379, -21.098522)
 use_collision = true
 size = Vector3(7.6739655, 0.2310791, 47.281654)
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="Ship/AftReactor" unique_id=65842243]
+transform = Transform3D(-4.371138e-08, 0, 0.9999999, 0, 0.9999999, 0, -0.9999999, 0, -4.371138e-08, -7.3134494, 7.460106, -25.235966)
+use_collision = true
+size = Vector3(8.169014, 0.2310791, 47.281654)
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Ship/AftReactor" unique_id=1820625251]
 transform = Transform3D(4.3711385e-08, -8.742302e-08, -0.9999999, -0.9999999, -4.3711385e-08, -4.3711385e-08, -4.3711378e-08, 0.9999999, -8.742302e-08, -7.4044003, 5.7166247, -28.668911)
@@ -1263,6 +1317,7 @@ size = Vector3(3.1022274, 0.47491455, 2.8205776)
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="Ship/AftReactor" unique_id=1626110657]
 transform = Transform3D(1.9106848e-15, -4.3711367e-08, 0.99999976, -0.99999976, -4.3711378e-08, 0, 4.3711378e-08, -0.99999976, -4.3711367e-08, 9.748469, 5.8959885, -34.3179)
+visible = false
 use_collision = true
 size = Vector3(11.950182, 0.2310791, 13.272085)
 
@@ -1278,10 +1333,10 @@ use_collision = true
 size = Vector3(11.950182, 0.2310791, 13.272085)
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="Ship/AftReactor/CSGBox3D12" unique_id=1151504299]
-transform = Transform3D(1.0000001, 3.5526739e-15, 7.1054274e-15, -3.552753e-15, 1.0000001, 5.421011e-20, 0, -5.421011e-20, 1.0000001, 4.3478, 0.08345413, -0.41165924)
+transform = Transform3D(1.0000001, 3.5527137e-15, 7.1054274e-15, -3.5527137e-15, 1.0000001, 0, 0, 0, 1.0000001, 4.1504517, 0.08345413, -0.41165924)
 operation = 2
 use_collision = true
-size = Vector3(3.1022274, 0.47491455, 2.8205776)
+size = Vector3(3.4969144, 0.47491455, 2.8205776)
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="Ship/AftReactor" unique_id=156904201]
 transform = Transform3D(-4.371138e-08, 1, -8.74228e-08, -1, -4.371139e-08, -8.742278e-08, -8.742278e-08, 8.74228e-08, 1, -17.92778, 5.8901196, -25.096924)
@@ -1378,6 +1433,14 @@ keycard = 1
 transform = Transform3D(1, 0, 0, 0, 0.77953106, 0, 0, 0, 1, -17.196766, 1.8088379, -11.506608)
 keycard = 2
 
+[node name="Door11" parent="Doors" unique_id=1571528571 instance=ExtResource("31_cbevn")]
+transform = Transform3D(1, 0, 0, 0, 0.77953106, 0, 0, 0, 1, -20.63863, 1.8088379, -32.668625)
+keycard = 2
+
+[node name="Door12" parent="Doors" unique_id=656892764 instance=ExtResource("31_cbevn")]
+transform = Transform3D(1, 0, 0, 0, 0.77953106, 0, 0, 0, 1, 20.339127, 1.8088379, -32.668625)
+keycard = 2
+
 [node name="Door9" parent="Doors" unique_id=532686634 instance=ExtResource("31_cbevn")]
 transform = Transform3D(1, 0, 0, 0, 0.77953106, 0, 0, 0, 1, 23.299994, 1.8088379, -11.506608)
 keycard = 2
@@ -1386,10 +1449,10 @@ keycard = 2
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.77953106, 0, -1, 0, -4.371139e-08, 11.086024, 1.8088379, -7.72666)
 keycard = 1
 
-[node name="Door11" parent="Doors" unique_id=2120234662 instance=ExtResource("31_cbevn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.672432, 2.223732, -33.133106)
-keycard = 2
-
 [node name="Ammo" parent="." unique_id=785988555 instance=ExtResource("33_e1ih4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.914949, 51.782516, 11.424516)
+type = 2
+
+[node name="GunPickup" parent="." unique_id=951352720 instance=ExtResource("36_3mr8n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.37402, 51.788807, 10.090241)
 type = 2
