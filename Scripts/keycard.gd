@@ -14,7 +14,7 @@ func _ready() -> void:
 	elif (img == 4):
 		texture = load("res://Assets/keycard Images/red-Pickup Key Card_Atlas.png")
 	elif(img == 3):
-		texture= load("res://Assets/keycard Images/yellowcardpic.png")
+		texture= load("res://Assets/keycard Images/yellow-Pickup Key Card_Atlas.png")
 	pickup_key_card.get_surface_override_material(0).albedo_texture = texture
 
 var playerNearby := false

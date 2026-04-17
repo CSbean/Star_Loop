@@ -23,5 +23,6 @@ func _on_body_entered(body: Node3D) -> void:
 		elif (type == 1):
 			player.hasShotgun = true
 		elif (type == 2):
+			player.inventorySlot = 2
 			player.hasPistol = true
 		self.queue_free()

@@ -58,14 +58,14 @@ position = Vector2(575.9999, 325.24994)
 scale = Vector2(1.7544377, 1.7467191)
 texture = ExtResource("2_pt772")
 
-[node name="Menu" type="Panel" parent="." unique_id=455130638]
+[node name="MainMenu" type="Panel" parent="." unique_id=455130638]
 layout_mode = 0
 offset_left = 90.0
 offset_top = 440.0
 offset_right = 1072.0
 offset_bottom = 634.0
 
-[node name="Settings" type="Button" parent="Menu" unique_id=120780036]
+[node name="Settings" type="Button" parent="MainMenu" unique_id=120780036]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 16.0
@@ -76,19 +76,19 @@ theme_override_fonts/font = ExtResource("3_pt772")
 theme_override_font_sizes/font_size = 46
 text = "Settings"
 
-[node name="Start" type="Button" parent="Menu" unique_id=1050500611]
+[node name="Start" type="Button" parent="MainMenu" unique_id=1050500611]
 layout_mode = 0
 offset_left = 222.0
 offset_top = 16.0
 offset_right = 924.0
 offset_bottom = 186.0
 scale = Vector2(0.76415616, 1.0304277)
-theme_override_colors/font_color = Color(0.6044637, 0.60446376, 0.60446376, 1)
+theme_override_colors/font_color = Color(0.39607844, 0.7411765, 0.7411765, 1)
 theme_override_fonts/font = ExtResource("3_pt772")
 theme_override_font_sizes/font_size = 124
 text = "Wake Up..."
 
-[node name="Quit" type="Button" parent="Menu" unique_id=275038551]
+[node name="Quit" type="Button" parent="MainMenu" unique_id=275038551]
 layout_mode = 0
 offset_left = 766.0
 offset_top = 16.0
@@ -112,3 +112,111 @@ text = "STAR_LOOP"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=178058440]
 libraries/ = SubResource("AnimationLibrary_sh1a5")
 autoplay = &"titleAnim"
+
+[node name="SettingsMenu" type="Panel" parent="." unique_id=597687976]
+visible = false
+layout_mode = 0
+offset_left = 64.0
+offset_top = 368.0
+offset_right = 1064.0
+offset_bottom = 624.0
+
+[node name="CloseSettings" type="Button" parent="SettingsMenu" unique_id=271788509]
+layout_mode = 0
+offset_left = 792.0
+offset_top = 168.0
+offset_right = 966.0
+offset_bottom = 264.0
+theme_override_font_sizes/font_size = 64
+text = "Close"
+
+[node name="SenseSlider" type="HSlider" parent="SettingsMenu" unique_id=1986873867]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 48.0
+offset_right = 576.0
+offset_bottom = 64.0
+scale = Vector2(1.6980542, 1.6980542)
+min_value = 25.0
+max_value = 75.0
+step = 5.0
+value = 50.0
+tick_count = 10
+ticks_on_borders = true
+
+[node name="Label" type="Label" parent="SettingsMenu/SenseSlider" unique_id=337403970]
+layout_mode = 0
+offset_top = -32.97892
+offset_right = 234.0
+offset_bottom = 2.02108
+theme_override_font_sizes/font_size = 25
+text = "Change Sensitivity: "
+
+[node name="SprintToggle" type="CheckButton" parent="SettingsMenu" unique_id=1964461529]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 88.0
+offset_right = 392.0
+offset_bottom = 141.0
+theme_override_font_sizes/font_size = 31
+button_pressed = true
+text = "Sprint Toggle On/Off"
+
+[node name="OpenCredits" type="Button" parent="SettingsMenu" unique_id=14230625]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 184.0
+offset_right = 307.0
+offset_bottom = 256.0
+theme_override_font_sizes/font_size = 46
+text = "Open Credits"
+
+[node name="CreditsMenu" type="Panel" parent="." unique_id=922866904]
+visible = false
+layout_mode = 0
+offset_left = 64.0
+offset_top = 160.0
+offset_right = 416.0
+offset_bottom = 632.0
+
+[node name="Label" type="Label" parent="CreditsMenu" unique_id=394605844]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 38
+text = "Game Developers:
+Benjamin Burnett
+Beau Barber
+
+Special thanks to:
+"
+
+[node name="CloseCredits" type="Button" parent="CreditsMenu" unique_id=1326259978]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 392.0
+offset_right = 684.0
+offset_bottom = 468.0
+theme_override_font_sizes/font_size = 49
+text = "Close Credits"
+
+[node name="Panel" type="Panel" parent="CreditsMenu" unique_id=2031402981]
+layout_mode = 0
+offset_left = 704.0
+offset_right = 1048.0
+offset_bottom = 464.0
+
+[node name="Label" type="Label" parent="CreditsMenu/Panel" unique_id=219512453]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 40
+text = "Attributions:"
+
+[connection signal="pressed" from="MainMenu/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MainMenu/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MainMenu/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="SettingsMenu/CloseSettings" to="." method="_on_close_settings_pressed"]
+[connection signal="pressed" from="SettingsMenu/OpenCredits" to="." method="_on_open_credits_pressed"]
+[connection signal="pressed" from="CreditsMenu/CloseCredits" to="." method="_on_close_credits_pressed"]

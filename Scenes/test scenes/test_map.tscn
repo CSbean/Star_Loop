@@ -34,6 +34,7 @@
 [ext_resource type="ArrayMesh" uid="uid://byn3gqqmmia5d" path="res://Assets/Ship Assets/Root Scene_Wall_2.res" id="32_h3ohp"]
 [ext_resource type="ArrayMesh" uid="uid://d07tbve7xdtf2" path="res://Assets/Ship Assets/Root Scene_Wall_5.res" id="33_ivvti"]
 [ext_resource type="ArrayMesh" uid="uid://dgsojbveh24t2" path="res://Assets/Ship Assets/Root Scene_Wall_3.res" id="34_brtdx"]
+[ext_resource type="PackedScene" uid="uid://u7er52behax" path="res://Scenes/gun_pickup.tscn" id="35_ivvti"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_t2mdo"]
 panorama = ExtResource("4_7o34i")
@@ -1259,3 +1260,7 @@ size = Vector3(25.372124, 0.2310791, 17.447021)
 
 [node name="Root Scene" parent="Ship" unique_id=507369760 instance=ExtResource("6_x43i3")]
 transform = Transform3D(0.83333313, 0, 0, 0, 0.83333313, 0, 0, 0, 0.83333313, -7.2819195, -26.478525, -25.777626)
+
+[node name="GunPickup" parent="." unique_id=951352720 instance=ExtResource("35_ivvti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.150238, 1.4747629, 14.446037)
+type = 2
