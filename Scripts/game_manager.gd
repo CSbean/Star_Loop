@@ -1,7 +1,16 @@
 extends Node
 
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+
 var paused :bool = false
 var keycardNum = 0
+var pshoot = "res://Assets/SFX & VFX/sfx/ray-gun-a-10-a.mp3" #does not work 
+var p 
+
+func _ready() -> void:
+	p = get_tree().get_first_node_in_group("Player")
+
+
 
 ###credits
 #Ship Assets by Quaternius
@@ -24,7 +33,9 @@ var keycardNum = 0
 
 
 
-
+func _process(delta: float) -> void:
+	if(Input.is_action_just_pressed("shoot")) and p.inventorySlot == 2:
+		audio_stream_player.play(pshoot)
 
 
 
