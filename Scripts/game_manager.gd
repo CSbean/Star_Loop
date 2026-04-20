@@ -1,14 +1,45 @@
 extends Node
 
-@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
-
 var paused :bool = false
 var keycardNum = 0
-var pshoot = "res://Assets/SFX & VFX/sfx/ray-gun-a-10-a.mp3" #does not work 
-var p 
-
+var player : Player
+var newMap : PackedScene
 func _ready() -> void:
-	p = get_tree().get_first_node_in_group("Player")
+	player = get_tree().get_first_node_in_group("Player")
+
+func change_map(levelCode : int) -> void:
+	if (levelCode == 0):
+		newMap = load("res://Scenes/main_scene.tscn")
+	elif (levelCode == 1):
+		newMap = load("res://Scenes/UI Scenes/StartScreen.tscn")
+	
+	get_tree().change_scene_to_packed(newMap)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -29,30 +60,4 @@ func _ready() -> void:
 #Ammo Shotgun by CreativeTrio
 #Ammo Sniper by CreativeTrio
 #
-#
-
-
-
-func _process(delta: float) -> void:
-	if(Input.is_action_just_pressed("shoot")) and p.inventorySlot == 2:
-		audio_stream_player.play(pshoot)
-
-
-
-
-
-
-
-
-
-
-
-
-#
-##Method 1: Automatic Generation (Editor)
-#Select your MeshInstance3D node in the Scene tree.
-#In the 3D viewport toolbar, click the Mesh button.
-#Choose Create Trimesh Static Sibling for complex, accurate collisions (like terrain).
-#Choose Create Convex Static Sibling for simpler, high-performance collisions (like boxes or walls).
-#Result: Godot automatically creates a StaticBody3D with a CollisionShape3D as a sibling node.
 #
