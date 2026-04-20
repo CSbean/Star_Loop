@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://c1pylbiopkyv0" path="res://Scripts/player.gd" id="1_4flbx"]
 [ext_resource type="PackedScene" uid="uid://cwysuvsvdvkp1" path="res://Scenes/ui.tscn" id="2_6t5aa"]
 [ext_resource type="PackedScene" uid="uid://uxgjnu5adkd4" path="res://Assets/Gun assets/Scifi Pistol.glb" id="2_cvnsp"]
+[ext_resource type="AudioStream" uid="uid://c0n6kxr2ad2wa" path="res://Assets/SFX & VFX/sfx/walking.mp3" id="4_vgqql"]
+[ext_resource type="AudioStream" uid="uid://sja4bq3se7l8" path="res://Assets/SFX & VFX/sfx/ray-gun-a-10-a.mp3" id="5_fkybt"]
+[ext_resource type="AudioStream" uid="uid://bh0k4ug5yupc8" path="res://Assets/SFX & VFX/sfx/SFX Sci-Fi shotgun Gun Shot.mp3" id="6_x3wgy"]
+[ext_resource type="AudioStream" uid="uid://i7ugdkbji3rc" path="res://Assets/SFX & VFX/sfx/328011__astrand__retro-blaster-fire.wav" id="7_3smsa"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
 
@@ -11691,3 +11695,16 @@ shape = SubResource("CapsuleShape3D_sh265")
 root_node = NodePath("../PlayerSprite")
 tree_root = SubResource("AnimationNodeStateMachine_6t5aa")
 anim_player = NodePath("../PlayerSprite/AnimationPlayer")
+
+[node name="walkingAudioStream" type="AudioStreamPlayer" parent="." unique_id=493385269]
+stream = ExtResource("4_vgqql")
+
+[node name="pistoShootAudio" type="AudioStreamPlayer" parent="." unique_id=1380644068]
+stream = ExtResource("5_fkybt")
+volume_db = -0.5
+
+[node name="shotgunShootAudio" type="AudioStreamPlayer" parent="." unique_id=1273049104]
+stream = ExtResource("6_x3wgy")
+
+[node name="arShootAudio" type="AudioStreamPlayer" parent="." unique_id=18047907]
+stream = ExtResource("7_3smsa")

@@ -1456,3 +1456,18 @@ type = 2
 [node name="GunPickup" parent="." unique_id=951352720 instance=ExtResource("36_3mr8n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.37402, 51.788807, 10.090241)
 type = 2
+
+[node name="GunPickup2" parent="." unique_id=1926145366 instance=ExtResource("36_3mr8n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.67326, 52.428993, 9.13092)
+type = 1
+
+[node name="GunPickup3" parent="." unique_id=2002693366 instance=ExtResource("36_3mr8n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.67326, 52.069347, 14.300031)
+
+[node name="Ammo2" parent="." unique_id=1036564800 instance=ExtResource("33_e1ih4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.465398, 52.688187, 10.973953)
+type = 4
+
+[node name="Ammo3" parent="." unique_id=1450377387 instance=ExtResource("33_e1ih4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.856207, 51.742172, 14.549334)
+type = 3
