@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ca6nwn066cada" path="res://Scripts/UI Scripts/StartScreen.gd" id="1_7aale"]
 [ext_resource type="Texture2D" uid="uid://bteme5q742bs6" path="res://Assets/blackholesun.jpg" id="2_pt772"]
 [ext_resource type="FontFile" uid="uid://utlrlorup56u" path="res://Assets/Orbitron-VariableFont_wght.ttf" id="3_pt772"]
+[ext_resource type="AudioStream" uid="uid://1yvmqv36iioi" path="res://Assets/SFX & VFX/sfx/AMONG US - OST - MAIN THEME SONG [HQ].mp3" id="4_mmqgp"]
 
 [sub_resource type="Animation" id="Animation_mmqgp"]
 length = 0.001
@@ -213,6 +214,12 @@ offset_right = 40.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 40
 text = "Attributions:"
+
+[node name="startAudio" type="AudioStreamPlayer" parent="." unique_id=172346318]
+stream = ExtResource("4_mmqgp")
+autoplay = true
+
+[node name="creditsAudio" type="AudioStreamPlayer" parent="." unique_id=1109224383]
 
 [connection signal="pressed" from="MainMenu/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="MainMenu/Start" to="." method="_on_start_pressed"]

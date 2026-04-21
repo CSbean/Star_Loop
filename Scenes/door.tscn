@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://dbmtlj0718kli"]
 
 [ext_resource type="Script" uid="uid://n63bx17hc7ir" path="res://Scripts/door.gd" id="1_p0e35"]
-[ext_resource type="ArrayMesh" uid="uid://c2mojphab3q3g" path="res://Assets/Ship Assets/Root Scene_Door_Single.res" id="2_fahql"]
+[ext_resource type="ArrayMesh" uid="uid://bkb1xrmg4vdfr" path="res://Assets/Ship Assets/Root Scene_Door_Single.res" id="2_fahql"]
+[ext_resource type="AudioStream" uid="uid://b55u56eu0eq7h" path="res://Assets/SFX & VFX/sfx/327738__distillerystudio__error_01.wav" id="3_fahql"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p0e35"]
 albedo_color = Color(1.8247963, 1.8247963, 1.8247963, 1)
@@ -116,6 +117,9 @@ libraries/ = SubResource("AnimationLibrary_ab4ky")
 wait_time = 6.4
 
 [node name="Node" type="Node" parent="." unique_id=1034215134]
+
+[node name="errorAudio" type="AudioStreamPlayer" parent="." unique_id=1535102621]
+stream = ExtResource("3_fahql")
 
 [connection signal="animation_changed" from="AnimationPlayer" to="." method="_on_animation_player_animation_changed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

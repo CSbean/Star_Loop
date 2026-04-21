@@ -1,25 +1,31 @@
 extends Control
 
-var badPic = preload("res://Assets/Gun assets/pistiolimg-removebg-preview.png")
+
 var nearby : bool
+
 const SHOTGUN_BG_REMOVE = preload("uid://c3m5nexfrrm82")
 const AR_REMOVE_BG = preload("uid://68vculh1mfde")
 const PISTIOLIMG_REMOVEBG_PREVIEW = preload("uid://cg00fy1425cuc")
+
 @onready var timer_label: Label = $Timer/TimerLabel
 @onready var pause_screen: Panel = $PauseScreen
+@onready var health: Label = $Health
+@onready var gun_text: TextureRect = $GunText
+@onready var ammo_label: Label = $ammoLabel
+@onready var keycard: Sprite2D = $Keycards/keycard
+@onready var objective: Label = $PauseScreen/Objective
+@onready var reload_audio: AudioStreamPlayer = $reloadAudio
 
+var badPic = preload("res://Assets/Gun assets/pistiolimg-removebg-preview.png")
 var greenPic = preload("res://Assets/keycard Images/mexico.png")
 var redPic = preload("res://Assets/keycard Images/Redcardpic.png")
 var whitePic = preload("res://Assets/keycard Images/whitePic.png")
 var yellowPic = preload("res://Assets/keycard Images/yellowcardpic.png")
-@onready var keycard: Sprite2D = $Keycards/keycard
+
 ## 2 is pistol, 1 - shotgun, 0 - AK
 var selectedGun := 2
-@onready var health: Label = $Health
-@onready var gun_text: TextureRect = $GunText
-@onready var ammo_label: Label = $ammoLabel
 var player : Player
-@onready var objective: Label = $PauseScreen/Objective
+
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
@@ -57,6 +63,8 @@ func _process(_delta: float) -> void:
 			selectedGun +=1
 		elif (selectedGun == 0) and !(player.hasRifle):
 			selectedGun +=1
+		else:
+			reload_audio.play()
 		if (selectedGun <= -1):
 			selectedGun = 0
 		player.inventorySlot = selectedGun

@@ -3,20 +3,27 @@ extends Node3D
 #All doors will have to be instantiated from this scene
 ## 0=no door acsees, 1=white, 2=green, 3=yellow, 4=red
 @export var keycard : int
-var player : Player
-var nearby := false
-var enemyScene : PackedScene = preload("res://Scenes/enemy.tscn")
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
 @export var isOpen := false
+
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
 @onready var root_scene_door_single: MeshInstance3D = $RootSceneDoorSingle
+@onready var node: Node = $Node
 @onready var timer: Timer = $Timer
-var isMoving := false
-var hasBeenOpened := false
+@onready var error_audio: AudioStreamPlayer = $errorAudio
+
+
 const YELLOW_DOOR = preload("uid://dvpcoiews1m4i")
 const RED_DOOR = preload("uid://dph82iep788ow")
 const GREEN_DOOR = preload("uid://cwfun4djjppvb")
-@onready var node: Node = $Node
+
+var enemyScene : PackedScene = preload("res://Scenes/enemy.tscn")
+
+var hasBeenOpened := false
+var player : Player
+var nearby := false
+var isMoving := false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
@@ -48,7 +55,7 @@ func _process(_delta: float) -> void:
 					animation_player.play("Close")
 			else:
 				#fail opening
-				pass
+				error_audio.play()
 
 func _on_timer_timeout() -> void:
 	if (isOpen):

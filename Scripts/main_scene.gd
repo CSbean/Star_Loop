@@ -1,15 +1,16 @@
 extends Node3D
 #@onready var ship: Node3D = $Ship
-@onready var space_objects: Node3D = $"Space Objects"
-var shipSpd := .64
 @onready var ship: Node3D = $Ship
 @onready var mesh_instance_3d: MeshInstance3D = $"Space Objects/MeshInstance3D"
-var player : Player
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-			 
+@onready var space_objects: Node3D = $"Space Objects"
+
+var player : Player
+var shipSpd := .64
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Engine.time_scale = 5
+	#Engine.time_scale = 5
 	player = get_tree().get_first_node_in_group("Player")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
