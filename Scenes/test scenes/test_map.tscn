@@ -38,6 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://ddxnfth88ifnl" path="res://Assets/Ship Assets/Sci Fi Engine.glb" id="35_05gsd"]
 [ext_resource type="PackedScene" uid="uid://u7er52behax" path="res://Scenes/gun_pickup.tscn" id="35_ivvti"]
 [ext_resource type="PackedScene" uid="uid://c4tjc0p50uggg" path="res://Assets/Ship Assets/RS-25.glb" id="36_p4h5g"]
+[ext_resource type="ArrayMesh" uid="uid://bufctiba3emcw" path="res://Assets/Ship Assets/Root Scene_DoorDouble_Wall_SideB.res" id="38_keq15"]
 [ext_resource type="ArrayMesh" uid="uid://ckhwl1d4kbk27" path="res://Assets/Ship Assets/Root Scene_Props_Capsule.res" id="38_kog7x"]
 [ext_resource type="ArrayMesh" uid="uid://cfy66u0u3he1q" path="res://Assets/Ship Assets/Root Scene_Props_Teleporter_1.res" id="39_keq15"]
 [ext_resource type="Shader" uid="uid://qjgbvwd70cvu" path="res://Scenes/main_scene.gdshader" id="40_kog7x"]
@@ -974,17 +975,17 @@ use_collision = true
 size = Vector3(7.538887, 0.2310791, 52.25995)
 
 [node name="CSGBox3D12" type="CSGBox3D" parent="Ship/Hall" unique_id=1070499386]
-transform = Transform3D(-4.3711374e-08, 0, 1, 0, 0.99999976, 0, -0.9999999, 0, -4.371137e-08, -337.92773, 6.3882637, 11.962887)
+transform = Transform3D(-4.3711374e-08, 0, 1, 0, 0.99999976, 0, -0.9999999, 0, -4.371137e-08, 16.895157, 6.3882637, 11.962872)
 use_collision = true
 size = Vector3(13.238054, 0.2310791, 31.148651)
 
 [node name="CSGBox3D13" type="CSGBox3D" parent="Ship/Hall" unique_id=1518246319]
-transform = Transform3D(-4.3711374e-08, 0, 1, 0, 0.99999976, 0, -0.9999999, 0, -4.371137e-08, -337.92773, 6.3882637, -22.61867)
+transform = Transform3D(-4.3711374e-08, 0, 1, 0, 0.99999976, 0, -0.9999999, 0, -4.371137e-08, 17.227234, 6.3882637, -22.618685)
 use_collision = true
 size = Vector3(13.238054, 0.2310791, 31.148651)
 
 [node name="CSGBox3D14" type="CSGBox3D" parent="Ship/Hall" unique_id=47540566]
-transform = Transform3D(-4.3711374e-08, 0, 1, 0, 0.99999976, 0, -0.9999999, 0, -4.371137e-08, -340.6621, 11.281273, -5.525942)
+transform = Transform3D(-4.3711374e-08, 0, 1, 0, 0.99999976, 0, -0.9999999, 0, -4.371137e-08, 144.61783, 11.281273, -5.5259633)
 use_collision = true
 size = Vector3(21.842228, 0.2310791, 25.679916)
 
@@ -1112,7 +1113,7 @@ transform = Transform3D(239.6405, -175.07353, 2.63198e-05, -239.6405, -175.07355
 mesh = ExtResource("32_xkeec")
 
 [node name="RootScenePropsCrateLong3" type="MeshInstance3D" parent="Ship/RightHall" unique_id=1598386065]
-transform = Transform3D(338.9029, 0, -1.8189894e-12, 0, 247.59138, 0, 1.8189894e-12, 0, 301.0634, -31.26335, 0.958162, -14.2297535)
+transform = Transform3D(338.9029, 0, -1.8189894e-12, 0, 247.59138, 0, 1.8189894e-12, 0, 301.0634, -31.26335, 1.3846258, -14.2297535)
 mesh = ExtResource("32_xkeec")
 
 [node name="RootScenePropsCrateLong4" type="MeshInstance3D" parent="Ship/RightHall" unique_id=1515586108]
@@ -1192,16 +1193,24 @@ mesh = ExtResource("34_brtdx")
 transform = Transform3D(-2.763895e-05, 166.64964, 4.6817804e-06, 0, -7.2844873e-06, 107.10666, 169.64665, 2.7150672e-05, 7.627589e-13, 5.2673454, 0.23892212, 3.7302856)
 mesh = ExtResource("34_brtdx")
 
+[node name="RootSceneWall21" type="MeshInstance3D" parent="Ship/RightHall" unique_id=263676378]
+transform = Transform3D(-169.64665, -4.5776367e-05, 4.68178e-06, 7.4154905e-06, -9.094947e-13, 107.10666, -3.8146973e-05, 166.64964, 8.9871844e-13, -4.046555, 0.23892252, 4.050521)
+mesh = ExtResource("34_brtdx")
+
+[node name="RootSceneWall22" type="MeshInstance3D" parent="Ship/RightHall" unique_id=275749564]
+transform = Transform3D(-169.64665, -4.5776367e-05, 4.68178e-06, 7.4154905e-06, -9.094947e-13, 107.10666, -3.8146973e-05, 166.64964, 8.9871844e-13, 2.5075176, 0.23892224, 4.051084)
+mesh = ExtResource("34_brtdx")
+
 [node name="RootSceneWall16" type="MeshInstance3D" parent="Ship/RightHall" unique_id=1738356349]
 transform = Transform3D(1.5808027e-05, -166.64964, 4.6817804e-06, 8.0013275e-13, 7.2844855e-06, 107.10666, -209.38365, -1.2581699e-05, 7.6275894e-13, -7.076931, 0.2389183, -22.08913)
 mesh = ExtResource("34_brtdx")
 
 [node name="RootSceneWall17" type="MeshInstance3D" parent="Ship/RightHall" unique_id=1391011111]
-transform = Transform3D(-0.2151226, -166.64954, -0.033485163, 0.648269, -0.052647445, 107.106125, -205.81165, 0.17402336, 0.3373996, -7.076933, 0.2389183, -14.092318)
+transform = Transform3D(-0.22362868, -166.64954, -0.033485163, 0.673902, -0.052647445, 107.106125, -213.94957, 0.17402336, 0.3373996, -7.0764823, 0.23755981, -13.661027)
 mesh = ExtResource("34_brtdx")
 
 [node name="RootSceneWall18" type="MeshInstance3D" parent="Ship/RightHall" unique_id=1663832836]
-transform = Transform3D(1.5538433e-05, -166.64964, 4.6817804e-06, 7.864872e-13, 7.2844855e-06, 107.10666, -205.81277, -1.2581699e-05, 7.6275894e-13, -7.076934, 0.2389183, -6.0250607)
+transform = Transform3D(1.8559149e-05, -142.23404, 5.15968e-06, 9.393826e-13, 6.217247e-06, 118.039734, -245.82335, -1.0738374e-05, 8.406188e-13, -7.127871, -0.008459277, -5.073953)
 mesh = ExtResource("34_brtdx")
 
 [node name="Node3D2" type="Node3D" parent="Ship/RightHall" unique_id=1499912182]
@@ -1279,7 +1288,35 @@ transform = Transform3D(-2.763895e-05, 166.64964, 4.6817804e-06, 0, -7.2844873e-
 mesh = ExtResource("34_brtdx")
 
 [node name="RootSceneWall5" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=1317214139]
-transform = Transform3D(-2.763895e-05, 166.64964, 4.6817804e-06, 0, -7.2844873e-06, 107.10666, 169.64665, 2.7150672e-05, 7.627589e-13, 10.56984, 0.23892212, -9.65126)
+transform = Transform3D(-2.763895e-05, 166.64964, 4.6817804e-06, 0, -7.2844873e-06, 107.10666, 169.64665, 2.7150672e-05, 7.627589e-13, 10.56984, 0.23892212, -11.617336)
+mesh = ExtResource("34_brtdx")
+
+[node name="RootSceneWall18" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=1623299391]
+transform = Transform3D(-3.4690212e-05, 162.967, 5.170533e-06, 0, -7.1235136e-06, 118.288, 212.927, 2.6550695e-05, 8.4238676e-13, 10.476217, 0.20559362, -4.279198)
+mesh = ExtResource("34_brtdx")
+
+[node name="RootSceneWall19" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=1928040150]
+transform = Transform3D(-3.4690212e-05, 162.967, 5.170533e-06, 0, -7.1235136e-06, 118.288, 212.927, 2.6550695e-05, 8.4238676e-13, 10.513207, 0.1844695, 7.336692)
+mesh = ExtResource("34_brtdx")
+
+[node name="RootSceneWall24" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=713065110]
+transform = Transform3D(5.330488e-05, -162.967, 5.170533e-06, -8.136727e-13, 7.1235136e-06, 118.288, -212.927, -4.079772e-05, 8.4238687e-13, 32.58623, -0.043004423, 7.3366957)
+mesh = ExtResource("34_brtdx")
+
+[node name="RootSceneWall20" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=544900889]
+transform = Transform3D(-212.927, -3.367421e-05, 5.170533e-06, 9.307335e-06, 2.5107325e-13, 118.288, -4.399755e-05, 162.967, 9.0949465e-13, 0.7831371, -0.090906195, 4.2391605)
+mesh = ExtResource("34_brtdx")
+
+[node name="RootSceneWall21" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=699468636]
+transform = Transform3D(-212.927, -3.367421e-05, 5.170533e-06, 9.307335e-06, 2.5107325e-13, 118.288, -4.399755e-05, 162.967, 9.0949465e-13, 6.8180532, -0.09090646, 4.239162)
+mesh = ExtResource("34_brtdx")
+
+[node name="RootSceneWall26" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=1978153540]
+transform = Transform3D(-278.57782, -3.370181e-05, -1.0692713e-12, 0, -9.756251e-06, 162.005, -4.206408e-05, 223.197, 7.0814635e-06, 26.395891, -0.09090735, 3.7806609)
+mesh = ExtResource("34_brtdx")
+
+[node name="RootSceneWall27" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=1626258434]
+transform = Transform3D(-278.57782, -3.370181e-05, -1.0692713e-12, 0, -9.756251e-06, 162.005, -4.206408e-05, 223.197, 7.0814635e-06, 16.362675, -0.09090735, 3.7806594)
 mesh = ExtResource("34_brtdx")
 
 [node name="RootSceneWall6" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=1476974118]
@@ -1292,6 +1329,14 @@ mesh = ExtResource("34_brtdx")
 
 [node name="RootSceneWall8" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=2023990588]
 transform = Transform3D(1.2807966e-05, -166.64964, 4.6817804e-06, 6.4828297e-13, 7.2844855e-06, 107.10666, -169.64665, -1.2581699e-05, 7.6275894e-13, -1.2473831, 0.23892212, -8.938425)
+mesh = ExtResource("34_brtdx")
+
+[node name="RootSceneWall22" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=718475316]
+transform = Transform3D(1.2807966e-05, -166.64964, 4.6817804e-06, 6.4828297e-13, 7.2844855e-06, 107.10666, -169.64665, -1.2581699e-05, 7.6275894e-13, -1.2473836, 0.23892212, -2.1756825)
+mesh = ExtResource("34_brtdx")
+
+[node name="RootSceneWall23" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=300085045]
+transform = Transform3D(1.2807966e-05, -166.64964, 4.6817804e-06, 6.4828297e-13, 7.2844855e-06, 107.10666, -169.64665, -1.2581699e-05, 7.6275894e-13, -1.2473841, 0.23892212, 4.517643)
 mesh = ExtResource("34_brtdx")
 
 [node name="RootSceneWall2" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=172943619]
@@ -1339,7 +1384,7 @@ transform = Transform3D(83.149765, 9.094947e-13, 5.6920614e-19, 0, -1.727334e-06
 mesh = ExtResource("33_ivvti")
 
 [node name="RootSceneWall16" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=1434173391]
-transform = Transform3D(96.60389, 9.094947e-13, 5.963112e-19, 0, -1.727334e-06, 113.38951, 1.8189894e-12, -39.516796, -4.956413e-06, 9.537473, 0.09111786, -8.094025)
+transform = Transform3D(96.60389, 9.094947e-13, 5.759302e-19, 0, -1.727334e-06, 109.51404, 1.8189894e-12, -39.516796, -4.78701e-06, 9.537473, 0.09111786, -8.094025)
 mesh = ExtResource("33_ivvti")
 
 [node name="RootSceneWall17" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=491721800]
@@ -1347,43 +1392,91 @@ transform = Transform3D(-82.94209, -3.454669e-06, -4.117076e-13, 0, -1.727334e-0
 mesh = ExtResource("33_ivvti")
 
 [node name="RootSceneDoorSingleLongWallSideA6" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=1253080130]
-transform = Transform3D(166.08984, 4.5474735e-13, 3.7947076e-19, 0, -2.0059338e-06, 116.98946, 3.637979e-12, -45.89042, -5.1137727e-06, 4.347685, 0.053050995, -8.088751)
+transform = Transform3D(166.08984, 4.5474735e-13, 3.5859544e-19, 0, -2.0059338e-06, 110.55367, 3.637979e-12, -45.89042, -4.832455e-06, 4.347685, 0.053050995, -8.088751)
 mesh = ExtResource("30_0csym")
 
 [node name="RootSceneDoorSingleWallSideB9" type="MeshInstance3D" parent="Ship/LeftHall" unique_id=446193778]
-transform = Transform3D(-165.07454, -3.454669e-06, -4.1143887e-13, 0, -1.727334e-06, 107.667854, -1.4431278e-05, 39.516796, 4.7063113e-06, 4.384653, 0.22138596, -9.078321)
+transform = Transform3D(-163.65916, -3.454669e-06, -4.161521e-13, 0, -1.727334e-06, 108.901245, -1.4307541e-05, 39.516796, 4.760225e-06, 4.358926, 0.15305999, -9.034629)
 mesh = ExtResource("3_l5tev")
+
+[node name="Door" parent="Ship/LeftHall" unique_id=1746548102 instance=ExtResource("26_n6rtp")]
+transform = Transform3D(0.88692063, 0, 0, 0, 0.6178959, 0, 0, 0, 1, 4.3438697, 1.4523382, -8.550183)
 
 [node name="LeftEngine" type="Node3D" parent="Ship" unique_id=263158192]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.188464, 0.09497753, -85.251144)
 
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Ship/LeftEngine" unique_id=605905200]
+transform = Transform3D(5.2715933e-08, 1.206, 1.05431866e-07, 1.206, -5.2715933e-08, 0, 4.6085733e-15, 1.05431866e-07, -1.206, 9.404784, 1.3275466, -33.603474)
+visible = false
+use_collision = true
+height = 4.179077
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Ship/LeftEngine" unique_id=339411046]
+transform = Transform3D(5.2715933e-08, 5.2715933e-08, -1.206, 1.206, -1.0558592e-15, 5.2715933e-08, 3.5527137e-15, -1.206, -5.2715933e-08, 9.404784, 2.313053, -31.99033)
+visible = false
+use_collision = true
+radius = 1.9501953
+height = 9.106003
+
 [node name="Sci Fi Engine2" parent="Ship/LeftEngine" unique_id=1496663741 instance=ExtResource("35_05gsd")]
-transform = Transform3D(-3.64224e-08, 0, 0.8332482, 0, 0.8332482, 0, -0.8332482, 0, -3.64224e-08, -24.858082, 0.23681152, -33.895767)
+transform = Transform3D(-3.64224e-08, 0, 0.8332482, 0, 0.8332482, 0, -0.8332482, 0, -3.64224e-08, -24.858082, -0.17647547, -33.162907)
 
 [node name="RS-26" parent="Ship/LeftEngine" unique_id=1783912869 instance=ExtResource("36_p4h5g")]
-transform = Transform3D(-0.5, 0, 7.549791e-08, 0, 0.5, 0, -7.549791e-08, 0, -0.5, -24.840313, -0.5965053, -28.165962)
+transform = Transform3D(-0.5, 0, 7.549791e-08, 0, 0.5, 0, -7.549791e-08, 0, -0.5, -24.840313, -0.5965053, -32.845688)
 
 [node name="RightEngine" type="Node3D" parent="Ship" unique_id=1933576751]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -27.326666, -1.9078143e-06, -83.49164)
 
+[node name="RootSceneDoorDoubleWallSideB" type="MeshInstance3D" parent="Ship/RightEngine" unique_id=185576459]
+transform = Transform3D(-1.4760839e-05, 138.3192, 5.1712527e-06, 0, -6.0461243e-06, 118.304474, 90.60138, 2.253506e-05, 8.4250396e-13, -37.952374, 0.18226609, -29.661795)
+mesh = ExtResource("38_keq15")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Ship/RightEngine" unique_id=1892968682]
+transform = Transform3D(5.2715933e-08, 1.206, 1.05431866e-07, 1.206, -5.2715933e-08, 0, 4.6085733e-15, 1.05431866e-07, -1.206, -44.004242, 1.1554954, -31.496899)
+visible = false
+use_collision = true
+height = 4.1833496
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="Ship/RightEngine" unique_id=303865380]
+transform = Transform3D(5.2715933e-08, 5.2715933e-08, -1.206, 1.206, -1.0558592e-15, 5.2715933e-08, 3.5527137e-15, -1.206, -5.2715933e-08, -44.3264, 1.8140666, -30.469887)
+visible = false
+use_collision = true
+radius = 2.1826172
+height = 7.9997787
+
 [node name="Sci Fi Engine" parent="Ship/RightEngine" unique_id=315394105 instance=ExtResource("35_05gsd")]
-transform = Transform3D(-3.64224e-08, 0, 0.8332482, 0, 0.8332482, 0, -0.8332482, 0, -3.64224e-08, -9.833712, 0.33179092, -32.13627)
+transform = Transform3D(-3.64224e-08, 0, 0.8332482, 0, 0.8332482, 0, -0.8332482, 0, -3.64224e-08, -9.833712, 0.33179092, -31.571434)
 
 [node name="RS-25" parent="Ship/RightEngine" unique_id=2126006902 instance=ExtResource("36_p4h5g")]
-transform = Transform3D(-0.5, 0, 7.549791e-08, 0, 0.5, 0, -7.549791e-08, 0, -0.5, -9.746174, -0.5015259, -26.406464)
+transform = Transform3D(-0.5, 0, 7.549791e-08, 0, 0.5, 0, -7.549791e-08, 0, -0.5, -9.746174, 0.050192654, -31.23795)
+
+[node name="Door" parent="Ship/RightEngine" unique_id=946476348 instance=ExtResource("26_n6rtp")]
+transform = Transform3D(-3.7517193e-08, 0, -1, 0, 0.74834955, 0, 0.8582933, 0, -4.371139e-08, -37.547523, 1.6381226, -29.671751)
+
+[node name="RootSceneDoorDoubleWallSideB2" type="MeshInstance3D" parent="Ship/RightEngine" unique_id=1537823924]
+transform = Transform3D(1.476084e-05, -138.3192, -5.171255e-06, 7.920625e-06, -6.046124e-06, 118.304474, -90.60138, -2.253506e-05, 1.03425045e-05, -15.940697, -0.03458461, -29.880203)
+mesh = ExtResource("38_keq15")
+
+[node name="Door2" parent="Ship/RightEngine" unique_id=490069662 instance=ExtResource("26_n6rtp")]
+transform = Transform3D(-3.7517193e-08, 0, 1, 0, 0.74834955, 0, -0.8582933, 0, -4.371139e-08, -16.382019, 1.6381226, -29.840872)
 
 [node name="AftReactor" type="Node3D" parent="Ship" unique_id=1675206576]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -7.941052, -1.9078143e-06, -77.9264)
 
 [node name="CSGBox3D13" type="CSGBox3D" parent="Ship/AftReactor" unique_id=332115436]
-transform = Transform3D(0.008652347, 0.0028557244, -0.9999584, -0.9999569, 0.0033511475, -0.008642764, 0.0033263252, 0.9999903, 0.0028845998, -7.3134503, 3.3741379, -21.098522)
+transform = Transform3D(0.008652347, 0.0028557244, -0.9999584, -0.9999569, 0.0033511475, -0.008642764, 0.0033263252, 0.9999903, 0.0028845998, -7.31345, 3.3741376, -21.098522)
 use_collision = true
 size = Vector3(7.6739655, 0.2310791, 47.281654)
 
 [node name="CSGBox3D14" type="CSGBox3D" parent="Ship/AftReactor" unique_id=1918091594]
-transform = Transform3D(-4.371138e-08, 0, 0.9999999, 0, 0.9999999, 0, -0.9999999, 0, -4.371138e-08, -7.3134494, 7.460106, -25.235966)
+transform = Transform3D(-4.371138e-08, 0, 0.9999999, 0, 0.9999999, 0, -0.9999999, 0, -4.371138e-08, -7.3134494, 7.4601064, -24.820473)
 use_collision = true
-size = Vector3(8.169014, 0.2310791, 47.281654)
+size = Vector3(9, 0.2310791, 47.281654)
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="Ship/AftReactor" unique_id=795209899]
+transform = Transform3D(-4.371138e-08, 0, 0.9999999, 0, 0.9999999, 0, -0.9999999, 0, -4.371138e-08, -24.954277, 7.4601064, -24.820465)
+use_collision = true
+size = Vector3(9, 0.2310791, 12)
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Ship/AftReactor" unique_id=304587344]
 transform = Transform3D(4.3711385e-08, -8.742302e-08, -0.9999999, -0.9999999, -4.3711385e-08, -4.3711385e-08, -4.3711378e-08, 0.9999999, -8.742302e-08, -7.4044003, 5.7166247, -28.668911)
@@ -1391,10 +1484,10 @@ use_collision = true
 size = Vector3(12.200455, 0.2310791, 20.852493)
 
 [node name="CSGBox3D16" type="CSGBox3D" parent="Ship/AftReactor/CSGBox3D8" unique_id=194859940]
-transform = Transform3D(0.9999999, 3.5527137e-15, 3.5527247e-15, -3.5527137e-15, 0.9999999, 2.7105054e-20, 1.12117886e-20, -2.7105054e-20, 0.9999999, 3.3865733, 0.009586334, 0.4803123)
+transform = Transform3D(0.9999999, 3.5527137e-15, 3.5527247e-15, -3.5527137e-15, 0.9999999, 2.7105054e-20, 1.12117886e-20, -2.7105054e-20, 0.9999999, 2.5803525, 0.009586334, 0.66190624)
 operation = 2
 use_collision = true
-size = Vector3(5.427311, 2.1057892, 8.956655)
+size = Vector3(5.966935, 2.1057892, 7.603421)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Ship/AftReactor" unique_id=537274083]
 transform = Transform3D(1, 0, -2.3376856e-12, 0, 1, 0, 2.3376856e-12, 0, 1, -7.1854544, 0, -21.138573)
@@ -1406,11 +1499,11 @@ transform = Transform3D(-4.3711374e-08, 0.99999976, -8.742321e-08, -0.99999976, 
 use_collision = true
 size = Vector3(11.950182, 0.2310791, 8.218224)
 
-[node name="CSGBox3D11" type="CSGBox3D" parent="Ship/AftReactor/CSGBox3D9" unique_id=1392128558]
-transform = Transform3D(1.0000001, 3.5526739e-15, 7.1054274e-15, -3.552753e-15, 1.0000001, 5.421011e-20, 0, -5.421011e-20, 1.0000001, 4.3478, 0.08345413, -0.41165924)
+[node name="CSGBox3D10" type="CSGBox3D" parent="Ship/AftReactor/CSGBox3D9" unique_id=797878663]
+transform = Transform3D(1, -7.283063e-13, -1.4566126e-12, 7.283063e-13, 1, -5.675121e-20, -1.8189894e-12, -6.098637e-20, 1, 3.9736185, 0, 0.98516464)
 operation = 2
 use_collision = true
-size = Vector3(3.1022274, 0.47491455, 2.8205776)
+size = Vector3(3.677669, 0.2310791, 2.6414344)
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="Ship/AftReactor" unique_id=1687303601]
 transform = Transform3D(1.9106848e-15, -4.3711367e-08, 0.99999976, -0.99999976, -4.3711378e-08, 0, 4.3711378e-08, -0.99999976, -4.3711367e-08, 9.748469, 5.8959885, -34.3179)
@@ -1441,10 +1534,25 @@ use_collision = true
 size = Vector3(11.938463, 0.2310791, 8.136681)
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="Ship/AftReactor/CSGBox3D10" unique_id=373356582]
-transform = Transform3D(1, 0, 0, 3.3407482e-22, 1, 0, 0, 0, 1, 4.3477993, 0, -0.41165543)
+transform = Transform3D(1, -7.283063e-13, -1.4566126e-12, 7.283063e-13, 1, -5.675121e-20, -1.8189894e-12, -6.098637e-20, 1, 3.9736185, 0, 0.98516464)
 operation = 2
 use_collision = true
-size = Vector3(3.1022274, 0.2310791, 2.8205776)
+size = Vector3(3.677669, 0.2310791, 2.6414344)
+
+[node name="RootSceneFloorTileBasic" type="MeshInstance3D" parent="Ship/AftReactor" unique_id=437873630]
+transform = Transform3D(-1022.001, -0.00016604112, -6.7486544e-13, 0, -4.806682e-05, 102.24868, -0.00015431785, 1099.6406, 4.469432e-06, -7.5403805, 0.38403648, -39.574097)
+mesh = ExtResource("4_wfnyu")
+
+[node name="RootSceneRoofTileVents" type="MeshInstance3D" parent="Ship/AftReactor" unique_id=2034451099]
+transform = Transform3D(-865.28, 0.00017904403, -5.7110527e-12, 0, -5.1830997e-05, -865.28, -0.00013065366, -1185.755, 3.7822592e-05, -7.89393, 11.801019, -40.172)
+mesh = ExtResource("17_ylabq")
+
+[node name="RootSceneRoofTileVents2" type="MeshInstance3D" parent="Ship/AftReactor" unique_id=1021524792]
+transform = Transform3D(1043.495, 0.00022459992, 6.887313e-12, 0, -6.501885e-05, 1043.495, 0.00015756337, -1487.458, -4.5612614e-05, -7.89393, 11.291006, -41.421303)
+mesh = ExtResource("17_ylabq")
+
+[node name="Door" parent="Ship/AftReactor" unique_id=548328110 instance=ExtResource("26_n6rtp")]
+transform = Transform3D(2.3626714, 0, 0, 0, 1.2797606, 0, 0, 0, 3.349138, -7.9863267, 2.265247, -28.808348)
 
 [node name="Reactor" type="Node3D" parent="Ship" unique_id=1166342285]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -7.941052, -1.9078143e-06, -77.9264)
@@ -1497,34 +1605,11 @@ visible = false
 use_collision = true
 size = Vector3(25.372124, 0.2310791, 17.447021)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ship/Reactor" unique_id=1133264844]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -7.776037, 5.996308, -40.356354)
+[node name="blackhole2" type="MeshInstance3D" parent="Ship/Reactor" unique_id=1133264844]
+transform = Transform3D(0.333, 0, 0, 0, 0.333, 0, 0, 0, 0.333, -7.776037, 5.996308, -40.356354)
 mesh = SubResource("SphereMesh_keq15")
 surface_material_override/0 = SubResource("ShaderMaterial_6b2ie")
 
 [node name="Root Scene" parent="Ship" unique_id=2095750086 instance=ExtResource("6_x43i3")]
 transform = Transform3D(0.83333313, 0, 0, 0, 0.83333313, 0, 0, 0, 0.83333313, -7.2819195, -26.478525, -25.777626)
-
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Ship" unique_id=605905200]
-transform = Transform3D(-5.2715933e-08, -1.206, 0, 1.206, -5.2715933e-08, 0, 0, 0, 1.206, -17.654425, 1.5539055, -51.32945)
-use_collision = true
-
-[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Ship" unique_id=1892968682]
-transform = Transform3D(-5.2715933e-08, -1.206, 0, 1.206, -5.2715933e-08, 0, 0, 0, 1.206, 16.522558, 1.5539055, -51.32945)
-use_collision = true
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Ship" unique_id=1579996697]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.66897, 1.8310394, -54.631355)
 visible = false
-use_collision = true
-size = Vector3(3, 3, 4.729492)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Ship" unique_id=1818291909]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.608097, 1.8310394, -54.631355)
-visible = false
-use_collision = true
-size = Vector3(3, 3, 4.729492)
-
-[node name="RootSceneFloorTileBasic" type="MeshInstance3D" parent="." unique_id=437873630]
-transform = Transform3D(1204.56, 0, 0, 0, -5.265299e-05, 1204.56, 0, -1204.56, -5.265299e-05, 0.30498683, -0.44523168, -25.95105)
-mesh = ExtResource("4_wfnyu")

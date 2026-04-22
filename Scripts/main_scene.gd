@@ -13,7 +13,7 @@ func _ready() -> void:
 	#Engine.time_scale = 5
 	player = get_tree().get_first_node_in_group("Player")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	player.ui.timer_label.text = str(150-int(animation_player.current_animation_position))
 	if (animation_player.current_animation_position>130):
 		player.ui.timer_label.theme_override_colors.font_color = Color.RED

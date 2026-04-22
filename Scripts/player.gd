@@ -49,7 +49,7 @@ var keycard = 0
 func _ready() -> void:
 	change_mouse()
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	if (Input.is_action_just_pressed("Flashlight")):
 		flashOn = !flashOn
 		spot_light_3d.visible = flashOn
