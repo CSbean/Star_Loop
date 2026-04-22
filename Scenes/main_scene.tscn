@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dtq3im4jfj2b3" path="res://Assets/finally.png" id="1_52fb6"]
 [ext_resource type="Shader" uid="uid://qjgbvwd70cvu" path="res://Scenes/main_scene.gdshader" id="3_jv6wh"]
 [ext_resource type="PackedScene" uid="uid://bddoycfxcquhb" path="res://Scenes/test scenes/test_map.tscn" id="4_x6ack"]
+[ext_resource type="AudioStream" uid="uid://eu0v1gop88id" path="res://Assets/SFX & VFX/sfx/Sci Fi Ambient Music.mp3" id="5_iacmt"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_6l7je"]
 panorama = ExtResource("1_52fb6")
@@ -97,3 +98,8 @@ autostart = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1308420402]
 libraries/ = SubResource("AnimationLibrary_iacmt")
 autoplay = &"new_animation"
+
+[node name="backgroundMusic" type="AudioStreamPlayer" parent="." unique_id=626824925]
+stream = ExtResource("5_iacmt")
+volume_db = -0.5
+autoplay = true

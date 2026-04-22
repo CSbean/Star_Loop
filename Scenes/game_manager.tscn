@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://bjpmgbw2vs2an"]
 
 [ext_resource type="Script" uid="uid://xxd8qmdp1ffi" path="res://Scripts/game_manager.gd" id="1_oj352"]
-[ext_resource type="AudioStream" uid="uid://sja4bq3se7l8" path="res://Assets/SFX & VFX/sfx/ray-gun-a-10-a.mp3" id="2_e5fcp"]
 
 [node name="GameManager" type="Node" unique_id=1198021366]
 script = ExtResource("1_oj352")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1018662474]
-stream = ExtResource("2_e5fcp")

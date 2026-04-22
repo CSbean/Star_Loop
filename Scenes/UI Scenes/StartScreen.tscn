@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bteme5q742bs6" path="res://Assets/blackholesun.jpg" id="2_pt772"]
 [ext_resource type="FontFile" uid="uid://utlrlorup56u" path="res://Assets/Orbitron-VariableFont_wght.ttf" id="3_pt772"]
 [ext_resource type="AudioStream" uid="uid://1yvmqv36iioi" path="res://Assets/SFX & VFX/sfx/AMONG US - OST - MAIN THEME SONG [HQ].mp3" id="4_mmqgp"]
+[ext_resource type="AudioStream" uid="uid://pbsfxbukce6p" path="res://Assets/SFX & VFX/sfx/credits_song.wav" id="5_lsrb6"]
 
 [sub_resource type="Animation" id="Animation_mmqgp"]
 length = 0.001
@@ -173,6 +174,15 @@ offset_bottom = 256.0
 theme_override_font_sizes/font_size = 46
 text = "Open Credits"
 
+[node name="howToPlay" type="Button" parent="SettingsMenu" unique_id=42874053]
+layout_mode = 0
+offset_left = 405.0
+offset_top = 184.0
+offset_right = 683.0
+offset_bottom = 256.0
+theme_override_font_sizes/font_size = 46
+text = "How To Play"
+
 [node name="CreditsMenu" type="Panel" parent="." unique_id=922866904]
 visible = false
 layout_mode = 0
@@ -220,10 +230,75 @@ stream = ExtResource("4_mmqgp")
 autoplay = true
 
 [node name="creditsAudio" type="AudioStreamPlayer" parent="." unique_id=1109224383]
+stream = ExtResource("5_lsrb6")
+
+[node name="howToPlayMenu" type="Panel" parent="." unique_id=1433002116]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="howToPlayMenu" unique_id=135507945]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 147.0
+offset_right = 253.0
+offset_bottom = 211.0
+theme_override_font_sizes/font_size = 46
+text = "Controls"
+
+[node name="Label2" type="Label" parent="howToPlayMenu" unique_id=1551358084]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 206.0
+offset_right = 235.0
+offset_bottom = 411.0
+text = "w - move foward
+a - move left
+s - move back
+d - move right
+shift - sprint
+
+e - interact
+f - on/off flashlight"
+
+[node name="CloseHowToPlay" type="Button" parent="howToPlayMenu" unique_id=1539528440]
+layout_mode = 0
+offset_left = 519.0
+offset_top = 490.0
+offset_right = 564.0
+offset_bottom = 521.0
+text = "Back"
+
+[node name="Label3" type="Label" parent="howToPlayMenu" unique_id=1055099479]
+layout_mode = 0
+offset_left = 859.0
+offset_top = 147.0
+offset_right = 1068.0
+offset_bottom = 211.0
+theme_override_font_sizes/font_size = 46
+text = "Objective"
+
+[node name="Label4" type="Label" parent="howToPlayMenu" unique_id=79441382]
+layout_mode = 0
+offset_left = 864.0
+offset_top = 206.0
+offset_right = 1097.0
+offset_bottom = 255.0
+text = "You wake up on a space
+ship and alians have invaded 
+try to kill there leader and 
+get out before they run you
+into a black hole "
 
 [connection signal="pressed" from="MainMenu/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="MainMenu/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MainMenu/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="SettingsMenu/CloseSettings" to="." method="_on_close_settings_pressed"]
 [connection signal="pressed" from="SettingsMenu/OpenCredits" to="." method="_on_open_credits_pressed"]
+[connection signal="pressed" from="SettingsMenu/howToPlay" to="." method="_on_how_to_play_pressed"]
 [connection signal="pressed" from="CreditsMenu/CloseCredits" to="." method="_on_close_credits_pressed"]
+[connection signal="pressed" from="howToPlayMenu/CloseHowToPlay" to="." method="_on_close_how_to_play_pressed"]

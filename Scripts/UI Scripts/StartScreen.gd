@@ -3,6 +3,8 @@ extends Control
 @onready var credits_menu: Panel = $CreditsMenu
 @onready var main_menu: Panel = $MainMenu
 @onready var start_audio: AudioStreamPlayer = $startAudio
+@onready var credits_audio: AudioStreamPlayer = $creditsAudio
+@onready var how_to_play_menu: Panel = $howToPlayMenu
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,18 +21,26 @@ func _on_start_pressed() -> void:
 func _on_settings_pressed() -> void:
 	settings_menu.visible = true
 	main_menu.visible = false
-	
 func _on_open_credits_pressed() -> void:
 	settings_menu.visible = false
 	credits_menu.visible = true
 	#stop
 	start_audio.stop()
+	#start
+	credits_audio.play()
 func _on_close_credits_pressed() -> void:
 	credits_menu.visible = false
 	main_menu.visible = true
-	#stop
+	#start
 	start_audio.play()
+	#stop
+	credits_audio.stop()
 func _on_close_settings_pressed() -> void:
 	settings_menu.visible = false
 	main_menu.visible = true
-	
+func _on_how_to_play_pressed() -> void:
+	settings_menu.visible = false
+	how_to_play_menu.visible = true
+func _on_close_how_to_play_pressed() -> void:
+	how_to_play_menu.visible = false
+	settings_menu.visible = true

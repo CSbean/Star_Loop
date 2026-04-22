@@ -10,6 +10,7 @@ func _ready() -> void:
 func change_map(levelCode : int) -> void:
 	if (levelCode == 0):
 		newMap = load("res://Scenes/main_scene.tscn")
+		
 	elif (levelCode == 1):
 		newMap = load("res://Scenes/UI Scenes/StartScreen.tscn")
 	
