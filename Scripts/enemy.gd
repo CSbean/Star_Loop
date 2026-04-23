@@ -1,9 +1,15 @@
 extends CharacterBody3D
 class_name Enemy
+
+## 0 = normal enemy, 1 = boss enemy
+@export var boss = 0
+
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
 @onready var animation_player: AnimationPlayer = $EnemySprite/AnimationPlayer
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
 @onready var looker: RayCast3D = $Looker
+# normal coler 467876
+@onready var base_alien: MeshInstance3D = $EnemySprite/RootNode/AlienArmature/Skeleton3D/BaseAlien
 
 var health := 100
 var state : String = "Idle"
@@ -14,7 +20,13 @@ var canHitPlayer = false
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
 	animation_player.play("AlienArmature|Alien_Run")
-
+	var mat = base_alien.get_active_material(1)
+	if boss == 1:
+		mat.albedo_color = Color(0.17, 0.613, 0.0, 1.0);
+		spd = 4.5
+	else:
+		mat.albedo_color = Color(0.273, 0.47, 0.463, 1.0);
+		spd = 2.5
 func _process(_delta: float) -> void:
 	pass
 
