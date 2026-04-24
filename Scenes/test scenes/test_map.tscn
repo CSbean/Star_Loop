@@ -3,44 +3,44 @@
 [ext_resource type="ArrayMesh" uid="uid://c3og65t1c02xj" path="res://Assets/Ship Assets/Root Scene_Window_Wall_SideB.res" id="2_f1414"]
 [ext_resource type="PackedScene" uid="uid://cd2r8ccrcojic" path="res://Scenes/player.tscn" id="2_tagkh"]
 [ext_resource type="ArrayMesh" uid="uid://ct3q86b8s72k" path="res://Assets/Ship Assets/Root Scene_Props_Pod.res" id="3_dwn3m"]
-[ext_resource type="ArrayMesh" uid="uid://bkgh6f4a1mqog" path="res://Assets/Ship Assets/Root Scene_Details_Plate_Details.res" id="3_ki8ce"]
+[ext_resource type="ArrayMesh" uid="uid://cybw5vk0namm7" path="res://Assets/Ship Assets/Root Scene_Details_Plate_Details.res" id="3_ki8ce"]
 [ext_resource type="ArrayMesh" uid="uid://1hfipn63vssl" path="res://Assets/Ship Assets/Root Scene_DoorSingle_Wall_SideB.res" id="3_l5tev"]
-[ext_resource type="ArrayMesh" uid="uid://p8207jm37mh7" path="res://Assets/Ship Assets/Root Scene_Wall_1.res" id="3_vn61f"]
+[ext_resource type="ArrayMesh" uid="uid://cgfqw1cl7w4ua" path="res://Assets/Ship Assets/Root Scene_Wall_1.res" id="3_vn61f"]
 [ext_resource type="Texture2D" uid="uid://dtq3im4jfj2b3" path="res://Assets/finally.png" id="4_7o34i"]
-[ext_resource type="ArrayMesh" uid="uid://be16tbegs1vi3" path="res://Assets/Ship Assets/Root Scene_FloorTile_Basic.res" id="4_wfnyu"]
-[ext_resource type="ArrayMesh" uid="uid://b353egjafiouj" path="res://Assets/Ship Assets/Root Scene_Props_ComputerSmall.res" id="5_yhb6n"]
+[ext_resource type="ArrayMesh" uid="uid://dq3c08mg5532u" path="res://Assets/Ship Assets/Root Scene_FloorTile_Basic.res" id="4_wfnyu"]
+[ext_resource type="ArrayMesh" uid="uid://clghtt1v4w6bd" path="res://Assets/Ship Assets/Root Scene_Props_ComputerSmall.res" id="5_yhb6n"]
 [ext_resource type="PackedScene" uid="uid://cc7tvl2nv4ryh" path="res://Assets/Ship Assets/Scifi Kit.glb" id="6_x43i3"]
-[ext_resource type="ArrayMesh" uid="uid://c8r1jkwas27mj" path="res://Assets/Ship Assets/Root Scene_Props_Crate.res" id="8_e6ses"]
-[ext_resource type="ArrayMesh" uid="uid://co4gy7v800t3l" path="res://Assets/Ship Assets/Root Scene_Props_ChestBottom.res" id="9_4o8uk"]
-[ext_resource type="ArrayMesh" uid="uid://7oi8r1n2d4x1" path="res://Assets/Ship Assets/Root Scene_Props_Shelf_Tall.res" id="10_l5tev"]
-[ext_resource type="ArrayMesh" uid="uid://d03gaxufb4ot" path="res://Assets/Ship Assets/Root Scene_Props_Vessel_Short.res" id="11_wj13g"]
-[ext_resource type="ArrayMesh" uid="uid://cuahcuu6164lc" path="res://Assets/Ship Assets/Root Scene_DoorSingle_Wall_SideA.res" id="11_x43i3"]
-[ext_resource type="ArrayMesh" uid="uid://5uwpw2g2jt7m" path="res://Assets/Ship Assets/Root Scene_Props_ContainerFull.res" id="12_n6rtp"]
-[ext_resource type="ArrayMesh" uid="uid://di4rhm76sbmbs" path="res://Assets/Ship Assets/Root Scene_RoofTile_Pipes1.res" id="14_wfnyu"]
-[ext_resource type="ArrayMesh" uid="uid://dyl8yofcrputj" path="res://Assets/Ship Assets/Root Scene_FloorTile_Double.res" id="16_0csym"]
+[ext_resource type="ArrayMesh" uid="uid://b0vm4sx2p50bk" path="res://Assets/Ship Assets/Root Scene_Props_Crate.res" id="8_e6ses"]
+[ext_resource type="ArrayMesh" uid="uid://dow68uey6v42t" path="res://Assets/Ship Assets/Root Scene_Props_ChestBottom.res" id="9_4o8uk"]
+[ext_resource type="ArrayMesh" uid="uid://bpe8pitcmfcp8" path="res://Assets/Ship Assets/Root Scene_Props_Shelf_Tall.res" id="10_l5tev"]
+[ext_resource type="ArrayMesh" uid="uid://d12y1kkfus7bn" path="res://Assets/Ship Assets/Root Scene_Props_Vessel_Short.res" id="11_wj13g"]
+[ext_resource type="ArrayMesh" uid="uid://chr704nsx3ui8" path="res://Assets/Ship Assets/Root Scene_DoorSingle_Wall_SideA.res" id="11_x43i3"]
+[ext_resource type="ArrayMesh" uid="uid://ddkshqf1kpmbw" path="res://Assets/Ship Assets/Root Scene_Props_ContainerFull.res" id="12_n6rtp"]
+[ext_resource type="ArrayMesh" uid="uid://b6i5oo2kxrknq" path="res://Assets/Ship Assets/Root Scene_RoofTile_Pipes1.res" id="14_wfnyu"]
+[ext_resource type="ArrayMesh" uid="uid://b0xddfl1y41eu" path="res://Assets/Ship Assets/Root Scene_FloorTile_Double.res" id="16_0csym"]
 [ext_resource type="ArrayMesh" uid="uid://b6vyabvi8vbo5" path="res://Assets/Ship Assets/Root Scene_Props_Laser.res" id="17_abdmj"]
-[ext_resource type="ArrayMesh" uid="uid://c0v6s1xf0o3ds" path="res://Assets/Ship Assets/Root Scene_RoofTile_Vents.res" id="17_ylabq"]
-[ext_resource type="ArrayMesh" uid="uid://cvnlmyatfscq1" path="res://Assets/Ship Assets/Root Scene_Pipes.res" id="18_svcei"]
-[ext_resource type="ArrayMesh" uid="uid://df6wm5ypfbx2p" path="res://Assets/Ship Assets/Root Scene_Props_Base.res" id="18_wqa1t"]
-[ext_resource type="ArrayMesh" uid="uid://rutekh64kijc" path="res://Assets/Ship Assets/Root Scene_RoofTile_Corner_Pipes.res" id="25_wj13g"]
+[ext_resource type="ArrayMesh" uid="uid://b4cegvl6c0e3i" path="res://Assets/Ship Assets/Root Scene_RoofTile_Vents.res" id="17_ylabq"]
+[ext_resource type="ArrayMesh" uid="uid://cynidpqbdpavm" path="res://Assets/Ship Assets/Root Scene_Pipes.res" id="18_svcei"]
+[ext_resource type="ArrayMesh" uid="uid://bh3iqvd6ec5p1" path="res://Assets/Ship Assets/Root Scene_Props_Base.res" id="18_wqa1t"]
+[ext_resource type="ArrayMesh" uid="uid://hh13jhrhpcp7" path="res://Assets/Ship Assets/Root Scene_RoofTile_Corner_Pipes.res" id="25_wj13g"]
 [ext_resource type="PackedScene" uid="uid://dbmtlj0718kli" path="res://Scenes/door.tscn" id="26_n6rtp"]
-[ext_resource type="ArrayMesh" uid="uid://dsae6uptve8qs" path="res://Assets/Ship Assets/Root Scene_Props_Vessel.res" id="26_v3qei"]
+[ext_resource type="ArrayMesh" uid="uid://bxho3atpelhw8" path="res://Assets/Ship Assets/Root Scene_Props_Vessel.res" id="26_v3qei"]
 [ext_resource type="PackedScene" uid="uid://dx7a0xb2opwj2" path="res://Scenes/enemy.tscn" id="28_0csym"]
 [ext_resource type="ArrayMesh" uid="uid://cxxemyrb71c35" path="res://Assets/Ship Assets/Root Scene_RoofTile_Sides_Pipes.res" id="29_0csym"]
 [ext_resource type="ArrayMesh" uid="uid://5pmx2enhbac3" path="res://Assets/Ship Assets/Contorl/iMadeThis.obj" id="29_n6rtp"]
-[ext_resource type="ArrayMesh" uid="uid://qvtl3tosjadq" path="res://Assets/Ship Assets/Root Scene_DoorSingleLong_Wall_SideA.res" id="30_0csym"]
+[ext_resource type="ArrayMesh" uid="uid://6v3i4qlnhimc" path="res://Assets/Ship Assets/Root Scene_DoorSingleLong_Wall_SideA.res" id="30_0csym"]
 [ext_resource type="PackedScene" uid="uid://bwmtkmwv42ju3" path="res://Scenes/keycard.tscn" id="30_ylabq"]
 [ext_resource type="PackedScene" uid="uid://cpij1nn6bh4gq" path="res://Scenes/ammo.tscn" id="31_ylabq"]
-[ext_resource type="ArrayMesh" uid="uid://byn3gqqmmia5d" path="res://Assets/Ship Assets/Root Scene_Wall_2.res" id="32_h3ohp"]
-[ext_resource type="ArrayMesh" uid="uid://ds36ewx6bllq6" path="res://Assets/Ship Assets/Root Scene_Props_CrateLong.res" id="32_xkeec"]
-[ext_resource type="ArrayMesh" uid="uid://d07tbve7xdtf2" path="res://Assets/Ship Assets/Root Scene_Wall_5.res" id="33_ivvti"]
-[ext_resource type="ArrayMesh" uid="uid://dgsojbveh24t2" path="res://Assets/Ship Assets/Root Scene_Wall_3.res" id="34_brtdx"]
+[ext_resource type="ArrayMesh" uid="uid://b2u4vh6d0flex" path="res://Assets/Ship Assets/Root Scene_Wall_2.res" id="32_h3ohp"]
+[ext_resource type="ArrayMesh" uid="uid://dfuc88pcbeb8c" path="res://Assets/Ship Assets/Root Scene_Props_CrateLong.res" id="32_xkeec"]
+[ext_resource type="ArrayMesh" uid="uid://cnnaqpssec1kb" path="res://Assets/Ship Assets/Root Scene_Wall_5.res" id="33_ivvti"]
+[ext_resource type="ArrayMesh" uid="uid://mws35u3p3v1f" path="res://Assets/Ship Assets/Root Scene_Wall_3.res" id="34_brtdx"]
 [ext_resource type="PackedScene" uid="uid://ddxnfth88ifnl" path="res://Assets/Ship Assets/Sci Fi Engine.glb" id="35_05gsd"]
 [ext_resource type="PackedScene" uid="uid://u7er52behax" path="res://Scenes/gun_pickup.tscn" id="35_ivvti"]
 [ext_resource type="PackedScene" uid="uid://c4tjc0p50uggg" path="res://Assets/Ship Assets/RS-25.glb" id="36_p4h5g"]
-[ext_resource type="ArrayMesh" uid="uid://bufctiba3emcw" path="res://Assets/Ship Assets/Root Scene_DoorDouble_Wall_SideB.res" id="38_keq15"]
-[ext_resource type="ArrayMesh" uid="uid://ckhwl1d4kbk27" path="res://Assets/Ship Assets/Root Scene_Props_Capsule.res" id="38_kog7x"]
-[ext_resource type="ArrayMesh" uid="uid://cfy66u0u3he1q" path="res://Assets/Ship Assets/Root Scene_Props_Teleporter_1.res" id="39_keq15"]
+[ext_resource type="ArrayMesh" uid="uid://ceiywkqpmfgkr" path="res://Assets/Ship Assets/Root Scene_DoorDouble_Wall_SideB.res" id="38_keq15"]
+[ext_resource type="ArrayMesh" uid="uid://c2na312edgled" path="res://Assets/Ship Assets/Root Scene_Props_Capsule.res" id="38_kog7x"]
+[ext_resource type="ArrayMesh" uid="uid://7ruusah86bkk" path="res://Assets/Ship Assets/Root Scene_Props_Teleporter_1.res" id="39_keq15"]
 [ext_resource type="Shader" uid="uid://qjgbvwd70cvu" path="res://Scenes/main_scene.gdshader" id="40_kog7x"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_t2mdo"]
@@ -172,15 +172,19 @@ keycard = 1
 
 [node name="Door7" parent="Doors" unique_id=1222812499 instance=ExtResource("26_n6rtp")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.77953106, 0, -1, 0, -4.371139e-08, -13.445569, 1.8088379, -7.76542)
+keycard = 1
 
 [node name="Door8" parent="Doors" unique_id=935266631 instance=ExtResource("26_n6rtp")]
 transform = Transform3D(1, 0, 0, 0, 0.77953106, 0, 0, 0, 1, -17.196766, 1.8088379, -11.506608)
+keycard = 2
 
 [node name="Door9" parent="Doors" unique_id=519817768 instance=ExtResource("26_n6rtp")]
 transform = Transform3D(1, 0, 0, 0, 0.77953106, 0, 0, 0, 1, 23.299994, 1.8088379, -11.506608)
+keycard = 2
 
 [node name="Door10" parent="Doors" unique_id=74740382 instance=ExtResource("26_n6rtp")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.77953106, 0, -1, 0, -4.371139e-08, 11.086024, 1.8088379, -7.72666)
+keycard = 1
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=866678120]
 transform = Transform3D(4.693776e-08, -0.9993188, -0.03690541, -8.736322e-08, -0.03690541, 0.9993188, -1, -4.368161e-08, -8.9035964e-08, 0, 17.61836, -1.0341349)
@@ -189,15 +193,23 @@ transform = Transform3D(4.693776e-08, -0.9993188, -0.03690541, -8.736322e-08, -0
 environment = SubResource("Environment_fav6h")
 
 [node name="keycard" parent="." unique_id=213014571 instance=ExtResource("30_ylabq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.94687, 2.35835, 9.613723)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -11.94687, 1.5407276, 9.442232)
+img = 1
+
+[node name="keycard2" parent="." unique_id=1284545414 instance=ExtResource("30_ylabq")]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, -21.78024, -0.11489263, -8.0408745)
+img = 2
+
+[node name="keycard3" parent="." unique_id=1015138522 instance=ExtResource("30_ylabq")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -25.457644, 0, -46.9471)
 img = 3
 
 [node name="Ammo" parent="." unique_id=785988555 instance=ExtResource("31_ylabq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.0917635, 2.499098, 10.196941)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.792598, 0.063161075, 11.393471)
 type = 2
 
 [node name="GunPickup" parent="." unique_id=951352720 instance=ExtResource("35_ivvti")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.150238, 1.4747629, 14.446037)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -14.649321, -0.075402886, 13.340548)
 type = 2
 
 [node name="Ship" type="NavigationRegion3D" parent="." unique_id=982697765]
@@ -1401,6 +1413,11 @@ mesh = ExtResource("3_l5tev")
 
 [node name="Door" parent="Ship/LeftHall" unique_id=1746548102 instance=ExtResource("26_n6rtp")]
 transform = Transform3D(0.88692063, 0, 0, 0, 0.6178959, 0, 0, 0, 1, 4.3438697, 1.4523382, -8.550183)
+keycard = 2
+
+[node name="Door2" parent="Ship/LeftHall" unique_id=743090742 instance=ExtResource("26_n6rtp")]
+transform = Transform3D(0.8869207, 0, -2.842171e-14, 0, 0.61789584, 0, 7.1054274e-15, 0, 1, 38.427105, 1.485426, -8.550192)
+keycard = 2
 
 [node name="LeftEngine" type="Node3D" parent="Ship" unique_id=263158192]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.188464, 0.09497753, -85.251144)
@@ -1452,6 +1469,7 @@ transform = Transform3D(-0.5, 0, 7.549791e-08, 0, 0.5, 0, -7.549791e-08, 0, -0.5
 
 [node name="Door" parent="Ship/RightEngine" unique_id=946476348 instance=ExtResource("26_n6rtp")]
 transform = Transform3D(-3.7517193e-08, 0, -1, 0, 0.74834955, 0, 0.8582933, 0, -4.371139e-08, -37.547523, 1.6381226, -29.671751)
+keycard = 3
 
 [node name="RootSceneDoorDoubleWallSideB2" type="MeshInstance3D" parent="Ship/RightEngine" unique_id=1537823924]
 transform = Transform3D(1.476084e-05, -138.3192, -5.171255e-06, 7.920625e-06, -6.046124e-06, 118.304474, -90.60138, -2.253506e-05, 1.03425045e-05, -15.940697, -0.03458461, -29.880203)
@@ -1459,6 +1477,7 @@ mesh = ExtResource("38_keq15")
 
 [node name="Door2" parent="Ship/RightEngine" unique_id=490069662 instance=ExtResource("26_n6rtp")]
 transform = Transform3D(-3.7517193e-08, 0, 1, 0, 0.74834955, 0, -0.8582933, 0, -4.371139e-08, -16.382019, 1.6381226, -29.840872)
+keycard = 3
 
 [node name="AftReactor" type="Node3D" parent="Ship" unique_id=1675206576]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -7.941052, -1.9078143e-06, -77.9264)
