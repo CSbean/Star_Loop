@@ -1190,6 +1190,46 @@ transform = Transform3D(-4.3712152e-08, 0.9999999, 4.3711385e-08, 0, -4.3711385e
 use_collision = true
 size = Vector3(45.1266, 0.2310791, 7.1085596)
 
+[node name="CSGBox3D15" type="CSGBox3D" parent="Ship/RightHall" unique_id=1753581605]
+transform = Transform3D(0.9999999, 2.1529445e-12, 4.2351647e-22, 0, -4.3711385e-08, 0.9999999, 2.1529445e-12, -0.9999999, -4.3711385e-08, 1.6140995, 2.9080079, -26.588112)
+use_collision = true
+size = Vector3(9.139849, 0.2310791, 5.609171)
+
+[node name="CSGBox3D22" type="CSGBox3D" parent="Ship/RightHall" unique_id=1894386377]
+transform = Transform3D(0.9999999, 2.9700686e-12, 4.2351647e-22, 0, -4.3711385e-08, 0.9999999, 2.9700686e-12, -0.9999999, -4.3711385e-08, -6.376856, 2.9080079, -26.588112)
+use_collision = true
+size = Vector3(1.4731946, 0.2310791, 5.609171)
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="Ship/RightHall" unique_id=728955266]
+transform = Transform3D(-4.371138e-08, -0.9999999, -4.3711385e-08, 0, -4.3711385e-08, 0.9999999, -0.9999999, 4.371138e-08, 1.9106848e-15, -7.3782063, 2.9080079, -27.563887)
+use_collision = true
+size = Vector3(1.2279913, 0.2310791, 5.609171)
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="Ship/RightHall" unique_id=1889317044]
+transform = Transform3D(-4.371138e-08, -0.9999999, -4.3711385e-08, 0, -4.3711385e-08, 0.9999999, -0.9999999, 4.371138e-08, 1.9106848e-15, -7.3782034, 2.9080079, -31.801058)
+use_collision = true
+size = Vector3(1.4998599, 0.2310791, 5.609171)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Ship/RightHall" unique_id=1007937711]
+transform = Transform3D(-4.371138e-08, -0.9999999, -4.3711385e-08, 0, -4.3711385e-08, 0.9999999, -0.9999999, 4.371138e-08, 1.9106848e-15, -27.94835, 2.9080079, -31.801054)
+use_collision = true
+size = Vector3(1.4998599, 0.2310791, 5.609171)
+
+[node name="CSGBox3D19" type="CSGBox3D" parent="Ship/RightHall" unique_id=735946978]
+transform = Transform3D(-4.371138e-08, -0.9999999, -4.3711385e-08, 0, -4.3711385e-08, 0.9999999, -0.9999999, 4.371138e-08, 1.9106848e-15, -27.94835, 2.623818, -27.34834)
+use_collision = true
+size = Vector3(1.4998599, 0.2310791, 5.0407915)
+
+[node name="CSGBox3D20" type="CSGBox3D" parent="Ship/RightHall" unique_id=1145505126]
+transform = Transform3D(0.9999999, 9.80549e-13, 4.2351647e-22, 0, -4.3711385e-08, 0.9999999, 9.80549e-13, -0.9999999, -4.3711385e-08, -32.52155, 2.623818, -26.323612)
+use_collision = true
+size = Vector3(7.6333137, 0.2310791, 5.0407915)
+
+[node name="CSGBox3D21" type="CSGBox3D" parent="Ship/RightHall" unique_id=1044677381]
+transform = Transform3D(0.9999999, 1.9895197e-12, 4.2351647e-22, 0, -4.3711385e-08, 0.9999999, 1.9895197e-12, -0.9999999, -4.3711385e-08, -40.072582, 2.623818, -26.323612)
+use_collision = true
+size = Vector3(1.5802034, 0.2310791, 5.0407915)
+
 [node name="CSGBox3D4" type="CSGBox3D" parent="Ship/RightHall" unique_id=61347670]
 transform = Transform3D(0.9999998, -2.9605944e-15, 0, 2.9605944e-15, 0.9999998, 3.5293036e-22, 0, -8.2358214e-23, 0.9999998, -5.4547462, 12.065808, -11.333267)
 visible = false

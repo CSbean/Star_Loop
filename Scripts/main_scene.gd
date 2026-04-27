@@ -16,6 +16,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	player.ui.timer_label.text = str(150-int(animation_player.current_animation_position))
 	if (animation_player.current_animation_position>130):
+
 		player.ui.timer_label.theme_override_colors.font_color = Color.RED
 	space_objects.global_position -=Vector3(0,0,shipSpd)
 	if (ship.global_position.distance_to(mesh_instance_3d.global_position) < 100):
