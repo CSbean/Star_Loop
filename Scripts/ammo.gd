@@ -1,6 +1,8 @@
 extends Area3D
 ## 1 = medkit, 2 = pistol ammo, 3 = rifle ammo, 4 = shotgun ammo
 @export var type : int = 0
+## pistol = 6, shotgun = 3, rifle = 12
+@export var amount : int
 @onready var medkit: Node3D = $Medkit
 @onready var pistol_ammo: Node3D = $PistolAmmo
 @onready var rifle_ammo: Node3D = $RifleAmmo
@@ -29,9 +31,9 @@ func _on_body_entered(body: Node3D) -> void:
 		if (type == 1):
 			player.health +=25
 		if (type == 2):
-			player.pistolRounds += 6
+			player.pistolRounds += amount
 		if (type == 3):
-			player.rifleRounds += 12
+			player.rifleRounds += amount
 		if (type == 4):
-			player.shotgunRounds += 3
+			player.shotgunRounds += amount
 		self.queue_free()
