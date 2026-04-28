@@ -69,6 +69,9 @@ _data = {
 &"new_animation": SubResource("Animation_x6ack")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_iacmt"]
+size = Vector3(15.0199585, 8.27887, 9.465271)
+
 [node name="MainScene" type="Node3D" unique_id=1876643400]
 script = ExtResource("1_6l7je")
 
@@ -103,3 +106,12 @@ autoplay = &"new_animation"
 stream = ExtResource("5_iacmt")
 volume_db = -0.5
 autoplay = true
+
+[node name="WinArea" type="Area3D" parent="." unique_id=376214464]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.7466)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WinArea" unique_id=467877567]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.424469, 3.6394348, 2.2662659)
+shape = SubResource("BoxShape3D_iacmt")
+
+[connection signal="body_entered" from="WinArea" to="." method="_on_win_area_body_entered"]

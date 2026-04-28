@@ -21,3 +21,11 @@ func _process(delta: float) -> void:
 	if (ship.global_position.distance_to(mesh_instance_3d.global_position) < 100):
 		GameManager.keycardNum = 0
 		get_tree().reload_current_scene()
+
+
+func _on_win_area_body_entered(body: Node3D) -> void:
+	if (body is Player):
+		GameManager.paused = true
+		player.ui.pause_screen.visible = true
+		player.ui.objective.text = "You Won!!"
+		player.ui.close_ui.visible = false

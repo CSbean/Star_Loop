@@ -1,7 +1,7 @@
 extends Node3D
 @export var pickup_key_card: MeshInstance3D 
 @export var texture : Texture2D
-# 0=no door acsees, 1=white, 2=green, 3=yellow, 4=red
+## 0=no door acsees, 1=white, 2=green, 3=yellow, 4=red
 @export var img : int
 var player2 : Player
 
