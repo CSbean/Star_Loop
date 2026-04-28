@@ -87,7 +87,7 @@ mesh = SubResource("SphereMesh_iacmt")
 surface_material_override/0 = SubResource("ShaderMaterial_x6ack")
 
 [node name="resetTime" type="Timer" parent="." unique_id=1449098792]
-wait_time = 180.0
+wait_time = 60.0
 one_shot = true
 autostart = true
 

@@ -133,6 +133,7 @@ theme_override_font_sizes/font_size = 64
 text = "Close"
 
 [node name="SenseSlider" type="HSlider" parent="SettingsMenu" unique_id=1986873867]
+visible = false
 texture_filter = 1
 layout_mode = 0
 offset_left = 8.0
@@ -156,6 +157,7 @@ theme_override_font_sizes/font_size = 25
 text = "Change Sensitivity: "
 
 [node name="SprintToggle" type="CheckButton" parent="SettingsMenu" unique_id=1964461529]
+visible = false
 layout_mode = 0
 offset_left = 16.0
 offset_top = 88.0

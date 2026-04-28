@@ -15,6 +15,7 @@ const PISTIOLIMG_REMOVEBG_PREVIEW = preload("uid://cg00fy1425cuc")
 @onready var keycard: Sprite2D = $Keycards/keycard
 @onready var objective: Label = $PauseScreen/Objective
 @onready var reload_audio: AudioStreamPlayer = $reloadAudio
+@onready var close_ui: Button = $PauseScreen/CloseUI
 
 var badPic = preload("res://Assets/Gun assets/pistiolimg-removebg-preview.png")
 var greenPic = preload("res://Assets/keycard Images/mexico.png")
@@ -34,16 +35,16 @@ func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("esc")):
 		pause_screen.visible = !pause_screen.visible
 	timer_label.global_position.x = 528
-	if (GameManager.keycardNum == 1):
+	if (GameManager.keycardNum == 1) and !(GameManager.paused):
 		keycard.texture = whitePic
 		objective.text = "Objective: Find Green Key card"
-	elif (GameManager.keycardNum == 2):
+	elif (GameManager.keycardNum == 2) and !(GameManager.paused):
 		keycard.texture = greenPic
 		objective.text = "Objective: Find Yellow Key card"
-	elif (GameManager.keycardNum == 3):
+	elif (GameManager.keycardNum == 3) and !(GameManager.paused):
 		keycard.texture = yellowPic
 		objective.text = "Objective: Find Red Key card"
-	elif (GameManager.keycardNum == 4):
+	elif (GameManager.keycardNum == 4) and !(GameManager.paused):
 		keycard.texture = redPic
 		objective.text = "Objective: Fix the ship's reactor"
 	if(GameManager.keycardNum == 0):
@@ -77,12 +78,20 @@ func _process(_delta: float) -> void:
 	elif (selectedGun ==0):
 		gun_text.texture = AR_REMOVE_BG
 		ammo_label.text = str(player.rifleRounds)
+	if (Input.is_action_just_pressed("one")):
+		selectedGun = 0
+	if (Input.is_action_just_pressed("two")):
+		selectedGun = 1
+	if (Input.is_action_just_pressed("three")):
+		selectedGun = 2
 func update_health(num:int)->void:
 	health.text = str(num)
 
 func lose()->void:
 	GameManager.paused = true
-
+	pause_screen.visible = true
+	objective.text = "You Died!!"
+	close_ui.visible = false
 func _on_close_ui_pressed() -> void:
 	pause_screen.visible = false
 	GameManager.paused = false

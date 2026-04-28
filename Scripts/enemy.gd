@@ -14,7 +14,7 @@ class_name Enemy
 var health := 100
 var state : String = "Idle"
 var player : CharacterBody3D
-var spd := 2.5
+var spd := 3.14
 var canHitPlayer = false
 
 func _ready() -> void:
@@ -54,12 +54,12 @@ func _physics_process(delta: float) -> void:
 			self.queue_free()
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body is Player:
+	if body is Player :
 		canHitPlayer = true
 		while canHitPlayer == true:
 			animation_player.play("AlienArmature|Alien_Punch")
 			await get_tree().create_timer(0.6).timeout
-			if (canHitPlayer):
+			if (canHitPlayer) and !(GameManager.paused):
 				body.take_damage_p(20)
 			await get_tree().create_timer(0.3).timeout
 			animation_player.play("AlienArmature|Alien_Run")
