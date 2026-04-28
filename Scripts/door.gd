@@ -36,7 +36,7 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	isMoving = animation_player.is_playing()
-	if (player.global_position.distance_squared_to(self.global_position) < 9):
+	if (player.global_position.distance_squared_to(self.global_position) < 16):
 		nearby = true
 		player.ui.nearby = true
 	else:
@@ -54,7 +54,6 @@ func _process(_delta: float) -> void:
 					isOpen = false
 					animation_player.play("Close")
 			else:
-				#fail opening
 				error_audio.play()
 
 func _on_timer_timeout() -> void:

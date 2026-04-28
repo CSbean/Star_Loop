@@ -59,8 +59,8 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		while canHitPlayer == true:
 			animation_player.play("AlienArmature|Alien_Punch")
 			await get_tree().create_timer(0.6).timeout
-			
-			body.take_damage_p(20)
+			if (canHitPlayer):
+				body.take_damage_p(20)
 			await get_tree().create_timer(0.3).timeout
 			animation_player.play("AlienArmature|Alien_Run")
 
