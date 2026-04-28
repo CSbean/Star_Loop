@@ -89,6 +89,9 @@ albedo_color = Color(18.892157, 18.892157, 18.892157, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bt7gk"]
 albedo_color = Color(0.38, 0.38, 0.38, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ltol4"]
+albedo_color = Color(0.54509807, 0.5019608, 0.54509807, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i4a8a"]
 albedo_color = Color(4.0247846, 4.0247846, 4.0247846, 1)
 
@@ -159,6 +162,26 @@ transform = Transform3D(1, 0, -7.1054274e-15, 0, 0.99999994, 0, 7.1054274e-15, 0
 
 [node name="Enemy6" parent="Enemies" unique_id=100477629 instance=ExtResource("28_0csym")]
 transform = Transform3D(1, 0, -7.1054274e-15, 0, 0.99999994, 0, 7.1054274e-15, 0, 1, -11.025538, 0, 16.799747)
+
+[node name="backupBossEnemies" type="Node3D" parent="Enemies" unique_id=162634483]
+
+[node name="Enemy" parent="Enemies/backupBossEnemies" unique_id=1289283427 instance=ExtResource("28_0csym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8288674, 1.0174087, 21.17495)
+
+[node name="Enemy2" parent="Enemies/backupBossEnemies" unique_id=1983591103 instance=ExtResource("28_0csym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8288674, 1.0174087, 14.960697)
+
+[node name="Enemy5" parent="Enemies/backupBossEnemies" unique_id=1300137958 instance=ExtResource("28_0csym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1711326, 1.0174087, 15.960697)
+
+[node name="Enemy6" parent="Enemies/backupBossEnemies" unique_id=1927650390 instance=ExtResource("28_0csym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1711326, 1.0174087, 21.960697)
+
+[node name="Enemy3" parent="Enemies/backupBossEnemies" unique_id=14407319 instance=ExtResource("28_0csym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1711326, 1.0174087, 21.17495)
+
+[node name="Enemy4" parent="Enemies/backupBossEnemies" unique_id=1301078894 instance=ExtResource("28_0csym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1711326, 1.0174087, 14.960697)
 
 [node name="Doors" type="Node3D" parent="." unique_id=2080865588]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.034255266, -0.34057808, 0)
@@ -1543,6 +1566,14 @@ keycard = 3
 transform = Transform3D(1.476084e-05, -138.3192, -5.171255e-06, 7.920625e-06, -6.046124e-06, 118.304474, -90.60138, -2.253506e-05, 1.03425045e-05, -15.940697, -0.03458461, -29.880203)
 mesh = ExtResource("38_keq15")
 
+[node name="RootSceneDoorDoubleWallSideB3" type="MeshInstance3D" parent="Ship/RightEngine" unique_id=110004207]
+transform = Transform3D(-2.2681465e-05, 138.3192, -5.171255e-06, -7.920624e-06, 6.0461243e-06, 118.304474, 90.60138, 3.462731e-05, 1.03425045e-05, -17.038454, -0.03458466, -29.880203)
+mesh = ExtResource("38_keq15")
+
+[node name="RootSceneDoorDoubleWallSideB4" type="MeshInstance3D" parent="Ship/RightEngine" unique_id=1793227236]
+transform = Transform3D(1.476084e-05, -138.3192, -5.171255e-06, 7.920626e-06, -6.046124e-06, 118.304474, -90.60138, -2.253506e-05, 1.03425045e-05, -36.904453, -0.034585547, -29.670732)
+mesh = ExtResource("38_keq15")
+
 [node name="Door2" parent="Ship/RightEngine" unique_id=490069662 instance=ExtResource("26_n6rtp")]
 transform = Transform3D(-3.7517193e-08, 0, 1, 0, 0.74834955, 0, -0.8582933, 0, -4.371139e-08, -16.382019, 1.6381226, -29.840872)
 keycard = 3
@@ -1585,6 +1616,7 @@ size = Vector3(46.8121, 0.2310791, 15.364258)
 transform = Transform3D(-4.3711374e-08, 0.99999976, -8.742321e-08, -0.99999976, -4.371138e-08, -8.742276e-08, -8.742276e-08, 8.742321e-08, 0.99999976, 2.8781023, 5.895979, -25.137688)
 use_collision = true
 size = Vector3(11.950182, 0.2310791, 8.218224)
+material = SubResource("StandardMaterial3D_ltol4")
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="Ship/AftReactor/CSGBox3D9" unique_id=797878663]
 transform = Transform3D(1, -7.283063e-13, -1.4566126e-12, 7.283063e-13, 1, -5.675121e-20, -1.8189894e-12, -6.098637e-20, 1, 3.9736185, 0, 0.98516464)
@@ -1640,6 +1672,7 @@ mesh = ExtResource("17_ylabq")
 
 [node name="Door" parent="Ship/AftReactor" unique_id=548328110 instance=ExtResource("26_n6rtp")]
 transform = Transform3D(2.3626714, 0, 0, 0, 1.2797606, 0, 0, 0, 3.349138, -7.9863267, 2.265247, -28.808348)
+keycard = 3
 
 [node name="Reactor" type="Node3D" parent="Ship" unique_id=1166342285]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -7.941052, -1.9078143e-06, -77.9264)
@@ -1697,6 +1730,21 @@ transform = Transform3D(0.333, 0, 0, 0, 0.333, 0, 0, 0, 0.333, -7.776037, 5.9963
 mesh = SubResource("SphereMesh_keq15")
 surface_material_override/0 = SubResource("ShaderMaterial_6b2ie")
 
+[node name="CSGBox3D3" type="CSGCylinder3D" parent="Ship/Reactor" unique_id=1499305250]
+transform = Transform3D(1, 4.425747e-20, 7.6738615e-13, 0, -1, 2.9802322e-08, 7.6738615e-13, -2.9802322e-08, -1, -8.000433, 5.414877, -40.120712)
+visible = false
+use_collision = true
+radius = 3.237793
+height = 12.52002
+
 [node name="Root Scene" parent="Ship" unique_id=2095750086 instance=ExtResource("6_x43i3")]
 transform = Transform3D(0.83333313, 0, 0, 0, 0.83333313, 0, 0, 0, 0.83333313, -7.2819195, -26.478525, -25.777626)
 visible = false
+
+[node name="RootSceneDoorDoubleWallSideB" type="MeshInstance3D" parent="." unique_id=346913153]
+transform = Transform3D(-283.41177, -3.70059e-05, -1.518454e-12, 0, -1.07127435e-05, 230.06055, -4.2794003e-05, 245.079, 1.0056267e-05, 0.48086804, -0.44665956, -41.071552)
+mesh = ExtResource("38_keq15")
+
+[node name="RootSceneDoorDoubleWallSideB2" type="MeshInstance3D" parent="." unique_id=1611835587]
+transform = Transform3D(283.41177, 5.8431386e-05, -1.5184538e-12, -1.0830234e-12, 1.0712745e-05, 230.06055, 6.757065e-05, -245.079, 1.0056267e-05, 0.48086756, -0.44665965, -39.05499)
+mesh = ExtResource("38_keq15")
