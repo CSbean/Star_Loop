@@ -5,6 +5,7 @@
 [ext_resource type="Shader" uid="uid://qjgbvwd70cvu" path="res://Scenes/main_scene.gdshader" id="3_jv6wh"]
 [ext_resource type="PackedScene" uid="uid://bddoycfxcquhb" path="res://Scenes/test scenes/test_map.tscn" id="4_x6ack"]
 [ext_resource type="AudioStream" uid="uid://eu0v1gop88id" path="res://Assets/SFX & VFX/sfx/Sci Fi Ambient Music.mp3" id="5_iacmt"]
+[ext_resource type="PackedScene" uid="uid://bwmtkmwv42ju3" path="res://Scenes/keycard.tscn" id="6_6ev3c"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_6l7je"]
 panorama = ExtResource("1_52fb6")
@@ -113,5 +114,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.7466)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WinArea" unique_id=467877567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.424469, 3.6394348, 2.2662659)
 shape = SubResource("BoxShape3D_iacmt")
+
+[node name="keycard" parent="." unique_id=213014571 instance=ExtResource("6_6ev3c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37795043, -15.904787)
+img = 4
 
 [connection signal="body_entered" from="WinArea" to="." method="_on_win_area_body_entered"]

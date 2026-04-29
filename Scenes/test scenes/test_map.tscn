@@ -215,6 +215,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.034255266, -0.34057808, 0)
 
 [node name="Door" parent="Doors" unique_id=1607450983 instance=ExtResource("26_n6rtp")]
 transform = Transform3D(1.2001226, 0, 0, 0, 1.0809841, 0, 0, 0, 1.2001226, -0.56885314, 2.0102944, 13.530891)
+keycard = 4
 
 [node name="Door2" parent="Doors" unique_id=1460703074 instance=ExtResource("26_n6rtp")]
 transform = Transform3D(-5.2459026e-08, 0, -1.2001226, 0, 0.9220949, 0, 1.2001226, 0, -5.2459026e-08, 3.6067088, 1.8050323, 2.0196981)
