@@ -1,5 +1,5 @@
 extends Control
-
+class_name UI
 
 var nearby : bool
 

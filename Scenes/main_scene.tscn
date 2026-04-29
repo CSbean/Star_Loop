@@ -5,7 +5,6 @@
 [ext_resource type="Shader" uid="uid://qjgbvwd70cvu" path="res://Scenes/main_scene.gdshader" id="3_jv6wh"]
 [ext_resource type="PackedScene" uid="uid://bddoycfxcquhb" path="res://Scenes/test scenes/test_map.tscn" id="4_x6ack"]
 [ext_resource type="AudioStream" uid="uid://eu0v1gop88id" path="res://Assets/SFX & VFX/sfx/Sci Fi Ambient Music.mp3" id="5_iacmt"]
-[ext_resource type="PackedScene" uid="uid://bwmtkmwv42ju3" path="res://Scenes/keycard.tscn" id="6_6ev3c"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_6l7je"]
 panorama = ExtResource("1_52fb6")
@@ -61,15 +60,6 @@ shader_parameter/density_heat_strength = 1.0
 shader_parameter/density_heat_power = 0.10000000149012
 shader_parameter/rs = 0.7
 
-[sub_resource type="Animation" id="Animation_x6ack"]
-resource_name = "new_animation"
-length = 150.0
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_iacmt"]
-_data = {
-&"new_animation": SubResource("Animation_x6ack")
-}
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_iacmt"]
 size = Vector3(15.0199585, 8.27887, 9.465271)
 
@@ -90,18 +80,9 @@ transform = Transform3D(13.130293, -1.2301751, -6.913336, 3.9884598, 13.371937, 
 mesh = SubResource("SphereMesh_iacmt")
 surface_material_override/0 = SubResource("ShaderMaterial_x6ack")
 
-[node name="resetTime" type="Timer" parent="." unique_id=1449098792]
-wait_time = 60.0
-one_shot = true
-autostart = true
-
 [node name="Ship" type="Node3D" parent="." unique_id=1605910709]
 
 [node name="BensSpecialPlace" parent="Ship" unique_id=1311132722 instance=ExtResource("4_x6ack")]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1308420402]
-libraries/ = SubResource("AnimationLibrary_iacmt")
-autoplay = &"new_animation"
 
 [node name="backgroundMusic" type="AudioStreamPlayer" parent="." unique_id=626824925]
 stream = ExtResource("5_iacmt")
@@ -115,8 +96,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.7466)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.424469, 3.6394348, 2.2662659)
 shape = SubResource("BoxShape3D_iacmt")
 
-[node name="keycard" parent="." unique_id=213014571 instance=ExtResource("6_6ev3c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37795043, -15.904787)
-img = 4
+[node name="loopTimer" type="Timer" parent="." unique_id=1922205856]
 
 [connection signal="body_entered" from="WinArea" to="." method="_on_win_area_body_entered"]
+[connection signal="timeout" from="loopTimer" to="." method="_on_loop_timer_timeout"]
