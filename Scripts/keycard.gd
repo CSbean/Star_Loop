@@ -3,6 +3,10 @@ extends Node3D
 @export var texture : Texture2D
 ## 0=no door acsees, 1=white, 2=green, 3=yellow, 4=red
 @export var img : int
+
+@onready var label_3d: Label3D = $Label3D
+
+
 var player2 : Player
 
 
@@ -22,9 +26,11 @@ var playerNearby := false
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is Player:
 		playerNearby = true
+		label_3d.visible = true
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body is Player:
 		playerNearby = false
+		label_3d.visible = false
 
 func _process(_delta: float) -> void:
 	if (playerNearby):
