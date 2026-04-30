@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://utlrlorup56u" path="res://Assets/Orbitron-VariableFont_wght.ttf" id="4_2246s"]
 [ext_resource type="FontFile" uid="uid://cghhnoa1eyfux" path="res://Assets/SFX & VFX/Orbitron,Saira_Stencil/Saira_Stencil/SairaStencil-VariableFont_wdth,wght.ttf" id="5_q7pk6"]
 [ext_resource type="AudioStream" uid="uid://urm7opuyljqq" path="res://Assets/SFX & VFX/sfx/561471__gamewithbepis__generic-rifle-cock.wav" id="6_m78vo"]
+[ext_resource type="Texture2D" uid="uid://bs4o26ujwjfq4" path="res://Assets/healthImg.png" id="7_smcll"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jxero"]
 font_size = 24
@@ -48,6 +49,45 @@ tracks/0/keys = {
 _data = {
 &"DoorError": SubResource("Animation_m78vo"),
 &"RESET": SubResource("Animation_smcll")
+}
+
+[sub_resource type="Animation" id="Animation_ryf15"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Heartbeat/HealthImg:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.2, 0.2)]
+}
+
+[sub_resource type="Animation" id="Animation_mmixe"]
+resource_name = "heartbeat"
+length = 1.5
+loop_mode = 1
+step = 0.016666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Heartbeat/HealthImg:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.2, 0.2), Vector2(0.25, 0.25), Vector2(0.2, 0.2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nt8jn"]
+_data = {
+&"RESET": SubResource("Animation_ryf15"),
+&"heartbeat": SubResource("Animation_mmixe")
 }
 
 [node name="UI" type="Control" unique_id=836688804]
@@ -192,6 +232,18 @@ theme_override_fonts/font = ExtResource("4_2246s")
 theme_override_font_sizes/font_size = 29
 text = "              Access denied: 
 Higher Level Keycard Required"
+
+[node name="Heartbeat" type="AnimationPlayer" parent="." unique_id=170206499]
+libraries/ = SubResource("AnimationLibrary_nt8jn")
+autoplay = &"heartbeat"
+
+[node name="HealthImg" type="Sprite2D" parent="Heartbeat" unique_id=1566026655]
+position = Vector2(160, 608)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_smcll")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2006724058]
+speed_scale = 1.63
 
 [connection signal="pressed" from="PauseScreen/MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="PauseScreen/CloseUI" to="." method="_on_close_ui_pressed"]

@@ -65,6 +65,7 @@ func _process(delta: float) -> void:
 	
 	
 	if GameManager.paused == false:
+		ui.heartbeat.speed_scale = 1 + ((100-health)/33.0)
 		if Input.is_action_just_pressed("Player_Sprint"):
 			sprinting_toggle = !sprinting_toggle
 			if sprinting_toggle:
@@ -95,7 +96,9 @@ func _process(delta: float) -> void:
 						pisto_shoot_audio.play()
 						if (ray_cast_3d.get_collider() is Enemy):
 							ray_cast_3d.get_collider().health -= 40
-			
+	else:
+		ui.heartbeat.speed_scale = 0
+		
 		
 func _physics_process(delta: float) -> void:
 	if GameManager.paused == false:

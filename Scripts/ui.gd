@@ -7,6 +7,7 @@ const SHOTGUN_BG_REMOVE = preload("uid://c3m5nexfrrm82")
 const AR_REMOVE_BG = preload("uid://68vculh1mfde")
 const PISTIOLIMG_REMOVEBG_PREVIEW = preload("uid://cg00fy1425cuc")
 
+@onready var heartbeat: AnimationPlayer = $Heartbeat
 @onready var error: AnimationPlayer = $Error
 @onready var timer_label: Label = $Timer/TimerLabel
 @onready var pause_screen: Panel = $PauseScreen
