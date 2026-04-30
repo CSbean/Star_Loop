@@ -133,7 +133,6 @@ theme_override_font_sizes/font_size = 64
 text = "Close"
 
 [node name="SenseSlider" type="HSlider" parent="SettingsMenu" unique_id=1986873867]
-visible = false
 texture_filter = 1
 layout_mode = 0
 offset_left = 8.0
@@ -157,15 +156,14 @@ theme_override_font_sizes/font_size = 25
 text = "Change Sensitivity: "
 
 [node name="SprintToggle" type="CheckButton" parent="SettingsMenu" unique_id=1964461529]
-visible = false
 layout_mode = 0
 offset_left = 16.0
 offset_top = 88.0
 offset_right = 392.0
 offset_bottom = 141.0
-theme_override_font_sizes/font_size = 31
+theme_override_font_sizes/font_size = 32
 button_pressed = true
-text = "Sprint Toggle On/Off"
+text = "Press shift to toggle sprint on/off"
 
 [node name="OpenCredits" type="Button" parent="SettingsMenu" unique_id=14230625]
 layout_mode = 0
@@ -185,6 +183,16 @@ offset_bottom = 256.0
 theme_override_font_sizes/font_size = 46
 text = "How To Play"
 
+[node name="AudioCheck" type="CheckButton" parent="SettingsMenu" unique_id=1575859692]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 88.0
+offset_right = 987.0
+offset_bottom = 141.0
+theme_override_font_sizes/font_size = 32
+button_pressed = true
+text = "Play Audio"
+
 [node name="CreditsMenu" type="Panel" parent="." unique_id=922866904]
 visible = false
 layout_mode = 0
@@ -203,7 +211,9 @@ Benjamin Burnett
 Beau Barber
 
 Special thanks to:
-"
+Duncan Casper
+Colin
+ Harrington-Ding"
 
 [node name="CloseCredits" type="Button" parent="CreditsMenu" unique_id=1326259978]
 layout_mode = 0
@@ -226,6 +236,30 @@ offset_right = 40.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 40
 text = "Attributions:"
+
+[node name="Label2" type="Label" parent="CreditsMenu/Panel" unique_id=1876685674]
+layout_mode = 0
+offset_top = 54.0
+offset_right = 326.0
+offset_bottom = 457.0
+scale = Vector2(0.94254917, 1.0265118)
+theme_override_font_sizes/font_size = 15
+text = "#Ship Assets by Quaternius
+#Astronaut by Quaternius
+#Scifi Pistol by Quaternius
+#Sci-Fi Shotgun by burunduk [CC-BY] via Poly Pizza
+#Alien by Quaternius
+#Cockpit control center by Poly by Google [CC-BY]
+#Ceiling Light by Ryan Donaldson [CC-BY]
+#Pickup Key Card by Quaternius
+#Pickup Health by Quaternius
+#Bullets Pickup by Quaternius
+#Coil Gun by Vas Pupin [CC-BY] via Poly Pizza
+#Space engine by Google [CC-BY] via Poly Pizza
+#Sci Fi Engine by Dipper98
+#Ammo Shotgun by CreativeTrio
+#Ammo Sniper by CreativeTrio
+#"
 
 [node name="startAudio" type="AudioStreamPlayer" parent="." unique_id=172346318]
 stream = ExtResource("4_mmqgp")
@@ -258,21 +292,23 @@ offset_left = 92.0
 offset_top = 206.0
 offset_right = 235.0
 offset_bottom = 411.0
-text = "w - move foward
-a - move left
-s - move back
-d - move right
-shift - sprint
+theme_override_font_sizes/font_size = 21
+text = "W - Move foward
+A - Move left
+S - Move back
+D - Move right
+Shift - Sprint
 
-e - interact
-f - on/off flashlight"
+E - Interact 
+F - Toggle Flashlight"
 
 [node name="CloseHowToPlay" type="Button" parent="howToPlayMenu" unique_id=1539528440]
 layout_mode = 0
-offset_left = 519.0
-offset_top = 490.0
-offset_right = 564.0
-offset_bottom = 521.0
+offset_left = 481.0
+offset_top = 402.0
+offset_right = 656.0
+offset_bottom = 517.0
+theme_override_font_sizes/font_size = 52
 text = "Back"
 
 [node name="Label3" type="Label" parent="howToPlayMenu" unique_id=1055099479]
@@ -286,15 +322,17 @@ text = "Objective"
 
 [node name="Label4" type="Label" parent="howToPlayMenu" unique_id=79441382]
 layout_mode = 0
-offset_left = 864.0
+offset_left = 799.0
 offset_top = 206.0
-offset_right = 1097.0
-offset_bottom = 255.0
-text = "You wake up on a space
-ship and alians have invaded 
-try to kill there leader and 
-get out before they run you
-into a black hole "
+offset_right = 1106.0
+offset_bottom = 383.0
+theme_override_font_sizes/font_size = 19
+text = "You wake up on a spaceship on 
+course for a black hole. Kill
+the enemies aboard your ship 
+and reach the forward navigation
+room to change your course and 
+save yourself"
 
 [connection signal="pressed" from="MainMenu/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="MainMenu/Start" to="." method="_on_start_pressed"]

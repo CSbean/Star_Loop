@@ -129,6 +129,7 @@ text = "100"
 label_settings = SubResource("LabelSettings_qdvrb")
 
 [node name="GunText" type="TextureRect" parent="." unique_id=114671122]
+visible = false
 layout_mode = 0
 offset_left = 880.00006
 offset_top = 525.0
@@ -142,6 +143,7 @@ position = Vector2(64, 544)
 scale = Vector2(0.18382044, 0.18382044)
 
 [node name="keycard" type="Sprite2D" parent="Keycards" unique_id=17351076]
+visible = false
 texture = ExtResource("3_nf4gj")
 
 [node name="Timer" type="Polygon2D" parent="." unique_id=947987071]
@@ -157,6 +159,7 @@ theme_override_font_sizes/font_size = 52
 text = "60"
 
 [node name="ammoLabel" type="Label" parent="." unique_id=2011456160]
+visible = false
 layout_mode = 0
 offset_left = 792.00006
 offset_top = 535.99994
@@ -241,9 +244,6 @@ autoplay = &"heartbeat"
 position = Vector2(160, 608)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("7_smcll")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2006724058]
-speed_scale = 1.63
 
 [connection signal="pressed" from="PauseScreen/MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="PauseScreen/CloseUI" to="." method="_on_close_ui_pressed"]

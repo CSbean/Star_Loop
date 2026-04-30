@@ -81,11 +81,14 @@ func _process(_delta: float) -> void:
 		gun_text.texture = AR_REMOVE_BG
 		ammo_label.text = str(player.rifleRounds)
 	if (Input.is_action_just_pressed("one")):
-		selectedGun = 0
-	if (Input.is_action_just_pressed("two")):
-		selectedGun = 1
-	if (Input.is_action_just_pressed("three")):
-		selectedGun = 2
+		if(player.hasPistol):
+			selectedGun = 2
+	elif (Input.is_action_just_pressed("two")):
+		if(player.hasShotgun):
+			selectedGun = 1
+	elif (Input.is_action_just_pressed("three")):
+		if(player.hasRifle):
+			selectedGun = 0
 func update_health(num:int)->void:
 	health.text = str(num)
 

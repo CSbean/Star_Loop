@@ -1,7 +1,7 @@
 extends Node3D
 #Preliminary code to have the door open for the player
 #All doors will have to be instantiated from this scene
-## 0=no door acsees, 1=white, 2=green, 3=yellow, 4=red
+## 0=no door access, 1=white, 2=green, 3=yellow, 4=red
 @export var keycard : int
 @export var isOpen := false
 
@@ -54,7 +54,8 @@ func _process(_delta: float) -> void:
 					isOpen = false
 					animation_player.play("Close")
 			else:
-				error_audio.play()
+				if (GameManager.playAudio):
+					error_audio.play()
 				player.ui.error.play("DoorError")
 
 func _on_timer_timeout() -> void:

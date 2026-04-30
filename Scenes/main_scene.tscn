@@ -61,7 +61,7 @@ shader_parameter/density_heat_power = 0.10000000149012
 shader_parameter/rs = 0.7
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iacmt"]
-size = Vector3(15.0199585, 8.27887, 9.465271)
+size = Vector3(8.971214, 6.8386536, 7.0910873)
 
 [node name="MainScene" type="Node3D" unique_id=1876643400]
 script = ExtResource("1_6l7je")
@@ -94,7 +94,7 @@ autoplay = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.7466)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WinArea" unique_id=467877567]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.424469, 3.6394348, 2.2662659)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2731743, 2.9193268, 0.9041939)
 shape = SubResource("BoxShape3D_iacmt")
 
 [node name="loopTimer" type="Timer" parent="." unique_id=1922205856]

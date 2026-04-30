@@ -5,11 +5,14 @@ extends Node3D
 @onready var space_objects: Node3D = $"Space Objects"
 @export var loopTime := 90.0
 @onready var loop_timer: Timer = $loopTimer
+@onready var background_music: AudioStreamPlayer = $backgroundMusic
 
 var player : Player
 var spd : float
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if not(GameManager.playAudio):
+		background_music.stop()
 	loop_timer.start(loopTime)
 	Engine.time_scale = 1
 	player = get_tree().get_first_node_in_group("Player")
@@ -28,6 +31,7 @@ func _on_loop_timer_timeout() -> void:
 
 func _on_win_area_body_entered(body: Node3D) -> void:
 	if (body is Player):
+		player.change_mouse()
 		GameManager.paused = true
 		player.ui.pause_screen.visible = true
 		player.ui.objective.text = "You Won!!"

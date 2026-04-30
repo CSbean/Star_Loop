@@ -1,10 +1,16 @@
 extends Node
 
 var paused :bool = false
+## 0=no door acsees, 1=white, 2=green, 3=yellow, 4=red
 var keycardNum = 0
 var player : Player
 var newMap : PackedScene
+var sprintToggleModeOn := true
+var setSensitivity := 50
+var playAudio := true
+
 func _ready() -> void:
+	keycardNum = 0
 	player = get_tree().get_first_node_in_group("Player")
 
 func change_map(levelCode : int) -> void:

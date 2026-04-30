@@ -26,7 +26,7 @@ var hasPistol := false
 
 #camra var's
 var look_dir: Vector2
-var camra_sense := 50#50
+var camera_sense := 50#50
 var capMouse := false
 var flashOn := false
 var sprinting_toggle = false
@@ -47,9 +47,11 @@ var keycard = 0
 	#Add Bossfight
 
 func _ready() -> void:
+	keycard = 0
+	camera_sense = GameManager.setSensitivity
 	change_mouse()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("Flashlight")):
 		flashOn = !flashOn
 		spot_light_3d.visible = flashOn
@@ -58,6 +60,9 @@ func _process(delta: float) -> void:
 		GameManager.paused = false
 	if (Input.is_action_just_pressed("quit")):
 		get_tree().quit()
+	if (Input.is_action_just_pressed("dev")):
+		GameManager.keycardNum = 4
+		keycard = 4
 	#dev controls^
 	if Input.is_action_just_pressed("esc"):
 		change_mouse()
@@ -66,36 +71,47 @@ func _process(delta: float) -> void:
 	
 	if GameManager.paused == false:
 		ui.heartbeat.speed_scale = 1 + ((100-health)/33.0)
-		if Input.is_action_just_pressed("Player_Sprint"):
-			sprinting_toggle = !sprinting_toggle
-			if sprinting_toggle:
+		if (GameManager.sprintToggleModeOn):
+			if Input.is_action_just_pressed("Player_Sprint"):
+					sprinting_toggle = !sprinting_toggle
+					if sprinting_toggle:
+						SPEED = 10.0
+					else:
+						SPEED = 5.0
+		else:
+			if (Input.is_action_pressed("Player_Sprint")):
 				SPEED = 10.0
 			else:
 				SPEED = 5.0
+			
 			
 		#shooting
 		#AR = 0, Shotgun = 1, Pistol = 2
 		if(Input.is_action_just_pressed("shoot")):
 			animation_player.play("CharacterArmature|Run_Shoot")
-			if ray_cast_3d.is_colliding():
-				if (inventorySlot == 0):
-					if (rifleRounds > 0):
-						rifleRounds -= 1
-						ar_shoot_audio.play()
-						if (ray_cast_3d.get_collider() is Enemy):
-							ray_cast_3d.get_collider().health -= 30
-				elif (inventorySlot == 1):
-					if (shotgunRounds > 0):
-						shotgunRounds -= 1
+			if (inventorySlot == 1):
+				if (shotgunRounds > 0):
+					shotgunRounds -= 1
+					if(GameManager.playAudio):
 						shotgun_shoot_audio.play()
-						if (ray_cast_3d.get_collider() is Enemy):
-							ray_cast_3d.get_collider().health -= 500/(self.global_position.distance_to(ray_cast_3d.get_collider().global_position))
-				elif (inventorySlot == 2):
-					if (pistolRounds > 0):
-						pistolRounds -= 1
+					if (ray_cast_3d.get_collider() is Enemy):
+						ray_cast_3d.get_collider().health -= 500/(self.global_position.distance_to(ray_cast_3d.get_collider().global_position))
+			elif (inventorySlot == 2):
+				if (pistolRounds > 0):
+					pistolRounds -= 1
+					if (ray_cast_3d.get_collider() is Enemy):
+						ray_cast_3d.get_collider().health -= 40
+					if (GameManager.playAudio):
 						pisto_shoot_audio.play()
-						if (ray_cast_3d.get_collider() is Enemy):
-							ray_cast_3d.get_collider().health -= 40
+		if (Input.is_action_pressed("shoot")) && (inventorySlot == 0):
+			if ray_cast_3d.is_colliding():
+				await get_tree().create_timer(0.5).timeout
+				if (rifleRounds > 0):
+					rifleRounds -= 1
+					if (GameManager.playAudio):
+						ar_shoot_audio.play()
+					if (ray_cast_3d.get_collider() is Enemy):
+						ray_cast_3d.get_collider().health -= 30
 	else:
 		ui.heartbeat.speed_scale = 0
 		
@@ -115,7 +131,7 @@ func _physics_process(delta: float) -> void:
 		var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 		var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:
-			if not walking_audio_stream.playing:
+			if not walking_audio_stream.playing && GameManager.playAudio:
 				walking_audio_stream.play()
 			velocity.x = direction.x * SPEED
 			velocity.z = direction.z * SPEED
@@ -141,8 +157,8 @@ func rotate_camrea(delta: float, sense_mod: float = 1.0):
 	if capMouse:
 		var input = Input.get_vector("ui_left","ui_right","ui_down","ui_up")
 		look_dir += input
-		rotation.y -= look_dir.x * camra_sense * delta
-		camera_3d.rotation.x = clamp(camera_3d.rotation.x - look_dir.y * camra_sense * sense_mod * delta,-1.5, 1.5)
+		rotation.y -= look_dir.x * camera_sense * delta
+		camera_3d.rotation.x = clamp(camera_3d.rotation.x - look_dir.y * camera_sense * sense_mod * delta,-1.5, 1.5)
 		look_dir = Vector2.ZERO
 
 func change_mouse()->void:

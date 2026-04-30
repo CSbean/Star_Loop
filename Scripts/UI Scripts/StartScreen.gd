@@ -5,18 +5,30 @@ extends Control
 @onready var start_audio: AudioStreamPlayer = $startAudio
 @onready var credits_audio: AudioStreamPlayer = $creditsAudio
 @onready var how_to_play_menu: Panel = $howToPlayMenu
+@onready var sense_slider: HSlider = $SettingsMenu/SenseSlider
+@onready var sprint_toggle: CheckButton = $SettingsMenu/SprintToggle
+@onready var audio_check: CheckButton = $SettingsMenu/AudioCheck
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
-
+	sprint_toggle.button_pressed = GameManager.sprintToggleModeOn
+	sense_slider.value = GameManager.setSensitivity
+	audio_check.button_pressed = GameManager.playAudio
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _process(_delta: float) -> void:
+	if (Input.is_action_just_pressed("quit")):
+		get_tree().quit()
+	elif (Input.is_action_just_pressed("reset")):
+		get_tree().reload_current_scene()
+		
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+	
 func _on_start_pressed() -> void:
+	GameManager.playAudio = audio_check.button_pressed
+	GameManager.sprintToggleModeOn = sprint_toggle.button_pressed
+	GameManager.setSensitivity = int(sense_slider.value)
 	GameManager.change_map(0)
 func _on_settings_pressed() -> void:
 	settings_menu.visible = true
