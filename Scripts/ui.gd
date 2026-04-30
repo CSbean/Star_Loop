@@ -7,6 +7,7 @@ const SHOTGUN_BG_REMOVE = preload("uid://c3m5nexfrrm82")
 const AR_REMOVE_BG = preload("uid://68vculh1mfde")
 const PISTIOLIMG_REMOVEBG_PREVIEW = preload("uid://cg00fy1425cuc")
 
+@onready var error: AnimationPlayer = $Error
 @onready var timer_label: Label = $Timer/TimerLabel
 @onready var pause_screen: Panel = $PauseScreen
 @onready var health: Label = $Health
@@ -88,10 +89,13 @@ func update_health(num:int)->void:
 	health.text = str(num)
 
 func lose()->void:
+	GameManager.keycardNum = 0
 	GameManager.paused = true
 	pause_screen.visible = true
 	objective.text = "You Died!!"
 	close_ui.visible = false
+	
+	
 func _on_close_ui_pressed() -> void:
 	pause_screen.visible = false
 	GameManager.paused = false

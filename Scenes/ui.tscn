@@ -13,6 +13,43 @@ font_size = 24
 [sub_resource type="LabelSettings" id="LabelSettings_qdvrb"]
 font_size = 64
 
+[sub_resource type="Animation" id="Animation_m78vo"]
+resource_name = "DoorError"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Error/ErrorPanel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.56666666, 1.4, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_smcll"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Error/ErrorPanel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ryf15"]
+_data = {
+&"DoorError": SubResource("Animation_m78vo"),
+&"RESET": SubResource("Animation_smcll")
+}
+
 [node name="UI" type="Control" unique_id=836688804]
 layout_mode = 3
 anchors_preset = 15
@@ -135,6 +172,26 @@ text = "Objective: Find Yellow Key Card"
 
 [node name="reloadAudio" type="AudioStreamPlayer" parent="." unique_id=829398438]
 stream = ExtResource("6_m78vo")
+
+[node name="Error" type="AnimationPlayer" parent="." unique_id=22833754]
+libraries/ = SubResource("AnimationLibrary_ryf15")
+
+[node name="ErrorPanel" type="Panel" parent="Error" unique_id=559550897]
+modulate = Color(1, 1, 1, 0)
+offset_left = 336.0
+offset_top = 280.0
+offset_right = 840.0
+offset_bottom = 371.0
+
+[node name="Label" type="Label" parent="Error/ErrorPanel" unique_id=1972291606]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 504.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("4_2246s")
+theme_override_font_sizes/font_size = 29
+text = "              Access denied: 
+Higher Level Keycard Required"
 
 [connection signal="pressed" from="PauseScreen/MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="PauseScreen/CloseUI" to="." method="_on_close_ui_pressed"]

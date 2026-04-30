@@ -55,6 +55,7 @@ func _process(_delta: float) -> void:
 					animation_player.play("Close")
 			else:
 				error_audio.play()
+				player.ui.error.play("DoorError")
 
 func _on_timer_timeout() -> void:
 	if (isOpen):
