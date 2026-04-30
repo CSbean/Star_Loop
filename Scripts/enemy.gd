@@ -1,8 +1,26 @@
 extends CharacterBody3D
 class_name Enemy
 
+#extends Node
+#
+## This creates a list in the Inspector where you can drag 24 sound files
+#@export var sound_pool: Array[AudioStream] = []
+#
+#@onready var audio_player = $AudioStreamPlayer
+#
+#func play_random_sound():
+	#if sound_pool.is_empty():
+		#return
+	#
+	## Picks one random sound from your 24 options
+	#var random_sound = sound_pool.pick_random()
+	#
+	#audio_player.stream = random_sound
+	#audio_player.play()
+
 ## 0 = normal enemy, 1 = boss enemy
 @export var boss = 0
+@export var sound_pool: Array[AudioStream] = []
 
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
 @onready var animation_player: AnimationPlayer = $EnemySprite/AnimationPlayer
@@ -16,11 +34,13 @@ var state : String = "Idle"
 var player : CharacterBody3D
 var spd := 3.14
 var canHitPlayer = false
+var rng = RandomNumberGenerator.new()
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
 	animation_player.play("AlienArmature|Alien_Run")
 	var mat = base_alien.get_active_material(1)
+	rng.randomize() # Randomizes the seed based on time
 	if boss == 1:
 		mat.albedo_color = Color(0.17, 0.613, 0.0, 1.0);
 		spd = 4.5
@@ -58,7 +78,9 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		canHitPlayer = true
 		while canHitPlayer == true:
 			animation_player.play("AlienArmature|Alien_Punch")
+			var random_int = rng.randi_range(1, 24)
 			await get_tree().create_timer(0.6).timeout
+			
 			if (canHitPlayer) and !(GameManager.paused):
 				body.take_damage_p(20)
 			await get_tree().create_timer(0.3).timeout

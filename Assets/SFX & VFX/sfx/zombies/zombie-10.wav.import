@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b0v16a52pn1xx"
+path="res://.godot/imported/zombie-10.wav-d1b85e0801250a5c87efc4e45b5275fd.sample"
+
+[deps]
+
+source_file="res://Assets/SFX & VFX/sfx/zombies/zombie-10.wav"
+dest_files=["res://.godot/imported/zombie-10.wav-d1b85e0801250a5c87efc4e45b5275fd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

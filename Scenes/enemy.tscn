@@ -1,6 +1,30 @@
 [gd_scene format=4 uid="uid://dx7a0xb2opwj2"]
 
 [ext_resource type="Script" uid="uid://dgx1ublns7neu" path="res://Scripts/enemy.gd" id="1_hghv2"]
+[ext_resource type="AudioStream" uid="uid://djwf5vhdofjje" path="res://Assets/SFX & VFX/sfx/zombies/zombie-1.wav" id="2_8cim4"]
+[ext_resource type="AudioStream" uid="uid://cjih1ft2eo4ii" path="res://Assets/SFX & VFX/sfx/zombies/zombie-2.wav" id="3_7x82w"]
+[ext_resource type="AudioStream" uid="uid://bfr5kbyb7skot" path="res://Assets/SFX & VFX/sfx/zombies/zombie-3.wav" id="4_iatxd"]
+[ext_resource type="AudioStream" uid="uid://cxwuslr6mluvh" path="res://Assets/SFX & VFX/sfx/zombies/zombie-4.wav" id="5_qqxsh"]
+[ext_resource type="AudioStream" uid="uid://b4dvjgtaubpdj" path="res://Assets/SFX & VFX/sfx/zombies/zombie-5.wav" id="6_0whn2"]
+[ext_resource type="AudioStream" uid="uid://dph6m5f2y3nam" path="res://Assets/SFX & VFX/sfx/zombies/zombie-6.wav" id="7_bx1xr"]
+[ext_resource type="AudioStream" uid="uid://dl81cflifye84" path="res://Assets/SFX & VFX/sfx/zombies/zombie-7.wav" id="8_n85mp"]
+[ext_resource type="AudioStream" uid="uid://sr7w8l1gs4oj" path="res://Assets/SFX & VFX/sfx/zombies/zombie-8.wav" id="9_nxecp"]
+[ext_resource type="AudioStream" uid="uid://bt84orfc8unbt" path="res://Assets/SFX & VFX/sfx/zombies/zombie-9.wav" id="10_6jaer"]
+[ext_resource type="AudioStream" uid="uid://b0v16a52pn1xx" path="res://Assets/SFX & VFX/sfx/zombies/zombie-10.wav" id="11_ve8xs"]
+[ext_resource type="AudioStream" uid="uid://b33jxl5skiixm" path="res://Assets/SFX & VFX/sfx/zombies/zombie-11.wav" id="12_q0iv8"]
+[ext_resource type="AudioStream" uid="uid://c2aaa146k2wb2" path="res://Assets/SFX & VFX/sfx/zombies/zombie-12.wav" id="13_c1gwg"]
+[ext_resource type="AudioStream" uid="uid://culjgjsh5ik20" path="res://Assets/SFX & VFX/sfx/zombies/zombie-13.wav" id="14_3mxp7"]
+[ext_resource type="AudioStream" uid="uid://1wf6l7f1c3u8" path="res://Assets/SFX & VFX/sfx/zombies/zombie-14.wav" id="15_5a56t"]
+[ext_resource type="AudioStream" uid="uid://bvsroom75caes" path="res://Assets/SFX & VFX/sfx/zombies/zombie-15.wav" id="16_a6sir"]
+[ext_resource type="AudioStream" uid="uid://cupujayec85j" path="res://Assets/SFX & VFX/sfx/zombies/zombie-16.wav" id="17_8ej4m"]
+[ext_resource type="AudioStream" uid="uid://ypfdvrpkuxm1" path="res://Assets/SFX & VFX/sfx/zombies/zombie-17.wav" id="18_bwheg"]
+[ext_resource type="AudioStream" uid="uid://r1c4deb5vuny" path="res://Assets/SFX & VFX/sfx/zombies/zombie-18.wav" id="19_iol0x"]
+[ext_resource type="AudioStream" uid="uid://lb8su54g3gjp" path="res://Assets/SFX & VFX/sfx/zombies/zombie-19.wav" id="20_ofqcr"]
+[ext_resource type="AudioStream" uid="uid://be6sq04yabip5" path="res://Assets/SFX & VFX/sfx/zombies/zombie-20.wav" id="21_nus6a"]
+[ext_resource type="AudioStream" uid="uid://b8gvbavjeubo2" path="res://Assets/SFX & VFX/sfx/zombies/zombie-21.wav" id="22_imgxb"]
+[ext_resource type="AudioStream" uid="uid://dpwhqy1laxu52" path="res://Assets/SFX & VFX/sfx/zombies/zombie-22.wav" id="23_pyrvc"]
+[ext_resource type="AudioStream" uid="uid://udlj1x7it0aj" path="res://Assets/SFX & VFX/sfx/zombies/zombie-23.wav" id="24_pja2t"]
+[ext_resource type="AudioStream" uid="uid://cx003q53uamaw" path="res://Assets/SFX & VFX/sfx/zombies/zombie-24.wav" id="25_jx5vc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_afpow"]
 radius = 0.61816406
@@ -5261,6 +5285,7 @@ _data = {
 
 [node name="Enemy" type="CharacterBody3D" unique_id=888042827]
 script = ExtResource("1_hghv2")
+sound_pool = Array[AudioStream]([ExtResource("2_8cim4"), ExtResource("3_7x82w"), ExtResource("4_iatxd"), ExtResource("5_qqxsh"), ExtResource("6_0whn2"), ExtResource("7_bx1xr"), ExtResource("8_n85mp"), ExtResource("9_nxecp"), ExtResource("10_6jaer"), ExtResource("11_ve8xs"), ExtResource("12_q0iv8"), ExtResource("13_c1gwg"), ExtResource("14_3mxp7"), ExtResource("15_5a56t"), ExtResource("16_a6sir"), ExtResource("17_8ej4m"), ExtResource("18_bwheg"), ExtResource("19_iol0x"), ExtResource("20_ofqcr"), ExtResource("21_nus6a"), ExtResource("22_imgxb"), ExtResource("23_pyrvc"), ExtResource("24_pja2t"), ExtResource("25_jx5vc")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2019255691]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
