@@ -22,6 +22,7 @@ class_name Enemy
 @export var boss = 0
 @export var sound_pool: Array[AudioStream] = []
 
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
 @onready var animation_player: AnimationPlayer = $EnemySprite/AnimationPlayer
 @onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
@@ -78,9 +79,8 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		canHitPlayer = true
 		while canHitPlayer == true:
 			animation_player.play("AlienArmature|Alien_Punch")
-			var random_int = rng.randi_range(1, 24)
 			await get_tree().create_timer(0.6).timeout
-			
+			play_random_sound()
 			if (canHitPlayer) and !(GameManager.paused):
 				body.take_damage_p(20)
 			await get_tree().create_timer(0.3).timeout
@@ -90,3 +90,13 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body is Player:
 		canHitPlayer = false
+
+func play_random_sound():
+	if sound_pool.is_empty():
+		return
+	
+	# Picks one random sound from your 24 options
+	var random_sound = sound_pool.pick_random()
+	
+	audio_stream_player.stream = random_sound
+	audio_stream_player.play()

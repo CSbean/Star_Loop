@@ -5742,5 +5742,7 @@ shape = SubResource("CapsuleShape3D_afpow")
 transform = Transform3D(1, 0, 0, 0, 1.3113416e-07, -1, 0, 1, 1.3113416e-07, 0, 1.2325656, -0.77409637)
 target_position = Vector3(0, -206.76, 0)
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1491944946]
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

@@ -1,13 +1,15 @@
 extends CharacterBody3D
 class_name Player
-@onready var ui: UI = $UI
 
+
+@onready var ui: UI = $UI
 @onready var camera_3d: Camera3D = $Camera3D
 @onready var animation_player: AnimationPlayer = $PlayerSprite/AnimationPlayer
 @onready var scifi_pistol: Node3D = $PlayerSprite/RootNode/CharacterArmature/Skeleton3D/BoneAttachment3D/ScifiPistol
 @onready var ray_cast_3d: RayCast3D = $Camera3D/RayCast3D
 @onready var spot_light_3d: SpotLight3D = $Camera3D/SpotLight3D
 @onready var animation_tree: AnimationTree = $AnimationTree
+@onready var ar_timer: Timer = $"ar timer"
 #audio strem players
 @onready var walking_audio_stream: AudioStreamPlayer = $walkingAudioStream
 @onready var pisto_shoot_audio: AudioStreamPlayer = $pistoShootAudio
@@ -23,6 +25,7 @@ var rifleRounds := 0
 var hasRifle := false
 var hasShotgun := false
 var hasPistol := false
+var fire_rate = 0.2
 
 #camra var's
 var look_dir: Vector2
@@ -103,15 +106,16 @@ func _process(_delta: float) -> void:
 						ray_cast_3d.get_collider().health -= 40
 					if (GameManager.playAudio):
 						pisto_shoot_audio.play()
-		if (Input.is_action_pressed("shoot")) && (inventorySlot == 0):
+		if (Input.is_action_pressed("shoot")) && (inventorySlot == 0) and ar_timer.is_stopped():
 			if ray_cast_3d.is_colliding():
-				await get_tree().create_timer(0.5).timeout
+				#await get_tree().create_timer(0.5).timeout
 				if (rifleRounds > 0):
 					rifleRounds -= 1
 					if (GameManager.playAudio):
 						ar_shoot_audio.play()
 					if (ray_cast_3d.get_collider() is Enemy):
 						ray_cast_3d.get_collider().health -= 30
+			ar_timer.start(fire_rate)
 	else:
 		ui.heartbeat.speed_scale = 0
 		

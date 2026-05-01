@@ -11708,3 +11708,7 @@ stream = ExtResource("6_x3wgy")
 
 [node name="arShootAudio" type="AudioStreamPlayer" parent="." unique_id=18047907]
 stream = ExtResource("7_3smsa")
+
+[node name="ar timer" type="Timer" parent="." unique_id=906172898]
+wait_time = 0.001
+one_shot = true
