@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dp3yh1fra382l" path="res://Assets/Gun assets/Sci-Fi Shotgun.glb" id="3_uha3q"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5e5h3"]
-size = Vector3(1.2700195, 1, 0.3881836)
+size = Vector3(1.6658325, 1, 2.00354)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xvntf"]
 resource_name = "mat23"
@@ -2818,11 +2818,11 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_w5hw4")
 
-[node name="GunPickup" type="Area3D" unique_id=951352720]
+[node name="gun_pickup" type="Area3D" unique_id=951352720]
 script = ExtResource("1_hrh40")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1124298793]
-transform = Transform3D(1.685, 0, 0, 0, 1.685, 0, 0, 0, 1.685, 0.22749145, 0, 0.016866446)
+transform = Transform3D(1.685, 0, 0, 0, 1.685, 0, 0, 0, 1.685, 0.04550858, 0, -0.2946487)
 shape = SubResource("BoxShape3D_5e5h3")
 
 [node name="RifleAsset" type="Node3D" parent="." unique_id=1803910345]
@@ -3089,4 +3089,11 @@ visible = false
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 visible = false
 
+[node name="prompt" type="Label3D" parent="." unique_id=1618642324]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0.2)
+visible = false
+billboard = 1
+text = "Press \"E\" To Pick Up"
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

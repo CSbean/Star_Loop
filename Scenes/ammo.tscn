@@ -7,13 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://gypgfoqnogqv" path="res://Assets/Gun assets/Ammo Shotgun.glb" id="4_dl8qa"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mx48c"]
-size = Vector3(1.5882568, 2.0233154, 1.305542)
+size = Vector3(2.61911, 2.0233154, 2.181244)
 
 [node name="Ammo" type="Area3D" unique_id=785988555]
 script = ExtResource("1_uunpu")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=674385036]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03302002, 0.13391769, 0.0048217773)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08854675, 0.13391769, -0.07106018)
 shape = SubResource("BoxShape3D_mx48c")
 
 [node name="Medkit" parent="." unique_id=772751660 instance=ExtResource("1_7r188")]
@@ -30,4 +30,11 @@ visible = false
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.15364629, 0, -0.29506522)
 visible = false
 
+[node name="propmt" type="Label3D" parent="." unique_id=1744711427]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0.2)
+visible = false
+billboard = 1
+text = "Press \"E\" To Pick Up"
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -6,6 +6,7 @@ extends Node3D
 @export var loopTime := 90.0
 @onready var loop_timer: Timer = $loopTimer
 @onready var background_music: AudioStreamPlayer = $backgroundMusic
+@onready var enemies: Node3D = $Enemies
 
 var player : Player
 var spd : float
@@ -16,9 +17,11 @@ func _ready() -> void:
 	loop_timer.start(loopTime)
 	Engine.time_scale = 1
 	player = get_tree().get_first_node_in_group("Player")
-	spd = (mesh_instance_3d.global_position.z+50) / loopTime
+	spd = (mesh_instance_3d.global_position.z+50) / loopTime-10
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	#if (Input.is_action_just_pressed("dev")):
+	#	enemies.queue_free()
 	if !(GameManager.paused):
 		mesh_instance_3d.global_position.z -= spd * delta
 		player.ui.timer_label.text = str(int(loop_timer.time_left))

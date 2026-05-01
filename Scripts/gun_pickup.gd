@@ -4,6 +4,8 @@ extends Area3D
 @onready var rifle_asset: Node3D = $RifleAsset
 @onready var pistol_asset: Node3D = $PistolAsset
 @onready var shotgun_asset: Node3D = $ShotgunAsset
+@onready var prompt: Label3D = $prompt
+var isNearby := false
 var player : Player
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,10 +16,14 @@ func _ready() -> void:
 	elif (type == 0):
 		rifle_asset.visible = true
 
-
 func _on_body_entered(body: Node3D) -> void:
 	if (body is Player):
 		player = body
+		isNearby = true
+		prompt.visible = true
+		
+func _process(_delta: float) -> void:
+	if (isNearby && Input.is_action_just_pressed("interact")):
 		if (type == 0):
 			player.hasRifle = true
 		elif (type == 1):
@@ -26,3 +32,9 @@ func _on_body_entered(body: Node3D) -> void:
 			player.inventorySlot = 2
 			player.hasPistol = true
 		self.queue_free()
+
+func _on_body_exited(body: Node3D) -> void:
+	if (body is Player):
+		player= body
+		isNearby = false
+		prompt.visible = false
