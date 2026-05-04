@@ -36,7 +36,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("esc")):
 		pause_screen.visible = !pause_screen.visible
-	timer_label.global_position.x = 528
+	timer_label.global_position.x = 532
 	if (GameManager.keycardNum == 1) and !(GameManager.paused):
 		keycard.texture = whitePic
 		objective.text = "Objective: Find Green Key card"

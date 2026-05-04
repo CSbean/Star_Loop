@@ -10,7 +10,6 @@ var setSensitivity := 50
 var playAudio := true
 
 func _ready() -> void:
-	keycardNum = 0
 	player = get_tree().get_first_node_in_group("Player")
 
 func change_map(levelCode : int) -> void:

@@ -50,6 +50,7 @@ var keycard = 0
 	#Add Bossfight
 
 func _ready() -> void:
+	GameManager.keycardNum = 0
 	keycard = 0
 	camera_sense = GameManager.setSensitivity
 	change_mouse()
