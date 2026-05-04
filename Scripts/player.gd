@@ -70,6 +70,7 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("esc"):
 		change_mouse()
 		GameManager.paused = !GameManager.paused
+		
 	
 	
 	if GameManager.paused == false:

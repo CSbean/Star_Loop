@@ -17,7 +17,7 @@ func _ready() -> void:
 	loop_timer.start(loopTime)
 	Engine.time_scale = 1
 	player = get_tree().get_first_node_in_group("Player")
-	spd = (mesh_instance_3d.global_position.z+50) / loopTime-10
+	spd = (mesh_instance_3d.global_position.z-100) / loopTime
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	#if (Input.is_action_just_pressed("dev")):
@@ -25,9 +25,13 @@ func _process(delta: float) -> void:
 	if !(GameManager.paused):
 		mesh_instance_3d.global_position.z -= spd * delta
 		player.ui.timer_label.text = str(int(loop_timer.time_left))
+		if (loop_timer.paused):
+			loop_timer.paused = false
 		if (loop_timer.time_left < loopTime/10.0):
 			player.ui.timer_label.set("theme_override_colors/font_color", Color.RED)
-
+	else:
+		if !(loop_timer.paused):
+			loop_timer.paused = true
 
 func _on_loop_timer_timeout() -> void:
 	get_tree().reload_current_scene()
