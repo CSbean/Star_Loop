@@ -72,8 +72,6 @@ func _process(_delta: float) -> void:
 		change_mouse()
 		GameManager.paused = !GameManager.paused
 		
-	
-	
 	if GameManager.paused == false:
 		ui.heartbeat.speed_scale = 1 + ((100-health)/33.0)
 		if (GameManager.sprintToggleModeOn):
