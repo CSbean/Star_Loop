@@ -29,7 +29,10 @@ func _process(_delta: float) -> void:
 	if (isNearby && Input.is_action_just_pressed("interact")):
 		if (type == 1):
 			if (player.health < 100):
-				player.health +=25
+				player.health +=amount
+				if (player.health >= 100):
+					player.health = 100
+			player.ui.update_health(player.health)
 		if (type == 2):
 			player.pistolRounds += amount
 		if (type == 3):
