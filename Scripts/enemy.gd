@@ -27,7 +27,7 @@ func _ready() -> void:
 	rng.randomize() # Randomizes the seed based on time
 	if boss == 1:
 		print("boss")
-		mat.albedo_color = Color(0.17, 0.613, 0.0, 10.0);#1.0
+		mat.albedo_color = Color(0.17, 0.613, 0.0, 1.0);#1.0
 		spd = 4.5
 	else:
 		mat.albedo_color = Color(0.273, 0.47, 0.463, 1.0);
@@ -81,7 +81,7 @@ func play_random_sound():
 			return
 	
 	# Picks one random sound from your 24 options
-	var random_sound = sound_pool.pick_random()
+		var random_sound = sound_pool.pick_random()
 	
-	audio_stream_player.stream = random_sound
-	audio_stream_player.play()
+		audio_stream_player.stream = random_sound
+		audio_stream_player.play()

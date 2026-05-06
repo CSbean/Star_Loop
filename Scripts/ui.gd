@@ -61,7 +61,8 @@ func _process(_delta: float) -> void:
 			selectedGun = 2
 		else:
 			if GameManager.playAudio:
-				reload_audio.play()
+				if reload_audio.playing == false:
+					reload_audio.play()
 		player.inventorySlot = selectedGun
 	if (Input.is_action_just_pressed("inventory down")):
 		selectedGun -=1
@@ -69,9 +70,12 @@ func _process(_delta: float) -> void:
 			selectedGun +=1
 		elif (selectedGun == 0) and !(player.hasRifle):
 			selectedGun +=1
+		elif (selectedGun < 0):
+			selectedGun += 1
 		else:
 			if GameManager.playAudio:
-				reload_audio.play()
+				if reload_audio.playing == false:
+					reload_audio.play()
 		if (selectedGun <= -1):
 			selectedGun = 0
 		player.inventorySlot = selectedGun
