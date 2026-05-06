@@ -9,6 +9,8 @@
 [ext_resource type="AudioStream" uid="uid://i7ugdkbji3rc" path="res://Assets/SFX & VFX/sfx/328011__astrand__retro-blaster-fire.wav" id="7_3smsa"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
+radius = 0.52685547
+height = 2.2644043
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ix0yt"]
 resource_name = "SciFi_Light_Accent"
@@ -11052,7 +11054,7 @@ graph_offset = Vector2(-88.917694, 16.04684)
 script = ExtResource("1_4flbx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1151526745]
-transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 1, -0.1)
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0.9963745, -0.1)
 shape = SubResource("CapsuleShape3D_sh265")
 
 [node name="UI" parent="." unique_id=836688804 instance=ExtResource("2_6t5aa")]
@@ -11074,7 +11076,7 @@ spot_angle = 33.53
 spot_angle_attenuation = 5.4641457
 
 [node name="PlayerSprite" type="Node3D" parent="." unique_id=994443223]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-1.1, 0, -1.6609539e-07, 0, 1.1, 0, 1.6609539e-07, 0, -1.1, 0, 0, 0)
 
 [node name="RootNode" type="Node3D" parent="PlayerSprite" unique_id=504290430]
 

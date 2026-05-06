@@ -67,6 +67,8 @@ func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("dev")):
 		GameManager.keycardNum = 4
 		keycard = 4
+	if (Input.is_action_just_pressed("mute")):
+		GameManager.playAudio = !GameManager.playAudio
 	#dev controls^
 	if Input.is_action_just_pressed("esc"):
 		change_mouse()
