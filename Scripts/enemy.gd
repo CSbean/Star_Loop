@@ -1,23 +1,6 @@
 extends CharacterBody3D
 class_name Enemy
 
-#extends Node
-#
-## This creates a list in the Inspector where you can drag 24 sound files
-#@export var sound_pool: Array[AudioStream] = []
-#
-#@onready var audio_player = $AudioStreamPlayer
-#
-#func play_random_sound():
-	#if sound_pool.is_empty():
-		#return
-	#
-	## Picks one random sound from your 24 options
-	#var random_sound = sound_pool.pick_random()
-	#
-	#audio_player.stream = random_sound
-	#audio_player.play()
-
 ## 0 = normal enemy, 1 = boss enemy
 @export var boss = 0
 @export var sound_pool: Array[AudioStream] = []
@@ -43,7 +26,8 @@ func _ready() -> void:
 	var mat = base_alien.get_active_material(1)
 	rng.randomize() # Randomizes the seed based on time
 	if boss == 1:
-		mat.albedo_color = Color(0.17, 0.613, 0.0, 1.0);
+		print("boss")
+		mat.albedo_color = Color(0.17, 0.613, 0.0, 10.0);#1.0
 		spd = 4.5
 	else:
 		mat.albedo_color = Color(0.273, 0.47, 0.463, 1.0);
@@ -92,8 +76,9 @@ func _on_area_3d_body_exited(body: Node3D) -> void:
 		canHitPlayer = false
 
 func play_random_sound():
-	if sound_pool.is_empty():
-		return
+	if GameManager.playAudio:
+		if sound_pool.is_empty():
+			return
 	
 	# Picks one random sound from your 24 options
 	var random_sound = sound_pool.pick_random()
