@@ -40,15 +40,6 @@ var inventorySlot = 1
 ## 0=no door acsees, 1=white, 2=green, 3=yellow, 4=red
 var keycard = 0
 
-### TO-DO LIST 
-	#Finish MAP!!!!! - Beau
-	#Get time loop working - Ben
-	#Add Ammo - Ben - DONE
-	#Add win/lose ui - Ben
-	#Add SFX - Beau
-	#Add Start Screen UI + Settings - Ben
-	#Add Bossfight
-
 func _ready() -> void:
 	GameManager.keycardNum = 0
 	keycard = 0
@@ -180,3 +171,8 @@ func take_damage_p(num:int)->void:
 	if health <= 0:
 		ui.lose()
 		change_mouse()
+
+#https://www.youtube.com/watch?v=vZHzMO90IwQ
+func initalize_state_machine():
+	main_sm = limboHSM.new()
+	add_child(main_sm)
