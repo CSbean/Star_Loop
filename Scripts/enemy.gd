@@ -2,8 +2,9 @@ extends CharacterBody3D
 class_name Enemy
 
 ## 0 = normal enemy, 1 = boss enemy
-@export var boss = 0
+@export var boss := false
 @export var sound_pool: Array[AudioStream] = []
+@onready var enemy_sprite: Node3D = $EnemySprite
 
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
@@ -12,11 +13,14 @@ class_name Enemy
 @onready var looker: RayCast3D = $Looker
 # normal coler 467876
 @onready var base_alien: MeshInstance3D = $EnemySprite/RootNode/AlienArmature/Skeleton3D/BaseAlien
+@onready var boss_sprite: Node3D = $BossSprite
+@onready var boss_anim: AnimationPlayer = $BossSprite/BossAnim
 
 var health := 100
 var state : String = "Idle"
 var player : CharacterBody3D
 var spd := 3.14
+var dmg := 20
 var canHitPlayer = false
 var rng = RandomNumberGenerator.new()
 
@@ -25,17 +29,24 @@ func _ready() -> void:
 	animation_player.play("AlienArmature|Alien_Run")
 	var mat = base_alien.get_active_material(1)
 	rng.randomize() # Randomizes the seed based on time
-	if boss == 1:
+	if boss:
 		print("boss")
-		mat.albedo_color = Color(0.17, 0.613, 0.0, 1.0);#1.0
-		spd = 4.5
+		spd = 4
+		health = 500
+		dmg = 50
+		enemy_sprite.visible = false 
+		boss_sprite.visible = true
 	else:
 		mat.albedo_color = Color(0.273, 0.47, 0.463, 1.0);
 		spd = 2.5
+		enemy_sprite.visible = true
+		boss_sprite.visible = false
 func _process(_delta: float) -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
+	if (boss) && (animation_player.is_playing()):
+		boss_anim.play(animation_player.current_animation)
 	if GameManager.paused == false:
 		var destination = navigation_agent_3d.get_next_path_position()
 		var local_destination = destination - self.global_position
@@ -66,7 +77,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 			await get_tree().create_timer(0.6).timeout
 			play_random_sound()
 			if (canHitPlayer) and !(GameManager.paused):
-				body.take_damage_p(20)
+				body.take_damage_p(dmg)
 			await get_tree().create_timer(0.3).timeout
 			animation_player.play("AlienArmature|Alien_Run")
 
