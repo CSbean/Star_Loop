@@ -8,7 +8,7 @@ class_name Player
 @onready var scifi_pistol: Node3D = $PlayerSprite/RootNode/CharacterArmature/Skeleton3D/BoneAttachment3D/ScifiPistol
 @onready var ray_cast_3d: RayCast3D = $Camera3D/RayCast3D
 @onready var spot_light_3d: SpotLight3D = $Camera3D/SpotLight3D
-@onready var animation_tree: AnimationTree = $AnimationTree
+#@onready var animation_tree: AnimationTree = $AnimationTree
 @onready var ar_timer: Timer = $"ar timer"
 #audio strem players
 @onready var walking_audio_stream: AudioStreamPlayer = $walkingAudioStream
@@ -39,8 +39,10 @@ var health = 100
 var inventorySlot = 1
 ## 0=no door acsees, 1=white, 2=green, 3=yellow, 4=red
 var keycard = 0
+var main_sm : LimboHSM
 
 func _ready() -> void:
+	initalize_state_machine()
 	GameManager.keycardNum = 0
 	keycard = 0
 	camera_sense = GameManager.setSensitivity
@@ -174,5 +176,42 @@ func take_damage_p(num:int)->void:
 
 #https://www.youtube.com/watch?v=vZHzMO90IwQ
 func initalize_state_machine():
-	main_sm = limboHSM.new()
+	main_sm = LimboHSM.new()
 	add_child(main_sm)
+	
+	var idle_state = LimboState.new().named("idle").call_on_enter(idle_start).call_on_update(idle_update)
+	var walk_state = LimboState.new().named("walk").call_on_enter(walk_start).call_on_update(walk_update)
+	var sprint_state = LimboState.new().named("sprint").call_on_enter(sprint_start).call_on_update(sprint_update)
+	var Pshoot_state = LimboState.new().named("Pshoot").call_on_enter(Pshoot_start).call_on_update(Pshoot_update)
+	
+	main_sm.add_child(idle_state)
+	main_sm.add_child(walk_state)
+	main_sm.add_child(sprint_state)
+	main_sm.add_child(Pshoot_state)
+	
+	main_sm.initial_state = idle_state
+	
+	main_sm.add_transition(idle_state,walk_state,&"to_walk")
+	
+	main_sm.initialize(self)
+	main_sm.set_active(true)
+
+func idle_start():
+	animation_player.play("CharacterArmature|Idle")
+func idle_update(delta: float):
+	print("idal update")
+
+func walk_start():
+	pass
+func walk_update(delta: float):
+	pass
+
+func sprint_start():
+	pass
+func sprint_update(delta: float):
+	pass
+
+func Pshoot_start():
+	pass
+func Pshoot_update(delta: float):
+	pass
