@@ -15,6 +15,8 @@ class_name Enemy
 @onready var base_alien: MeshInstance3D = $EnemySprite/RootNode/AlienArmature/Skeleton3D/BaseAlien
 @onready var boss_sprite: Node3D = $BossSprite
 @onready var boss_anim: AnimationPlayer = $BossSprite/BossAnim
+@onready var death_particles: GPUParticles3D = $deathParticles
+@onready var head: BoneAttachment3D = $EnemySprite/RootNode/AlienArmature/Skeleton3D/Head
 
 var health := 100
 var state : String = "Idle"
@@ -23,6 +25,7 @@ var spd := 3.14
 var dmg := 20
 var canHitPlayer = false
 var rng = RandomNumberGenerator.new()
+var dead := false
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
@@ -47,7 +50,7 @@ func _process(_delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	if (boss) && (animation_player.is_playing()):
 		boss_anim.play(animation_player.current_animation)
-	if GameManager.paused == false:
+	if GameManager.paused == false && !dead:
 		var destination = navigation_agent_3d.get_next_path_position()
 		var local_destination = destination - self.global_position
 		var direction = local_destination.normalized()
@@ -65,21 +68,22 @@ func _physics_process(delta: float) -> void:
 		looker.rotate_x(y)
 		if (looker.get_collider() is Player):
 			navigation_agent_3d.target_position = player.global_position
-		
+
 		if (health <= 0):
-			self.queue_free()
+			die()
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is Player :
 		canHitPlayer = true
-		while canHitPlayer == true:
+		while canHitPlayer == true && !dead:
 			animation_player.play("AlienArmature|Alien_Punch")
 			await get_tree().create_timer(0.6).timeout
 			play_random_sound()
 			if (canHitPlayer) and !(GameManager.paused):
 				body.take_damage_p(dmg)
 			await get_tree().create_timer(0.3).timeout
-			animation_player.play("AlienArmature|Alien_Run")
+			if !(dead):
+				animation_player.play("AlienArmature|Alien_Run")
 
 
 func _on_area_3d_body_exited(body: Node3D) -> void:
@@ -96,3 +100,16 @@ func play_random_sound():
 	
 		audio_stream_player.stream = random_sound
 		audio_stream_player.play()
+
+func die() -> void:
+	#death_particles.global_position = head.global_position
+	if !(dead):
+		if (boss):
+			death_particles.amount = 15000
+		dead = true
+		collision_shape_3d.queue_free()
+		animation_player.current_animation ="AlienArmature|Alien_Death"
+		death_particles.emitting = true
+		await animation_player.animation_finished
+		self.queue_free()
+	self.velocity = Vector3.ZERO

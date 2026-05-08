@@ -18,6 +18,7 @@ const PISTIOLIMG_REMOVEBG_PREVIEW = preload("uid://cg00fy1425cuc")
 @onready var objective: Label = $PauseScreen/Objective
 @onready var reload_audio: AudioStreamPlayer = $reloadAudio
 @onready var close_ui: Button = $PauseScreen/CloseUI
+@onready var pause_text: Label = $PauseScreen/PauseText
 
 var badPic = preload("res://Assets/Gun assets/pistiolimg-removebg-preview.png")
 var greenPic = preload("res://Assets/keycard Images/mexico.png")
@@ -101,10 +102,11 @@ func update_health(num:int)->void:
 	health.text = str(num)
 
 func lose()->void:
+	pause_text.text = "- You Died!! -"
 	GameManager.keycardNum = 0
 	GameManager.paused = true
 	pause_screen.visible = true
-	objective.text = "You Died!!"
+	objective.text = "You've fallen to the hordes!"
 	close_ui.visible = false
 	
 	
