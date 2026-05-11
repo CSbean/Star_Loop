@@ -40,6 +40,7 @@ var inventorySlot = 1
 ## 0=no door acsees, 1=white, 2=green, 3=yellow, 4=red
 var keycard = 0
 var main_sm : LimboHSM
+var isSprinting := false
 
 func _ready() -> void:
 	initalize_state_machine()
@@ -74,13 +75,17 @@ func _process(_delta: float) -> void:
 					sprinting_toggle = !sprinting_toggle
 					if sprinting_toggle:
 						SPEED = 10.0
+						isSprinting = true
 					else:
 						SPEED = 5.0
+						isSprinting = false
 		else:
 			if (Input.is_action_pressed("Player_Sprint")):
 				SPEED = 10.0
+				isSprinting = true
 			else:
 				SPEED = 5.0
+				isSprinting = false
 			
 			
 		#shooting
@@ -117,6 +122,7 @@ func _process(_delta: float) -> void:
 		
 func _physics_process(delta: float) -> void:
 	if GameManager.paused == false:
+		print(main_sm.get_active_state())
 		# Add the gravity.
 		if not is_on_floor():
 			velocity += get_gravity() * delta
@@ -191,26 +197,38 @@ func initalize_state_machine():
 	
 	main_sm.initial_state = idle_state
 	
+	
 	main_sm.add_transition(idle_state,walk_state,&"to_walk")
+	main_sm.add_transition(idle_state, sprint_state, &"to_sprint")
+	main_sm.add_transition(main_sm.ANYSTATE, idle_state, &"state_ended")
+	main_sm.add_transition(idle_state, Pshoot_state, &"Pshoot")
+	main_sm.add_transition(main_sm.ANYSTATE, Pshoot_state, &"to_Pshoot")
 	
 	main_sm.initialize(self)
 	main_sm.set_active(true)
 
 func idle_start():
 	animation_player.play("CharacterArmature|Idle")
-func idle_update(delta: float):
-	print("idal update")
+func idle_update(_delta: float):
+	if velocity != Vector3.ZERO:
+		if isSprinting:
+			main_sm.dispatch(&"to_sprint")
+		elif isSprinting == false:
+			main_sm.dispatch(&"to_walk")
 
 func walk_start():
-	pass
+	animation_player.play("CharacterArmature|Walk")
 func walk_update(delta: float):
-	pass
+	if velocity == Vector3.ZERO:
+		main_sm.dispatch(&"state_ended")
+	if isSprinting:
+			main_sm.dispatch(&"to_sprint")
 
 func sprint_start():
-	pass
+	animation_player.play("CharacterArmature|Run")
 func sprint_update(delta: float):
-	pass
-
+	if velocity == Vector3.ZERO:
+		main_sm.dispatch(&"state_ended")
 func Pshoot_start():
 	pass
 func Pshoot_update(delta: float):
