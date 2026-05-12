@@ -61,7 +61,6 @@ scale = Vector2(1.7544377, 1.7467191)
 texture = ExtResource("2_pt772")
 
 [node name="MainMenu" type="Panel" parent="." unique_id=455130638]
-visible = false
 layout_mode = 0
 offset_left = 90.0
 offset_top = 440.0
@@ -117,6 +116,7 @@ libraries/ = SubResource("AnimationLibrary_sh1a5")
 autoplay = &"titleAnim"
 
 [node name="SettingsMenu" type="Panel" parent="." unique_id=597687976]
+visible = false
 layout_mode = 0
 offset_left = 64.0
 offset_top = 368.0
@@ -223,7 +223,8 @@ Beau Barber
 Special thanks to:
 Duncan Casper
 Colin
- Harrington-Ding"
+ Harrington-Ding
+Owen Wilkins"
 
 [node name="CloseCredits" type="Button" parent="CreditsMenu" unique_id=1326259978]
 layout_mode = 0

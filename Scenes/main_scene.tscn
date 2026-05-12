@@ -1715,7 +1715,7 @@ transform = Transform3D(1043.495, 0.00022459992, 6.887313e-12, 0, -6.501885e-05,
 mesh = ExtResource("25_0c7y5")
 
 [node name="Door" parent="Ship/AftReactor" unique_id=1655557711 instance=ExtResource("33_vjhad")]
-transform = Transform3D(2.3626714, 0, 0, 0, 1.2797606, 0, 0, 0, 3.349138, -7.9863267, 2.265247, -28.808348)
+transform = Transform3D(2.363, 0, 0, 0, 1.28, 0, 0, 0, 2.644, -7.9863267, 2.265247, -28.583147)
 keycard = 3
 
 [node name="Reactor" type="Node3D" parent="Ship" unique_id=1332329762]

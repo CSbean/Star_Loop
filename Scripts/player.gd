@@ -1,7 +1,6 @@
 extends CharacterBody3D
 class_name Player
 
-
 @onready var ui: UI = $UI
 @onready var camera_3d: Camera3D = $Camera3D
 @onready var animation_player: AnimationPlayer = $PlayerSprite/AnimationPlayer
@@ -15,6 +14,7 @@ class_name Player
 @onready var pisto_shoot_audio: AudioStreamPlayer = $pistoShootAudio
 @onready var shotgun_shoot_audio: AudioStreamPlayer = $shotgunShootAudio
 @onready var ar_shoot_audio: AudioStreamPlayer = $arShootAudio
+@onready var player: Player = $"."
 
 var SPEED = 5.0
 const JUMP_VELOCITY = 4.
