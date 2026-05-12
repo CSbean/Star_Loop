@@ -7,7 +7,8 @@ extends Node3D
 @onready var loop_timer: Timer = $loopTimer
 @onready var background_music: AudioStreamPlayer = $backgroundMusic
 @onready var enemies: Node3D = $Enemies
-
+@onready var win_cam: Camera3D = $WinCam
+var wonMove := false
 var player : Player
 var spd : float
 # Called when the node enters the scene tree for the first time.
@@ -20,6 +21,14 @@ func _ready() -> void:
 	spd = (mesh_instance_3d.global_position.z-100) / loopTime
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	# Test spd remove \/
+	if (Input.is_action_pressed("test_spd") && player.dev_mode):
+		Engine.time_scale = 20
+	else:
+		Engine.time_scale = 1
+	if (wonMove):
+		space_objects.global_position +=  Vector3(-10*delta, 0, 0)
+		ship.rotate(Vector3(0,1,0), .03*delta)
 	#if (Input.is_action_just_pressed("dev")):
 	#	enemies.queue_free()
 	if !(GameManager.paused):
@@ -44,3 +53,5 @@ func _on_win_area_body_entered(body: Node3D) -> void:
 		player.ui.pause_screen.visible = true
 		player.ui.objective.text = "You Won!!"
 		player.ui.close_ui.visible = false
+		win_cam.current = true 
+		wonMove = true

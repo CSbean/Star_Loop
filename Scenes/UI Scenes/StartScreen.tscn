@@ -61,6 +61,7 @@ scale = Vector2(1.7544377, 1.7467191)
 texture = ExtResource("2_pt772")
 
 [node name="MainMenu" type="Panel" parent="." unique_id=455130638]
+visible = false
 layout_mode = 0
 offset_left = 90.0
 offset_top = 440.0
@@ -116,7 +117,6 @@ libraries/ = SubResource("AnimationLibrary_sh1a5")
 autoplay = &"titleAnim"
 
 [node name="SettingsMenu" type="Panel" parent="." unique_id=597687976]
-visible = false
 layout_mode = 0
 offset_left = 64.0
 offset_top = 368.0
@@ -158,9 +158,9 @@ text = "Change Sensitivity: "
 [node name="SprintToggle" type="CheckButton" parent="SettingsMenu" unique_id=1964461529]
 layout_mode = 0
 offset_left = 16.0
-offset_top = 88.0
-offset_right = 392.0
-offset_bottom = 141.0
+offset_top = 80.0
+offset_right = 571.0
+offset_bottom = 133.0
 theme_override_font_sizes/font_size = 32
 button_pressed = true
 text = "Press shift to toggle sprint on/off"
@@ -192,6 +192,16 @@ offset_bottom = 141.0
 theme_override_font_sizes/font_size = 32
 button_pressed = true
 text = "Play Audio"
+
+[node name="DevMode" type="CheckButton" parent="SettingsMenu" unique_id=1116257525]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 128.0
+offset_right = 318.0
+offset_bottom = 181.0
+theme_override_font_sizes/font_size = 32
+button_pressed = true
+text = "Developer Mode Buttons "
 
 [node name="CreditsMenu" type="Panel" parent="." unique_id=922866904]
 visible = false

@@ -19,6 +19,7 @@ const PISTIOLIMG_REMOVEBG_PREVIEW = preload("uid://cg00fy1425cuc")
 @onready var reload_audio: AudioStreamPlayer = $reloadAudio
 @onready var close_ui: Button = $PauseScreen/CloseUI
 @onready var pause_text: Label = $PauseScreen/PauseText
+@onready var die_button: Button = $PauseScreen/DieButton
 
 var badPic = preload("res://Assets/Gun assets/pistiolimg-removebg-preview.png")
 var greenPic = preload("res://Assets/keycard Images/mexico.png")
@@ -49,7 +50,7 @@ func _process(_delta: float) -> void:
 		objective.text = "Objective: Find Red Key card"
 	elif (GameManager.keycardNum == 4) and !(GameManager.paused):
 		keycard.texture = redPic
-		objective.text = "Objective: Fix the ship's reactor"
+		objective.text = "Objective: Fix the ship's navigation!"
 	if(GameManager.keycardNum == 0):
 		keycard.visible = false
 	else:
@@ -106,9 +107,9 @@ func lose()->void:
 	GameManager.keycardNum = 0
 	GameManager.paused = true
 	pause_screen.visible = true
-	objective.text = "You've fallen to the hordes!"
+	objective.text = "You've fallen to the enemy hordes!"
 	close_ui.visible = false
-	
+	die_button.visible = true
 	
 func _on_close_ui_pressed() -> void:
 	pause_screen.visible = false
@@ -119,3 +120,8 @@ func _on_close_ui_pressed() -> void:
 func _on_main_menu_pressed() -> void:
 	GameManager.paused = false
 	GameManager.change_map(1)
+
+
+func _on_die_button_pressed() -> void:
+	GameManager.paused = false
+	get_tree().reload_current_scene()

@@ -8,6 +8,7 @@ extends Control
 @onready var sense_slider: HSlider = $SettingsMenu/SenseSlider
 @onready var sprint_toggle: CheckButton = $SettingsMenu/SprintToggle
 @onready var audio_check: CheckButton = $SettingsMenu/AudioCheck
+@onready var dev_mode: CheckButton = $SettingsMenu/DevMode
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,6 +27,7 @@ func _on_quit_pressed() -> void:
 	get_tree().quit()
 	
 func _on_start_pressed() -> void:
+	GameManager.dev_mode_buttons = dev_mode.pressed
 	GameManager.playAudio = audio_check.button_pressed
 	GameManager.sprintToggleModeOn = sprint_toggle.button_pressed
 	GameManager.setSensitivity = int(sense_slider.value)

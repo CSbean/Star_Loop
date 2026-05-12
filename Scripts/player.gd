@@ -16,7 +16,6 @@ class_name Player
 @onready var shotgun_shoot_audio: AudioStreamPlayer = $shotgunShootAudio
 @onready var ar_shoot_audio: AudioStreamPlayer = $arShootAudio
 
-
 var SPEED = 5.0
 const JUMP_VELOCITY = 4.
 var shotgunRounds := 0
@@ -33,6 +32,7 @@ var camera_sense := 50#50
 var capMouse := false
 var flashOn := false
 var sprinting_toggle = false
+var dev_mode := false
 var pistolVisabilityToggle = false
 var health = 100
 ##AR = 0, Shotgun = 1, Pistol = 2
@@ -59,12 +59,12 @@ func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("Flashlight")):
 		flashOn = !flashOn
 		spot_light_3d.visible = flashOn
-	if (Input.is_action_just_pressed("reset")):
+	if (Input.is_action_just_pressed("reset") && dev_mode):
 		get_tree().reload_current_scene()
 		GameManager.paused = false
 	if (Input.is_action_just_pressed("quit")):
 		get_tree().quit()
-	if (Input.is_action_just_pressed("dev")):
+	if (Input.is_action_just_pressed("dev") && dev_mode):
 		GameManager.keycardNum = 4
 		keycard = 4
 	if (Input.is_action_just_pressed("mute")):

@@ -8,7 +8,7 @@ var newMap : PackedScene
 var sprintToggleModeOn := true
 var setSensitivity := 50
 var playAudio := true
-
+var dev_mode_buttons := false
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
 

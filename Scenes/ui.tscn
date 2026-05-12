@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://cghhnoa1eyfux" path="res://Assets/SFX & VFX/Orbitron,Saira_Stencil/Saira_Stencil/SairaStencil-VariableFont_wdth,wght.ttf" id="5_q7pk6"]
 [ext_resource type="AudioStream" uid="uid://urm7opuyljqq" path="res://Assets/SFX & VFX/sfx/561471__gamewithbepis__generic-rifle-cock.wav" id="6_m78vo"]
 [ext_resource type="Texture2D" uid="uid://bs4o26ujwjfq4" path="res://Assets/healthImg.png" id="7_smcll"]
+[ext_resource type="Texture2D" uid="uid://kh2rttx7lmuu" path="res://Assets/statictest.jpg" id="8_ryf15"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jxero"]
 font_size = 24
@@ -213,6 +214,16 @@ offset_bottom = 154.0
 theme_override_font_sizes/font_size = 42
 text = "Objective: Find Yellow Key Card"
 
+[node name="DieButton" type="Button" parent="PauseScreen" unique_id=777976400]
+visible = false
+layout_mode = 0
+offset_left = 512.0
+offset_top = 184.0
+offset_right = 752.0
+offset_bottom = 243.0
+theme_override_font_sizes/font_size = 37
+text = "Retry "
+
 [node name="reloadAudio" type="AudioStreamPlayer" parent="." unique_id=829398438]
 stream = ExtResource("6_m78vo")
 
@@ -245,5 +256,17 @@ position = Vector2(160, 608)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("7_smcll")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=807712102]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_ryf15")
+
 [connection signal="pressed" from="PauseScreen/MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="PauseScreen/CloseUI" to="." method="_on_close_ui_pressed"]
+[connection signal="pressed" from="PauseScreen/DieButton" to="." method="_on_die_button_pressed"]
