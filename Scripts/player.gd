@@ -15,6 +15,7 @@ class_name Player
 @onready var pisto_shoot_audio: AudioStreamPlayer = $pistoShootAudio
 @onready var shotgun_shoot_audio: AudioStreamPlayer = $shotgunShootAudio
 @onready var ar_shoot_audio: AudioStreamPlayer = $arShootAudio
+@onready var animation_player_enemy: AnimationPlayer = $EnemySprite/AnimationPlayer
 
 var SPEED = 5.0
 const JUMP_VELOCITY = 4.
@@ -93,7 +94,7 @@ func _process(_delta: float) -> void:
 		#shooting
 		#AR = 0, Shotgun = 1, Pistol = 2
 		if(Input.is_action_just_pressed("shoot")):
-			animation_player.play("CharacterArmature|Run_Shoot")
+			animation_player.play("CharacterArmature|Idle_Gun_Pointing")
 			if (inventorySlot == 1):
 				if (shotgunRounds > 0):
 					shotgunRounds -= 1
@@ -117,6 +118,7 @@ func _process(_delta: float) -> void:
 						ar_shoot_audio.play()
 					if (ray_cast_3d.get_collider() is Enemy):
 						ray_cast_3d.get_collider().health -= 30
+						animation_player_enemy.play("damaged_animation")
 			ar_timer.start(fire_rate)
 	else:
 		ui.heartbeat.speed_scale = 0
@@ -141,11 +143,13 @@ func _physics_process(delta: float) -> void:
 				walking_audio_stream.play()
 			velocity.x = direction.x * SPEED
 			velocity.z = direction.z * SPEED
+			
 		else:
 			if walking_audio_stream.playing:
 				walking_audio_stream.stop()
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)
+		
 
 
 		rotate_camrea(delta)

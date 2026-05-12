@@ -5,6 +5,7 @@ extends Area3D
 @onready var pistol_asset: Node3D = $PistolAsset
 @onready var shotgun_asset: Node3D = $ShotgunAsset
 @onready var prompt: Label3D = $prompt
+
 var isNearby := false
 var player : Player
 # Called when the node enters the scene tree for the first time.
