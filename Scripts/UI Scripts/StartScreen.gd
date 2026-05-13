@@ -27,7 +27,7 @@ func _on_quit_pressed() -> void:
 	get_tree().quit()
 	
 func _on_start_pressed() -> void:
-	GameManager.dev_mode_buttons = dev_mode.pressed
+	GameManager.dev_mode_avail = dev_mode.button_pressed
 	GameManager.playAudio = audio_check.button_pressed
 	GameManager.sprintToggleModeOn = sprint_toggle.button_pressed
 	GameManager.setSensitivity = int(sense_slider.value)

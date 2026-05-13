@@ -54,7 +54,7 @@ func _ready() -> void:
 	keycard = 0
 	camera_sense = GameManager.setSensitivity
 	change_mouse()
-
+	dev_mode = GameManager.dev_mode_avail
 func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("Flashlight")):
 		flashOn = !flashOn
@@ -106,6 +106,7 @@ func _process(_delta: float) -> void:
 					pistolRounds -= 1
 					if (ray_cast_3d.get_collider() is Enemy):
 						ray_cast_3d.get_collider().health -= 40
+						ray_cast_3d.get_collider().damage_anim.play("damage")
 					if (GameManager.playAudio):
 						pisto_shoot_audio.play()
 		if (Input.is_action_pressed("shoot")) && (inventorySlot == 0) and ar_timer.is_stopped():

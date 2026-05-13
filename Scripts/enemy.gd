@@ -17,6 +17,7 @@ class_name Enemy
 @onready var boss_anim: AnimationPlayer = $BossSprite/BossAnim
 @onready var death_particles: GPUParticles3D = $deathParticles
 @onready var head: BoneAttachment3D = $EnemySprite/RootNode/AlienArmature/Skeleton3D/Head
+@onready var damage_anim: AnimationPlayer = $EnemySprite/damage_anim
 
 var health := 100
 var state : String = "Idle"
@@ -44,6 +45,7 @@ func _ready() -> void:
 		spd = 2.5
 		enemy_sprite.visible = true
 		boss_sprite.visible = false
+	damage_anim.play("damage")
 func _process(_delta: float) -> void:
 	pass
 

@@ -45,6 +45,8 @@
 [ext_resource type="PackedScene" uid="uid://bwmtkmwv42ju3" path="res://Scenes/keycard.tscn" id="42_igw8g"]
 [ext_resource type="PackedScene" uid="uid://u7er52behax" path="res://Scenes/gun_pickup.tscn" id="43_rlvbq"]
 [ext_resource type="PackedScene" uid="uid://cpij1nn6bh4gq" path="res://Scenes/ammo.tscn" id="44_2v2b7"]
+[ext_resource type="ArrayMesh" uid="uid://dryvehqv7slkc" path="res://Assets/Ship Assets/Root Scene_Details_Plate_Small.res" id="46_p35vf"]
+[ext_resource type="ArrayMesh" uid="uid://by0qpdxrn38yf" path="res://Assets/Ship Assets/Root Scene_Details_Triangles.res" id="47_stxua"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_6l7je"]
 panorama = ExtResource("1_52fb6")
@@ -1715,7 +1717,7 @@ transform = Transform3D(1043.495, 0.00022459992, 6.887313e-12, 0, -6.501885e-05,
 mesh = ExtResource("25_0c7y5")
 
 [node name="Door" parent="Ship/AftReactor" unique_id=1655557711 instance=ExtResource("33_vjhad")]
-transform = Transform3D(2.3626714, 0, 0, 0, 1.2797606, 0, 0, 0, 3.349138, -7.9863267, 2.265247, -28.808348)
+transform = Transform3D(2.5456324, 0, 0, 0, 1.2797606, 0, 0, 0, 1.6131251, -7.9863267, 2.6642332, -28.808348)
 keycard = 3
 
 [node name="Reactor" type="Node3D" parent="Ship" unique_id=1332329762]
@@ -1982,6 +1984,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1711326, 1.0174087, 14.9606
 
 [node name="WinCam" type="Camera3D" parent="." unique_id=1342446200]
 transform = Transform3D(-1, 4.3711385e-08, 7.5710346e-08, 8.742277e-08, 0.50000006, 0.8660254, 0, 0.8660254, -0.50000006, 0, 379.54413, 0)
+
+[node name="RootSceneDetailsPlateSmall" type="MeshInstance3D" parent="." unique_id=936453630]
+transform = Transform3D(-0.00010077258, 1679.995, -6.046356e-05, 0, -7.3434916e-05, -1383.245, -2305.408, -7.3434916e-05, 2.6429462e-12, 11.846341, 6.8565245, -44.165024)
+mesh = ExtResource("46_p35vf")
+
+[node name="RootSceneDetailsTriangles" type="MeshInstance3D" parent="." unique_id=138402845]
+transform = Transform3D(-4.371139e-05, 1000, 4.371139e-05, 0, -4.371139e-05, 1000, 1000, 4.371139e-05, 1.9106854e-12, 11.33901, 7.014528, -44.098156)
+mesh = ExtResource("47_stxua")
+
+[node name="RootSceneDetailsPlateSmall2" type="MeshInstance3D" parent="." unique_id=1203152526]
+transform = Transform3D(-0.00010077258, -1679.995, 0.00018139069, 0, 0.00022030475, 1383.245, -2305.408, 7.3434916e-05, -7.928838e-12, -23.962692, 6.856526, -44.165024)
+mesh = ExtResource("46_p35vf")
+
+[node name="RootSceneDetailsTriangles2" type="MeshInstance3D" parent="." unique_id=1449020429]
+transform = Transform3D(-4.371139e-05, -1000, 4.371139e-05, 4.3368087e-19, -4.371139e-05, -1000, 1000, -4.371139e-05, 1.910685e-12, -9.975955, 7.0145288, -44.098156)
+mesh = ExtResource("47_stxua")
 
 [connection signal="body_entered" from="WinArea" to="." method="_on_win_area_body_entered"]
 [connection signal="timeout" from="loopTimer" to="." method="_on_loop_timer_timeout"]
