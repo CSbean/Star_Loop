@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cfj5nwgm1q62q"
+path="res://.godot/imported/mixkit-space-rocket-full-power-turbine-1720.mp3-f4de1f10a9fdf3c851a9f93bf7ec4f8f.mp3str"
+
+[deps]
+
+source_file="res://Assets/SFX & VFX/sfx/mixkit-space-rocket-full-power-turbine-1720.mp3"
+dest_files=["res://.godot/imported/mixkit-space-rocket-full-power-turbine-1720.mp3-f4de1f10a9fdf3c851a9f93bf7ec4f8f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

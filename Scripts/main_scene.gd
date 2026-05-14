@@ -8,6 +8,9 @@ extends Node3D
 @onready var background_music: AudioStreamPlayer = $backgroundMusic
 @onready var enemies: Node3D = $Enemies
 @onready var win_cam: Camera3D = $WinCam
+@onready var reng_audio: AudioStreamPlayer3D = $Ship/LeftEngine/RengAudio
+@onready var l_eng_audio: AudioStreamPlayer3D = $Ship/LeftEngine/LEngAudio
+
 var wonMove := false
 var player : Player
 var spd : float
@@ -15,6 +18,8 @@ var spd : float
 func _ready() -> void:
 	if not(GameManager.playAudio):
 		background_music.stop()
+		reng_audio.playing = false
+		l_eng_audio.playing = false
 	loop_timer.start(loopTime)
 	Engine.time_scale = 1
 	player = get_tree().get_first_node_in_group("Player")
