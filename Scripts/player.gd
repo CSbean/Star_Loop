@@ -25,7 +25,7 @@ var hasRifle := false
 var hasShotgun := false
 var hasPistol := false
 var fire_rate = 0.2
-
+var is_walking := false
 #camra var's
 var look_dir: Vector2
 var camera_sense := 50#50
@@ -125,6 +125,7 @@ func _process(_delta: float) -> void:
 		
 func _physics_process(delta: float) -> void:
 	if GameManager.paused == false:
+		is_walking = velocity == Vector3.ZERO
 		# Add the gravity.
 		if not is_on_floor():
 			velocity += get_gravity() * delta
