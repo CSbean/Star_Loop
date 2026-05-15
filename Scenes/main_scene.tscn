@@ -40,7 +40,6 @@
 [ext_resource type="AudioStream" uid="uid://cfj5nwgm1q62q" path="res://Assets/SFX & VFX/sfx/mixkit-space-rocket-full-power-turbine-1720.mp3" id="37_8qtx6"]
 [ext_resource type="ArrayMesh" uid="uid://ckhwl1d4kbk27" path="res://Assets/Ship Assets/Root Scene_Props_Capsule.res" id="37_83t5j"]
 [ext_resource type="ArrayMesh" uid="uid://cfy66u0u3he1q" path="res://Assets/Ship Assets/Root Scene_Props_Teleporter_1.res" id="38_f2mrd"]
-[ext_resource type="PackedScene" uid="uid://cc7tvl2nv4ryh" path="res://Assets/Ship Assets/Scifi Kit.glb" id="39_rq1tk"]
 [ext_resource type="PackedScene" uid="uid://dx7a0xb2opwj2" path="res://Scenes/enemy.tscn" id="40_t1ett"]
 [ext_resource type="ArrayMesh" uid="uid://bx42w63uje8q6" path="res://Assets/Ship Assets/Root Scene_Details_Pipes_Long.res" id="41_0c7y5"]
 [ext_resource type="PackedScene" uid="uid://cd2r8ccrcojic" path="res://Scenes/player.tscn" id="41_ju5bt"]
@@ -61,6 +60,7 @@
 [ext_resource type="PackedScene" uid="uid://gypgfoqnogqv" path="res://Assets/Gun assets/Ammo Shotgun.glb" id="57_rxykl"]
 [ext_resource type="ArrayMesh" uid="uid://badn3kcuftvah" path="res://Assets/Ship Assets/Root Scene_Details_Vent_2.res" id="60_7o6dj"]
 [ext_resource type="ArrayMesh" uid="uid://qgfomvp7r2ks" path="res://Assets/Ship Assets/Root Scene_Props_ChestTop.res" id="61_0c7y5"]
+[ext_resource type="ArrayMesh" uid="uid://3yti4qrgdsb1" path="res://Assets/saberncc61947.obj" id="61_4d4va"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_6l7je"]
 panorama = ExtResource("1_52fb6")
@@ -3587,6 +3587,12 @@ transform = Transform3D(-7.592786e-08, 1.3437532, 0, -1.737027, -5.873731e-08, 0
 visible = false
 use_collision = true
 
+[node name="CSGBox3D6" type="CSGBox3D" parent="Ship/Medbay" unique_id=1544666626]
+transform = Transform3D(-0.8332482, 0, 0, 0, -0.8332482, 0, 0, 0, -0.8332482, 6.402566, -1.3787451, -2.3680038)
+visible = false
+use_collision = true
+size = Vector3(0.7887573, 2.6877441, 2.3970947)
+
 [node name="Comms" type="Node3D" parent="Ship" unique_id=766662162]
 transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, -1, -6.0754633, 0, -13.346778)
 
@@ -4003,6 +4009,12 @@ mesh = ExtResource("28_d63xc")
 transform = Transform3D(-5.60326e-06, 124.98723, 4.973357e-06, 0, -5.463365e-06, 113.77711, 128.18764, 5.4633656e-06, 2.1739235e-13, 2.5160866, 0.15526581, -13.045469)
 mesh = ExtResource("28_d63xc")
 
+[node name="CSGBox3D5" type="CSGBox3D" parent="Ship/Hall" unique_id=501801030]
+transform = Transform3D(-3.642244e-08, 0, -0.8332482, 0, 0.8332482, 0, 0.8332482, 0, -3.642244e-08, 0.42177725, 1.378747, -27.691328)
+visible = false
+use_collision = true
+size = Vector3(2.4821777, 2.6877441, 7.0373535)
+
 [node name="RightHall" type="Node3D" parent="Ship" unique_id=1217659946]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -18.508204, -1.9078143e-06, -52.054405)
 
@@ -4193,6 +4205,46 @@ mesh = ExtResource("28_d63xc")
 [node name="RootSceneRoofTileCornerPipes2" type="MeshInstance3D" parent="Ship/RightHall" unique_id=1139170049]
 transform = Transform3D(3.955686e-05, 306.5936, -1.1125621e-12, -1.31856195e-05, 0, -291.14203, -301.65182, 4.0204897e-05, 1.2726222e-05, 2.081461, 5.381119, -29.454813)
 mesh = ExtResource("32_7d3c8")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Ship/RightHall" unique_id=1744813209]
+transform = Transform3D(-1, 0, 8.7422784e-08, 0, 1, 0, -8.7422784e-08, 0, -1, -1.276516, 1.670846, -24.058167)
+visible = false
+use_collision = true
+size = Vector3(2.4003906, 2.2666016, 4.178589)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Ship/RightHall" unique_id=1589640986]
+transform = Transform3D(-1, 0, 8.7422784e-08, 0, 1, 0, -8.7422784e-08, 0, -1, 3.6107254, 1.3939905, -11.341707)
+visible = false
+use_collision = true
+size = Vector3(3.8017883, 1.7128906, 3.996399)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Ship/RightHall" unique_id=269270589]
+transform = Transform3D(-0.8435227, 0, 0.5370935, 0, 1, 0, -0.5370935, 0, -0.8435227, -1.2383823, 1.6173792, -19.807585)
+visible = false
+use_collision = true
+size = Vector3(2.2856598, 2.159668, 3.996399)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Ship/RightHall" unique_id=1496734109]
+transform = Transform3D(-0.8456812, 0, 0.5336884, 0, 1, 0, -0.5336884, 0, -0.8456812, -1.5100193, 4.0666933, -19.035229)
+visible = false
+use_collision = true
+size = Vector3(2.4003906, 2.2666016, 2.2551727)
+
+[node name="RootScenePropsCrateLong5" type="MeshInstance3D" parent="Ship/RightHall" unique_id=1148262926]
+transform = Transform3D(-1.4568976e-05, 0, -333.2993, 0, 333.2993, 0, 333.2993, 0, -1.4568976e-05, -0.00092315674, 1.5825696, -24.02448)
+mesh = ExtResource("29_ppfgf")
+
+[node name="RootScenePropsCrateLong6" type="MeshInstance3D" parent="Ship/RightHall" unique_id=621920560]
+transform = Transform3D(-179.21896, 0, -281.01416, 0, 333.2993, 0, 281.01416, 0, -179.21896, -0.1667614, 1.5825698, -19.080727)
+mesh = ExtResource("29_ppfgf")
+
+[node name="RootScenePropsContainerFull2" type="MeshInstance3D" parent="Ship/RightHall" unique_id=265958875]
+transform = Transform3D(-2.9137951e-05, 333.2993, 1.4568974e-05, -1.4568975e-05, -1.4568975e-05, 333.2993, 333.2993, 2.9137951e-05, 1.45689755e-05, 4.2950897, 0.39968333, -11.41432)
+mesh = ExtResource("17_5w0f0")
+
+[node name="RootScenePropsChestTop" type="MeshInstance3D" parent="Ship/RightHall" unique_id=1638792200]
+transform = Transform3D(-1.48317185e-05, 63.01395, -327.2883, -2.754427e-06, 327.28833, 63.01394, 333.29922, 5.5088553e-06, -1.4043481e-05, 3.1258583, 2.7757816, -10.924124)
+mesh = ExtResource("61_0c7y5")
 
 [node name="LeftHall" type="Node3D" parent="Ship" unique_id=1240792999]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 21.166134, -1.9078143e-06, -52.054405)
@@ -4684,33 +4736,9 @@ mesh = ExtResource("44_4d4va")
 transform = Transform3D(-5.4639237e-05, 0, 2500, 0, 297.267, 0, -1250, 0, -0.00010927847, 17.69631, 1.8630215, -55.270103)
 mesh = ExtResource("45_vdma7")
 
-[node name="Root Scene" parent="Ship" unique_id=2095750086 instance=ExtResource("39_rq1tk")]
-transform = Transform3D(0.83333313, 0, 0, 0, 0.83333313, 0, 0, 0, 0.83333313, -7.2819195, -26.478525, -25.777626)
-visible = false
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Ship" unique_id=1744813209]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.231686, 1.6708441, -27.996235)
-visible = false
-use_collision = true
-size = Vector3(2.4003906, 2.2666016, 4.178589)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Ship" unique_id=1589640986]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.118927, 1.3939886, -40.712696)
-visible = false
-use_collision = true
-size = Vector3(3.8017883, 1.7128906, 3.996399)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Ship" unique_id=269270589]
-transform = Transform3D(0.8435228, 0, -0.53709346, 0, 1, 0, 0.53709346, 0, 0.8435228, -17.26982, 1.6173773, -32.24682)
-visible = false
-use_collision = true
-size = Vector3(2.2856598, 2.159668, 3.996399)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Ship" unique_id=1496734109]
-transform = Transform3D(0.84568125, 0, -0.53368837, 0, 1, 0, 0.53368837, 0, 0.84568125, -16.998182, 4.0666914, -33.019173)
-visible = false
-use_collision = true
-size = Vector3(2.4003906, 2.2666016, 2.2551727)
+[node name="RootSceneDetailsVent2" type="MeshInstance3D" parent="Ship/Reactor" unique_id=1606187323]
+transform = Transform3D(1999.9999, 0.00045776367, 2.0009487e-11, 0, -8.742278e-05, 1999.9999, 0.00045776367, -1999.9999, -8.742278e-05, -7.9410477, 6.3943486, -51.44494)
+mesh = ExtResource("60_7o6dj")
 
 [node name="Doors" type="Node3D" parent="." unique_id=145446824]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.034, 0, 0)
@@ -5518,37 +5546,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1711326, 1.0174087, 14.9606
 [node name="WinCam" type="Camera3D" parent="." unique_id=1342446200]
 transform = Transform3D(-1, 4.3711385e-08, 7.5710346e-08, 8.742277e-08, 0.50000006, 0.8660254, 0, 0.8660254, -0.50000006, 0, 379.54413, 0)
 
-[node name="RootSceneDetailsVent2" type="MeshInstance3D" parent="." unique_id=1606187323]
-transform = Transform3D(-2400.245, -0.0003395364, -1.4841609e-11, 0, -0.00010491805, 2400.245, -0.0003395364, 2400.245, 0.00010491805, 0, 7.674, -12.457)
-mesh = ExtResource("60_7o6dj")
-
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=501801030]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.686666, 1.6546631, -8.136377)
+[node name="Saberncc61947" type="MeshInstance3D" parent="." unique_id=157238797]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 118.0768, 0)
 visible = false
-use_collision = true
-size = Vector3(2.4821777, 2.6877441, 7.0373535)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1544666626]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.975165, 1.6546631, 13.36614)
-visible = false
-use_collision = true
-size = Vector3(0.7887573, 2.6877441, 2.3970947)
-
-[node name="RootScenePropsCrateLong" type="MeshInstance3D" parent="." unique_id=1148262926]
-transform = Transform3D(-1.7484555e-05, 0, 400, 0, 400, 0, -400, 0, -1.7484555e-05, -22.211002, 1.8992753, -14.315344)
-mesh = ExtResource("29_ppfgf")
-
-[node name="RootScenePropsCrateLong2" type="MeshInstance3D" parent="." unique_id=621920560]
-transform = Transform3D(215.08469, 0, 337.2515, 0, 400, 0, -337.2515, 0, 215.08469, -22.011978, 1.8992755, -20.248455)
-mesh = ExtResource("29_ppfgf")
-
-[node name="RootScenePropsContainerFull" type="MeshInstance3D" parent="." unique_id=265958875]
-transform = Transform3D(7.6427417e-13, -400, -1.7484555e-05, -1.7484555e-05, -1.7484555e-05, 400, -400, 0, -1.7484555e-05, -27.366745, 0.4796667, -29.449081)
-mesh = ExtResource("17_5w0f0")
-
-[node name="RootScenePropsChestTop" type="MeshInstance3D" parent="." unique_id=1638792200]
-transform = Transform3D(-1.7169226e-05, -75.624466, 392.78607, -3.3056501e-06, 392.78613, 75.62445, -399.99994, -3.67804e-13, -1.7484552e-05, -25.963524, 3.331276, -30.037378)
-mesh = ExtResource("61_0c7y5")
+mesh = ExtResource("61_4d4va")
 
 [connection signal="body_entered" from="WinArea" to="." method="_on_win_area_body_entered"]
 [connection signal="timeout" from="loopTimer" to="." method="_on_loop_timer_timeout"]
