@@ -40,14 +40,6 @@ var inventorySlot = 1
 ## 0=no door acsees, 1=white, 2=green, 3=yellow, 4=red
 var keycard = 0
 
-### TO-DO LIST 
-	#Finish MAP!!!!! - Beau
-	#Get time loop working - Ben
-	#Add Ammo - Ben - DONE
-	#Add win/lose ui - Ben
-	#Add SFX - Beau
-	#Add Start Screen UI + Settings - Ben
-	#Add Bossfight
 
 func _ready() -> void:
 	GameManager.keycardNum = 0
@@ -55,6 +47,7 @@ func _ready() -> void:
 	camera_sense = GameManager.setSensitivity
 	change_mouse()
 	dev_mode = GameManager.dev_mode_avail
+
 func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("Flashlight")):
 		flashOn = !flashOn
@@ -93,7 +86,6 @@ func _process(_delta: float) -> void:
 		#shooting
 		#AR = 0, Shotgun = 1, Pistol = 2
 		if(Input.is_action_just_pressed("shoot")):
-			animation_player.play("CharacterArmature|Run_Shoot")
 			if (inventorySlot == 1):
 				if (shotgunRounds > 0):
 					shotgunRounds -= 1

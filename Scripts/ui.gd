@@ -20,6 +20,9 @@ const PISTIOLIMG_REMOVEBG_PREVIEW = preload("uid://cg00fy1425cuc")
 @onready var close_ui: Button = $PauseScreen/CloseUI
 @onready var pause_text: Label = $PauseScreen/PauseText
 @onready var die_button: Button = $PauseScreen/DieButton
+@onready var scifi_pistol: Node3D = $"../PlayerSprite/RootNode/CharacterArmature/Skeleton3D/BoneAttachment3D/ScifiPistol"
+@onready var root_scene: Node3D = $"../PlayerSprite/RootNode/CharacterArmature/Skeleton3D/BoneAttachment3D/Root Scene"
+@onready var coil_gun: Node3D = $"../PlayerSprite/RootNode/CharacterArmature/Skeleton3D/BoneAttachment3D/Coil Gun"
 
 var badPic = preload("res://Assets/Gun assets/pistiolimg-removebg-preview.png")
 var greenPic = preload("res://Assets/keycard Images/mexico.png")
@@ -34,6 +37,9 @@ var player : Player
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
+	scifi_pistol.visible = false
+	root_scene.visible = false
+	coil_gun.visible = false
 
 func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("esc")):
@@ -84,21 +90,40 @@ func _process(_delta: float) -> void:
 	if (selectedGun == 2):
 		gun_text.texture = PISTIOLIMG_REMOVEBG_PREVIEW
 		ammo_label.text = str(player.pistolRounds)
+		if player.hasPistol:
+			scifi_pistol.visible = true
+		coil_gun.visible = false
+		root_scene.visible = false
 	elif (selectedGun == 1):
 		gun_text.texture = SHOTGUN_BG_REMOVE
 		ammo_label.text = str(player.shotgunRounds)
+		scifi_pistol.visible = false
+		coil_gun.visible = false
+		root_scene.visible = true
 	elif (selectedGun ==0):
 		gun_text.texture = AR_REMOVE_BG
 		ammo_label.text = str(player.rifleRounds)
+		scifi_pistol.visible = false
+		coil_gun.visible = true
+		root_scene.visible = false
 	if (Input.is_action_just_pressed("one")):
 		if(player.hasPistol):
 			selectedGun = 2
+			scifi_pistol.visible = true
+			coil_gun.visible = false
+			root_scene.visible = false
 	elif (Input.is_action_just_pressed("two")):
 		if(player.hasShotgun):
 			selectedGun = 1
+			scifi_pistol.visible = false
+			coil_gun.visible = false
+			root_scene.visible = true
 	elif (Input.is_action_just_pressed("three")):
 		if(player.hasRifle):
 			selectedGun = 0
+			scifi_pistol.visible = false
+			coil_gun.visible = true
+			root_scene.visible = false
 func update_health(num:int)->void:
 	health.text = str(num)
 
