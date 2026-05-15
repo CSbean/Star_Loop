@@ -67,8 +67,6 @@ func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("dev") && dev_mode):
 		GameManager.keycardNum = 4
 		keycard = 4
-	if (Input.is_action_just_pressed("mute")):
-		GameManager.playAudio = !GameManager.playAudio
 	#dev controls^
 	if Input.is_action_just_pressed("esc"):
 		change_mouse()
@@ -104,9 +102,8 @@ func _process(_delta: float) -> void:
 			elif (inventorySlot == 2):
 				if (pistolRounds > 0):
 					pistolRounds -= 1
-					if (ray_cast_3d.get_collider() is Enemy):
-						ray_cast_3d.get_collider().health -= 40
-						ray_cast_3d.get_collider().damage_anim.play("damage")
+					if (ray_cast_3d.get_collider() !=null):
+						ray_cast_3d.get_collider().takeDamage()
 					if (GameManager.playAudio):
 						pisto_shoot_audio.play()
 		if (Input.is_action_pressed("shoot")) && (inventorySlot == 0) and ar_timer.is_stopped():

@@ -31,8 +31,14 @@ func _process(delta: float) -> void:
 		Engine.time_scale = 20
 	else:
 		Engine.time_scale = 1
+	if (Input.is_action_just_pressed("mute")):
+		GameManager.playAudio = !GameManager.playAudio
+		if (background_music.playing):
+			background_music.stop()
+		else:
+			background_music.play()
 	if (wonMove):
-		space_objects.global_position +=  Vector3(-10*delta, 0, 0)
+		space_objects.global_position +=  Vector3(-5*delta, 0, -2*delta)
 		ship.rotate(Vector3(0,1,0), .03*delta)
 	#if (Input.is_action_just_pressed("dev")):
 	#	enemies.queue_free()

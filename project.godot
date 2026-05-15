@@ -139,6 +139,10 @@ test_spd={
 ]
 }
 
+[layer_names]
+
+3d_physics/layer_2="enemies"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

@@ -87,7 +87,9 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 			if !(dead):
 				animation_player.play("AlienArmature|Alien_Run")
 
-
+func takeDamage()->void:
+	health -= 40
+	self.damage_anim.play("damage")
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body is Player:
 		canHitPlayer = false
