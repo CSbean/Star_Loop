@@ -34,7 +34,6 @@ func _ready() -> void:
 	var mat = base_alien.get_active_material(1)
 	rng.randomize() # Randomizes the seed based on time
 	if boss:
-		print("boss")
 		spd = 4
 		health = 500
 		dmg = 50
@@ -87,8 +86,8 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 			if !(dead):
 				animation_player.play("AlienArmature|Alien_Run")
 
-func takeDamage()->void:
-	health -= 40
+func takeDamage(damage)->void:
+	health -= damage
 	self.damage_anim.play("damage")
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body is Player:

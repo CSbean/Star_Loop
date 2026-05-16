@@ -12,13 +12,13 @@ extends Node3D
 @onready var timer: Timer = $Timer
 @onready var error_audio: AudioStreamPlayer = $errorAudio
 
-
 const YELLOW_DOOR = preload("uid://dvpcoiews1m4i")
 const RED_DOOR = preload("uid://dph82iep788ow")
 const GREEN_DOOR = preload("uid://cwfun4djjppvb")
 
 var enemyScene : PackedScene = preload("res://Scenes/enemy.tscn")
 
+var allowOpen := true
 var hasBeenOpened := false
 var player : Player
 var nearby := false
@@ -44,8 +44,8 @@ func _process(_delta: float) -> void:
 		player.ui.nearby = false
 	if (self.nearby):
 		if (Input.is_action_just_pressed("interact") and !(isMoving)):
-			if (player.keycard>=keycard):
-				if !(isOpen):
+			if (player.keycard>=keycard) and (allowOpen):
+				if !(isOpen) :
 					timer.start(6.4)
 					animation_player.play("Open")
 					isOpen = true
@@ -60,5 +60,8 @@ func _process(_delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	if (isOpen):
-		animation_player.play("Close")
-		isOpen = false
+		if not(nearby):
+			animation_player.play("Close")
+			isOpen = false
+		else:
+			timer.start(3.2)

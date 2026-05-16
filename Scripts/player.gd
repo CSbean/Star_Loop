@@ -17,7 +17,7 @@ class_name Player
 @onready var ar_shoot_audio: AudioStreamPlayer = $arShootAudio
 
 var SPEED = 5.0
-const JUMP_VELOCITY = 4.
+const JUMP_VELOCITY = 4
 var shotgunRounds := 0
 var pistolRounds := 0
 var rifleRounds := 0
@@ -79,13 +79,17 @@ func _process(_delta: float) -> void:
 					sprinting_toggle = !sprinting_toggle
 					if sprinting_toggle:
 						SPEED = 10.0
+						setWalkPitch(1.5)
 					else:
+						setWalkPitch(1)
 						SPEED = 5.0
 		else:
 			if (Input.is_action_pressed("Player_Sprint")):
 				SPEED = 10.0
+				setWalkPitch(1.5)
 			else:
 				SPEED = 5.0
+				setWalkPitch(1)
 			
 			
 		#shooting
@@ -98,12 +102,12 @@ func _process(_delta: float) -> void:
 					if(GameManager.playAudio):
 						shotgun_shoot_audio.play()
 					if (ray_cast_3d.get_collider() is Enemy):
-						ray_cast_3d.get_collider().health -= 500/(self.global_position.distance_to(ray_cast_3d.get_collider().global_position))
+						ray_cast_3d.get_collider().takeDamage(500/(self.global_position.distance_to(ray_cast_3d.get_collider().global_position)))
 			elif (inventorySlot == 2):
 				if (pistolRounds > 0):
 					pistolRounds -= 1
 					if (ray_cast_3d.get_collider() !=null):
-						ray_cast_3d.get_collider().takeDamage()
+						ray_cast_3d.get_collider().takeDamage(40)
 					if (GameManager.playAudio):
 						pisto_shoot_audio.play()
 		if (Input.is_action_pressed("shoot")) && (inventorySlot == 0) and ar_timer.is_stopped():
@@ -114,7 +118,7 @@ func _process(_delta: float) -> void:
 					if (GameManager.playAudio):
 						ar_shoot_audio.play()
 					if (ray_cast_3d.get_collider() is Enemy):
-						ray_cast_3d.get_collider().health -= 30
+						ray_cast_3d.get_collider().takeDamage(30)
 			ar_timer.start(fire_rate)
 	else:
 		ui.heartbeat.speed_scale = 0
@@ -125,15 +129,19 @@ func _physics_process(delta: float) -> void:
 		# Add the gravity.
 		if not is_on_floor():
 			velocity += get_gravity() * delta
-
+			walking_audio_stream.stream_paused = true
+		else:
+			walking_audio_stream.stream_paused = false
 		# Handle jump.
 		if Input.is_action_just_pressed("jump") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
-
+			
 		# Get the input direction and handle the movement/deceleration.
 		# As good practice, you should replace UI actions with custom gameplay actions.
 		var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 		var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		# why the freak is this taking in a vector3 with no condition AND WORKING?
+		# its not a boolean what
 		if direction:
 			if not walking_audio_stream.playing && GameManager.playAudio:
 				walking_audio_stream.play()
@@ -178,3 +186,10 @@ func take_damage_p(num:int)->void:
 	if health <= 0:
 		ui.lose()
 		change_mouse()
+
+func setWalkPitch(num : float) -> void:
+	if (walking_audio_stream.get_pitch_scale() != num):
+		var time : float = walking_audio_stream.get_playback_position()
+		walking_audio_stream.stop()
+		walking_audio_stream.set_pitch_scale(num)
+		walking_audio_stream.play(time)

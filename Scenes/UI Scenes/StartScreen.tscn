@@ -273,7 +273,6 @@ text = "#Ship Assets by Quaternius
 
 [node name="startAudio" type="AudioStreamPlayer" parent="." unique_id=172346318]
 stream = ExtResource("4_mmqgp")
-autoplay = true
 
 [node name="creditsAudio" type="AudioStreamPlayer" parent="." unique_id=1109224383]
 stream = ExtResource("5_lsrb6")

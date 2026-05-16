@@ -15,13 +15,17 @@ func _ready() -> void:
 	sprint_toggle.button_pressed = GameManager.sprintToggleModeOn
 	sense_slider.value = GameManager.setSensitivity
 	audio_check.button_pressed = GameManager.playAudio
-	
+	if (GameManager.playAudio == true):
+		start_audio.play()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("quit")):
 		get_tree().quit()
 	elif (Input.is_action_just_pressed("reset")):
 		get_tree().reload_current_scene()
+	if (Input.is_action_just_pressed("mute")):
+		start_audio.playing = !start_audio.playing
+		audio_check.button_pressed = start_audio.playing
 		
 func _on_quit_pressed() -> void:
 	get_tree().quit()

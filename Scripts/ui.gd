@@ -99,6 +99,7 @@ func _process(_delta: float) -> void:
 	elif (Input.is_action_just_pressed("three")):
 		if(player.hasRifle):
 			selectedGun = 0
+			
 func update_health(num:int)->void:
 	health.text = str(num)
 

@@ -10,7 +10,9 @@ extends Node3D
 @onready var win_cam: Camera3D = $WinCam
 @onready var reng_audio: AudioStreamPlayer3D = $Ship/LeftEngine/RengAudio
 @onready var l_eng_audio: AudioStreamPlayer3D = $Ship/LeftEngine/LEngAudio
-
+@onready var boss: Enemy = $Enemies/backupBossEnemies/boss
+@onready var boss_door: StaticBody3D = $Doors/bossDoor
+@export var test_anim := false
 var wonMove := false
 var player : Player
 var spd : float
@@ -37,6 +39,10 @@ func _process(delta: float) -> void:
 			background_music.stop()
 		else:
 			background_music.play()
+	if (player.keycard == 4) && (boss != null):
+		boss_door.allowOpen = false
+	else:
+		boss_door.allowOpen = true
 	if (wonMove):
 		space_objects.global_position +=  Vector3(-5*delta, 0, -2*delta)
 		ship.rotate(Vector3(0,1,0), .03*delta)
@@ -58,11 +64,15 @@ func _on_loop_timer_timeout() -> void:
 
 func _on_win_area_body_entered(body: Node3D) -> void:
 	if (body is Player):
-		player.change_mouse()
-		GameManager.paused = true
-		background_music.stop()
-		player.ui.pause_screen.visible = true
-		player.ui.objective.text = "You Won!!"
-		player.ui.close_ui.visible = false
-		win_cam.current = true 
-		wonMove = true
+		if (test_anim == false):
+			player.change_mouse()
+			GameManager.paused = true
+			player.walking_audio_stream.stop()
+			background_music.stop()
+			player.ui.pause_screen.visible = true
+			player.ui.objective.text = "You Won!!"
+			player.ui.close_ui.visible = false
+			win_cam.current = true 
+			wonMove = true
+		else:
+			GameManager.change_map(2)

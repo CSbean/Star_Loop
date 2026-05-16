@@ -11,6 +11,7 @@ var playAudio := true
 var dev_mode_avail := false
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
+	
 func change_map(levelCode : int) -> void:
 	if (levelCode == 0):
 		newMap = load("res://Scenes/main_scene.tscn")
@@ -18,6 +19,8 @@ func change_map(levelCode : int) -> void:
 	elif (levelCode == 1):
 		newMap = load("res://Scenes/UI Scenes/StartScreen.tscn")
 	
+	elif (levelCode == 2):
+		newMap = load("res://Scenes/ending_anim.tscn")
 	get_tree().change_scene_to_packed(newMap)
 
 

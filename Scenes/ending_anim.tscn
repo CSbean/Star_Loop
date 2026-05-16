@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://0j4rp1lcmcis"]
+
+[ext_resource type="Script" uid="uid://cxwjrg3fnw3ie" path="res://Scripts/ending_anim.gd" id="1_c1jag"]
+[ext_resource type="Texture2D" uid="uid://dtq3im4jfj2b3" path="res://Assets/finally.png" id="2_3h6ls"]
+[ext_resource type="Shader" uid="uid://qjgbvwd70cvu" path="res://Scenes/main_scene.gdshader" id="3_xbx7f"]
+[ext_resource type="PackedScene" uid="uid://dp5tbc33xvv2a" path="res://Assets/Gun assets/Dingus the cat.glb" id="4_neu3e"]
+[ext_resource type="ArrayMesh" uid="uid://3yti4qrgdsb1" path="res://Assets/saberncc61947.obj" id="5_65x38"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_861la"]
+panorama = ExtResource("2_3h6ls")
+
+[sub_resource type="Sky" id="Sky_jv6wh"]
+sky_material = SubResource("PanoramaSkyMaterial_861la")
+
+[sub_resource type="Environment" id="Environment_c6cdt"]
+background_mode = 2
+sky = SubResource("Sky_jv6wh")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_737tn"]
+radius = 8.0
+height = 6.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0bow4"]
+render_priority = 0
+shader = ExtResource("3_xbx7f")
+shader_parameter/radius = 0.0
+shader_parameter/noise = ExtResource("2_3h6ls")
+shader_parameter/spin = 1.0
+shader_parameter/shadow_asymmetry = 1.0
+shader_parameter/shadow_oblateness = 1.0
+shader_parameter/frame_drag_strength = 1.0
+shader_parameter/doppler_beaming = 0.5
+shader_parameter/warp_falloff = 2.5
+shader_parameter/warp_strength = 1.0
+shader_parameter/warp_inner_edge = 0.3
+shader_parameter/color_core = Color(0.9411765, 1, 1, 1)
+shader_parameter/brightness_core = 22.0
+shader_parameter/color_hot = Color(0.8509804, 0.5764706, 0, 1)
+shader_parameter/brightness_hot = 10.0
+shader_parameter/color_mid = Color(0.6171144, 0.33116978, 1.92523e-07, 1)
+shader_parameter/brightness_mid = 6.5
+shader_parameter/color_cool = Color(0.70043933, 0.39254397, 0, 1)
+shader_parameter/brightness_cool = 4.0
+shader_parameter/color_outer = Color(0.95, 0.55, 0.15, 1)
+shader_parameter/brightness_outer = 2.2
+shader_parameter/color_edge = Color(0.7, 0.08, 0.02, 1)
+shader_parameter/brightness_edge = 5.0
+shader_parameter/gradient_stop0 = 0.08
+shader_parameter/gradient_stop1 = 0.322000015295
+shader_parameter/gradient_stop2 = 1.0
+shader_parameter/gradient_stop3 = 1.0
+shader_parameter/color_saturation = 1.5450000733875
+shader_parameter/grav_redshift_strength = 2.0
+shader_parameter/turbulence_strength = 0.2170000103075
+shader_parameter/turbulence_scale = 8.0
+shader_parameter/turbulence_speed = 2.0
+shader_parameter/density_heat_strength = 1.0
+shader_parameter/density_heat_power = 0.10000000149012
+shader_parameter/rs = 0.7
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6rj55"]
+albedo_texture = ExtResource("2_3h6ls")
+
+[sub_resource type="Animation" id="Animation_7b62t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ship:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ship:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lvvls"]
+resource_name = "win_anim"
+length = 5.0
+capture_included = true
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ship:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 2,
+"values": [Vector3(0, 0, -93.393425), Vector3(0, 0, 0), Vector3(7.1241264, 3.0927353, 66.62172), Vector3(24.364784, 13.804466, 112.66703), Vector3(50.575516, 13.804466, 178.47684), Vector3(108.53537, 8.865093, 295.02527)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ship:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 2,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -0.2443461), Vector3(-0.20501553, 0.122832015, -0.54511636), Vector3(-0.21761262, 0.57498884, -0.97206557), Vector3(-0.21532795, 0.8020843, -1.1653893), Vector3(-0.3354046, 1.0930574, -0.72086847)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7yx6n"]
+_data = {
+&"RESET": SubResource("Animation_7b62t"),
+&"win_anim": SubResource("Animation_lvvls")
+}
+
+[node name="Ending_Anim" type="Node3D" unique_id=1317501074]
+script = ExtResource("1_c1jag")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=448381394]
+environment = SubResource("Environment_c6cdt")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1067131201]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+visible = false
+shadow_enabled = true
+
+[node name="Space Objects" type="Node3D" parent="." unique_id=685689166]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1237.242)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Space Objects" unique_id=594391731]
+transform = Transform3D(13.130293, -1.2301751, -6.913336, 3.9884598, 13.371937, 5.1957293, 5.7792497, -6.433513, 12.121151, 0, 0, 1500)
+mesh = SubResource("SphereMesh_737tn")
+surface_material_override/0 = SubResource("ShaderMaterial_0bow4")
+metadata/_edit_group_ = true
+
+[node name="Root Scene2" parent="Space Objects/MeshInstance3D" unique_id=289245190 instance=ExtResource("4_neu3e")]
+transform = Transform3D(-0.094210416, 0.01943702, -0.027323976, 0.010298243, 0.09431962, 0.0315873, 0.0319115, 0.026944637, -0.09086057, -19.65195, 18.751804, -19.230816)
+
+[node name="ship" type="MeshInstance3D" parent="." unique_id=1664531573]
+transform = Transform3D(7.9999986, 0, 0, 0, 8.000002, 0, 0, 0, 8.000003, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_6rj55")
+mesh = ExtResource("5_65x38")
+
+[node name="Camera3D" type="Camera3D" parent="ship" unique_id=407373605]
+transform = Transform3D(-0.11489657, 0.03255987, -0.036927458, 0.033339597, 0.12044657, 0.002467647, 0.036225047, -0.0075809797, -0.11939541, -1.3414036, 0.8076746, 3.522267)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1615655860]
+libraries/ = SubResource("AnimationLibrary_7yx6n")
+autoplay = &"win_anim"
+
+[connection signal="current_animation_changed" from="AnimationPlayer" to="." method="_on_animation_player_current_animation_changed"]
