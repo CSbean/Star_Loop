@@ -11663,10 +11663,10 @@ visible = false
 
 [node name="Root Scene" parent="PlayerSprite/RootNode/CharacterArmature/Skeleton3D/BoneAttachment3D" unique_id=942025488 instance=ExtResource("4_f1ek2")]
 transform = Transform3D(-3.783498e-10, -0.009, -1.8499122e-09, 0.009, -5.2386895e-10, 0, 5.820766e-11, -1.164608e-09, 0.008999999, -0.00023781322, 0.0013954844, -0.0004929318)
+visible = false
 
 [node name="Coil Gun" parent="PlayerSprite/RootNode/CharacterArmature/Skeleton3D/BoneAttachment3D" unique_id=1573832501 instance=ExtResource("5_tx1dd")]
 transform = Transform3D(-1.891749e-10, -0.004999999, -9.5042196e-11, 0.005, -1.3096724e-10, 1.4551915e-11, 4.3655746e-11, -3.0536285e-10, 0.005, -0.0012153462, 0.0042789886, -0.00039337296)
-visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerSprite" unique_id=358784650]
 libraries/ = SubResource("AnimationLibrary_llqmx")
