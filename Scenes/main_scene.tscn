@@ -3017,6 +3017,7 @@ size = Vector3(2.61911, 2.0233154, 2.181244)
 
 [node name="MainScene" type="Node3D" unique_id=1876643400]
 script = ExtResource("1_6l7je")
+test_anim = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=427842572]
 environment = SubResource("Environment_2c62f")
