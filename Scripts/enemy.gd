@@ -19,6 +19,7 @@ class_name Enemy
 @onready var head: BoneAttachment3D = $EnemySprite/RootNode/AlienArmature/Skeleton3D/Head
 @onready var damage_anim: AnimationPlayer = $EnemySprite/damage_anim
 @onready var boss_damage: AnimationPlayer = $BossSprite/bossDamage
+@onready var death_timer: Timer = $Death_Timer
 
 var health := 100
 var state : String = "Idle"
@@ -28,6 +29,8 @@ var dmg := 20
 var canHitPlayer = false
 var rng = RandomNumberGenerator.new()
 var dead := false
+@onready var Base_physical_bone_simulator_3d: PhysicalBoneSimulator3D = $EnemySprite/RootNode/AlienArmature/Skeleton3D/PhysicalBoneSimulator3D
+@onready var Boss_physical_bone_simulator_3d: PhysicalBoneSimulator3D = $BossSprite/RootNode/AlienArmature/Skeleton3D/PhysicalBoneSimulator3D
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
@@ -111,12 +114,21 @@ func play_random_sound():
 func die() -> void:
 	#death_particles.global_position = head.global_position
 	if !(dead):
-		if (boss):
-			death_particles.amount = 30000
 		dead = true
 		collision_shape_3d.queue_free()
-		animation_player.current_animation ="AlienArmature|Alien_Death"
+		if (boss):
+			death_particles.amount = 30000
+			Boss_physical_bone_simulator_3d.active=true
+			Boss_physical_bone_simulator_3d.physical_bones_start_simulation()
+		else:
+			Base_physical_bone_simulator_3d.active=true
+			Base_physical_bone_simulator_3d.physical_bones_start_simulation()
+			Base_physical_bone_simulator_3d.
+		death_timer.start()
+
+
 		death_particles.emitting = true
-		await animation_player.animation_finished
-		self.queue_free()
+		death_timer.timeout.connect(func():
+			self.queue_free()
+			)
 	self.velocity = Vector3.ZERO
