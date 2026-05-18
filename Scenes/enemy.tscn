@@ -5515,6 +5515,46 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iatxd"]
 albedo_color = Color(5.829119, 5.829119, 5.829119, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bx1xr"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_nxecp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../RootNode/AlienArmature/Skeleton3D/BaseAlien2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_6jaer"]
+resource_name = "damage"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../RootNode/AlienArmature/Skeleton3D/BaseAlien2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ve8xs"]
+_data = {
+&"RESET": SubResource("Animation_nxecp"),
+&"damage": SubResource("Animation_6jaer")
+}
+
 [sub_resource type="Animation" id="Animation_qqxsh"]
 resource_name = "BOSSRGB"
 length = 7.0
@@ -5571,6 +5611,7 @@ size = Vector3(0.05, 0.05, 0.05)
 [node name="Enemy" type="CharacterBody3D" unique_id=888042827]
 collision_layer = 3
 script = ExtResource("1_hghv2")
+boss = null
 sound_pool = Array[AudioStream]([ExtResource("2_8cim4"), ExtResource("3_7x82w"), ExtResource("4_iatxd"), ExtResource("5_qqxsh"), ExtResource("6_0whn2"), ExtResource("7_bx1xr"), ExtResource("8_n85mp"), ExtResource("9_nxecp"), ExtResource("10_6jaer"), ExtResource("11_ve8xs"), ExtResource("12_q0iv8"), ExtResource("13_c1gwg"), ExtResource("14_3mxp7"), ExtResource("15_5a56t"), ExtResource("16_a6sir"), ExtResource("17_8ej4m"), ExtResource("18_bwheg"), ExtResource("19_iol0x"), ExtResource("20_ofqcr"), ExtResource("21_nus6a"), ExtResource("22_imgxb"), ExtResource("23_pyrvc"), ExtResource("24_pja2t"), ExtResource("25_jx5vc")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2019255691]
@@ -6030,7 +6071,6 @@ libraries/ = SubResource("AnimationLibrary_nxecp")
 
 [node name="BossSprite" type="Node3D" parent="." unique_id=1604053161]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0.13741748, 0.17609614)
-visible = false
 
 [node name="RootNode" type="Node3D" parent="BossSprite" unique_id=467068380]
 
@@ -6465,6 +6505,20 @@ skeleton = NodePath("..")
 surface_material_override/0 = SubResource("StandardMaterial3D_8cim4")
 surface_material_override/1 = SubResource("StandardMaterial3D_7x82w")
 surface_material_override/4 = SubResource("StandardMaterial3D_iatxd")
+
+[node name="BaseAlien2" type="MeshInstance3D" parent="BossSprite/RootNode/AlienArmature/Skeleton3D" unique_id=351781098]
+visible = false
+material_overlay = SubResource("StandardMaterial3D_bx1xr")
+mesh = SubResource("ArrayMesh_0xpl0")
+skin = SubResource("Skin_8uq4g")
+skeleton = NodePath("..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8cim4")
+surface_material_override/1 = SubResource("StandardMaterial3D_7x82w")
+surface_material_override/4 = SubResource("StandardMaterial3D_iatxd")
+
+[node name="bossDamage" type="AnimationPlayer" parent="BossSprite" unique_id=1279156215]
+root_node = NodePath("../BossAnim")
+libraries/ = SubResource("AnimationLibrary_ve8xs")
 
 [node name="BossAnim" type="AnimationPlayer" parent="BossSprite" unique_id=1873707125]
 libraries/ = SubResource("AnimationLibrary_x8x31")

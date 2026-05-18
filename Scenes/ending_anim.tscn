@@ -5,6 +5,7 @@
 [ext_resource type="Shader" uid="uid://qjgbvwd70cvu" path="res://Scenes/main_scene.gdshader" id="3_xbx7f"]
 [ext_resource type="PackedScene" uid="uid://dp5tbc33xvv2a" path="res://Assets/Gun assets/Dingus the cat.glb" id="4_neu3e"]
 [ext_resource type="ArrayMesh" uid="uid://3yti4qrgdsb1" path="res://Assets/saberncc61947.obj" id="5_65x38"]
+[ext_resource type="FontFile" uid="uid://h6cviqo5s1e3" path="res://Assets/SFX & VFX/Orbitron,Saira_Stencil/Orbitron/Orbitron-VariableFont_wght.ttf" id="6_3h6ls"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_861la"]
 panorama = ExtResource("2_3h6ls")
@@ -89,10 +90,22 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ship/Camera3D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.019742358, -2.8416378, 0.2700387)]
+}
 
 [sub_resource type="Animation" id="Animation_lvvls"]
 resource_name = "win_anim"
-length = 5.0
+length = 120.0
 capture_included = true
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -101,10 +114,10 @@ tracks/0/path = NodePath("ship:position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3, 4, 5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 119.36667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 2,
-"values": [Vector3(0, 0, -93.393425), Vector3(0, 0, 0), Vector3(7.1241264, 3.0927353, 66.62172), Vector3(24.364784, 13.804466, 112.66703), Vector3(50.575516, 13.804466, 178.47684), Vector3(108.53537, 8.865093, 295.02527)]
+"values": [Vector3(0, 0, -93.393425), Vector3(0, 0, 0), Vector3(7.1241264, 3.0927353, 66.62172), Vector3(24.364784, 13.804466, 112.66703), Vector3(50.575516, 13.804466, 178.47684), Vector3(108.535, 15, 295.025), Vector3(108.53537, 8.865093, 295.02527)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -113,10 +126,22 @@ tracks/1/path = NodePath("ship:rotation")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3, 4, 5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 9.733334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 2,
-"values": [Vector3(0, 0, 0), Vector3(0, 0, -0.2443461), Vector3(-0.20501553, 0.122832015, -0.54511636), Vector3(-0.21761262, 0.57498884, -0.97206557), Vector3(-0.21532795, 0.8020843, -1.1653893), Vector3(-0.3354046, 1.0930574, -0.72086847)]
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -0.2443461), Vector3(-0.20501553, 0.122832015, -0.54511636), Vector3(-0.21761262, 0.57498884, -0.97206557), Vector3(-0.21532795, 0.8020843, -1.1653893), Vector3(-0.3354046, 1.0930574, -0.72086847), Vector3(0, 0.55850536, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ship/Camera3D:rotation")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4.356914, 11.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.019742358, -2.8416378, 0.2700387), Vector3(-0.83538854, 1.1218385, 0.6889156), Vector3(0.10297442, -0.23561946, -0.15707964)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7yx6n"]
@@ -140,7 +165,7 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1237.242)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Space Objects" unique_id=594391731]
-transform = Transform3D(13.130293, -1.2301751, -6.913336, 3.9884598, 13.371937, 5.1957293, 5.7792497, -6.433513, 12.121151, 0, 0, 1500)
+transform = Transform3D(13.227292, -1.2392628, -6.9644065, 4.0179243, 13.47072, 5.2341137, 5.8219423, -6.481041, 12.210695, -41.634884, 0, 1500)
 mesh = SubResource("SphereMesh_737tn")
 surface_material_override/0 = SubResource("ShaderMaterial_0bow4")
 metadata/_edit_group_ = true
@@ -149,15 +174,69 @@ metadata/_edit_group_ = true
 transform = Transform3D(-0.094210416, 0.01943702, -0.027323976, 0.010298243, 0.09431962, 0.0315873, 0.0319115, 0.026944637, -0.09086057, -19.65195, 18.751804, -19.230816)
 
 [node name="ship" type="MeshInstance3D" parent="." unique_id=1664531573]
-transform = Transform3D(7.9999986, 0, 0, 0, 8.000002, 0, 0, 0, 8.000003, 0, 0, 0)
+transform = Transform3D(7.9999986, 0, 0, 0, 8.000001, 0, 0, 0, 8.000003, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_6rj55")
 mesh = ExtResource("5_65x38")
 
 [node name="Camera3D" type="Camera3D" parent="ship" unique_id=407373605]
-transform = Transform3D(-0.11489657, 0.03255987, -0.036927458, 0.033339597, 0.12044657, 0.002467647, 0.036225047, -0.0075809797, -0.11939541, -1.3414036, 0.8076746, 3.522267)
+transform = Transform3D(-0.114896506, 0.032559898, -0.036927428, 0.03333958, 0.12044664, 0.0024676342, 0.03622502, -0.007580985, -0.11939546, -1.3778362, 0.8139076, 3.5414734)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1615655860]
 libraries/ = SubResource("AnimationLibrary_7yx6n")
 autoplay = &"win_anim"
+
+[node name="EndCredits" type="Control" parent="." unique_id=1039259000]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="EndCredits" unique_id=772030826]
+layout_mode = 0
+offset_left = 680.0
+offset_top = 40.0
+offset_right = 1104.0
+offset_bottom = 608.0
+theme_override_fonts/font = ExtResource("6_3h6ls")
+theme_override_font_sizes/font_size = 36
+text = "Game Developers:
+Benjamin Burnett
+Beau Barber
+
+Special thanks to:
+Duncan Casper
+
+Super-Duper 
+Special thanks to 
+Colin Harrington Ding
+
+Attributions: 
+"
+
+[node name="Label2" type="Label" parent="EndCredits" unique_id=1519782667]
+layout_mode = 0
+offset_left = 688.0
+offset_top = 640.0
+offset_right = 1077.0
+offset_bottom = 1053.0
+theme_override_fonts/font = ExtResource("6_3h6ls")
+text = "#Ship Assets by Quaternius
+#Astronaut by Quaternius
+#Scifi Pistol by Quaternius
+#Sci-Fi Shotgun by burunduk [CC-BY] via Poly Pizza
+#Alien by Quaternius
+#Cockpit control center by Poly by Google [CC-BY]
+#Ceiling Light by Ryan Donaldson [CC-BY]
+#Pickup Key Card by Quaternius
+#Pickup Health by Quaternius
+#Bullets Pickup by Quaternius
+#Coil Gun by Vas Pupin [CC-BY] via Poly Pizza
+#Space engine by Google [CC-BY] via Poly Pizza
+#Sci Fi Engine by Dipper98
+#Ammo Shotgun by CreativeTrio
+#Ammo Sniper by CreativeTrio
+#"
 
 [connection signal="current_animation_changed" from="AnimationPlayer" to="." method="_on_animation_player_current_animation_changed"]

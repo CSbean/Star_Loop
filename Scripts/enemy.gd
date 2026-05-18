@@ -18,6 +18,7 @@ class_name Enemy
 @onready var death_particles: GPUParticles3D = $deathParticles
 @onready var head: BoneAttachment3D = $EnemySprite/RootNode/AlienArmature/Skeleton3D/Head
 @onready var damage_anim: AnimationPlayer = $EnemySprite/damage_anim
+@onready var boss_damage: AnimationPlayer = $BossSprite/bossDamage
 
 var health := 100
 var state : String = "Idle"
@@ -51,6 +52,9 @@ func _process(_delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	if (boss) && (animation_player.is_playing()):
 		boss_anim.play(animation_player.current_animation)
+	if (boss) && damage_anim.is_playing():
+		boss_damage.play(damage_anim.current_animation)
+		
 	if GameManager.paused == false && !dead:
 		var destination = navigation_agent_3d.get_next_path_position()
 		var local_destination = destination - self.global_position
@@ -108,7 +112,7 @@ func die() -> void:
 	#death_particles.global_position = head.global_position
 	if !(dead):
 		if (boss):
-			death_particles.amount = 15000
+			death_particles.amount = 30000
 		dead = true
 		collision_shape_3d.queue_free()
 		animation_player.current_animation ="AlienArmature|Alien_Death"
