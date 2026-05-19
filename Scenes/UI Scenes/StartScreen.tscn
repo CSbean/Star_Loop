@@ -204,6 +204,7 @@ button_pressed = true
 text = "Developer Mode Buttons "
 
 [node name="CreditsMenu" type="Panel" parent="." unique_id=922866904]
+visible = false
 layout_mode = 0
 offset_left = 64.0
 offset_top = 160.0

@@ -10,6 +10,8 @@ class_name Player
 @onready var spot_light_3d: SpotLight3D = $Camera3D/SpotLight3D
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var ar_timer: Timer = $"ar timer"
+@onready var shotgun: Node3D = $"PlayerSprite/RootNode/CharacterArmature/Skeleton3D/BoneAttachment3D/Root Scene"
+@onready var coil_gun: Node3D = $"PlayerSprite/RootNode/CharacterArmature/Skeleton3D/BoneAttachment3D/Coil Gun"
 #audio strem players
 @onready var walking_audio_stream: AudioStreamPlayer = $walkingAudioStream
 @onready var pisto_shoot_audio: AudioStreamPlayer = $pistoShootAudio
@@ -55,6 +57,7 @@ func _ready() -> void:
 	camera_sense = GameManager.setSensitivity
 	change_mouse()
 	dev_mode = GameManager.dev_mode_avail
+
 func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("Flashlight")):
 		flashOn = !flashOn
@@ -71,6 +74,19 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("esc"):
 		change_mouse()
 		GameManager.paused = !GameManager.paused
+	if hasPistol:
+		if ui.selectedGun == 2:
+			scifi_pistol.visible = true
+			shotgun.visible = false
+			coil_gun.visible = false
+		if ui.selectedGun == 1:
+			scifi_pistol.visible = false
+			shotgun.visible = true
+			coil_gun.visible = false
+		if ui.selectedGun == 0:
+			scifi_pistol.visible = false
+			shotgun.visible = false
+			coil_gun.visible = true
 		
 	if GameManager.paused == false:
 		ui.heartbeat.speed_scale = 1 + ((100-health)/33.0)
@@ -111,12 +127,11 @@ func _process(_delta: float) -> void:
 					if (GameManager.playAudio):
 						pisto_shoot_audio.play()
 		if (Input.is_action_pressed("shoot")) && (inventorySlot == 0) and ar_timer.is_stopped():
-			if ray_cast_3d.is_colliding():
-				#await get_tree().create_timer(0.5).timeout
-				if (rifleRounds > 0):
-					rifleRounds -= 1
-					if (GameManager.playAudio):
+			if (GameManager.playAudio) and  (rifleRounds >0):
 						ar_shoot_audio.play()
+						rifleRounds -= 1
+			if ray_cast_3d.is_colliding():
+				if (rifleRounds >0):
 					if (ray_cast_3d.get_collider() is Enemy):
 						ray_cast_3d.get_collider().takeDamage(30)
 			ar_timer.start(fire_rate)
