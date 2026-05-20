@@ -6051,11 +6051,13 @@ bone_idx = 44
 transform = Transform3D(1, 5.04871e-29, -1.0587912e-22, -5.04871e-29, 1, 5.293956e-23, 1.0587912e-22, -5.293956e-23, 1, 0, 0.0012686809, 0)
 
 [node name="BaseAlien" type="MeshInstance3D" parent="EnemySprite/RootNode/AlienArmature/Skeleton3D" unique_id=1112236842]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0023659319)
 mesh = SubResource("ArrayMesh_8cim4")
 skin = SubResource("Skin_8uq4g")
 skeleton = NodePath("..")
 
 [node name="BaseAlien2" type="MeshInstance3D" parent="EnemySprite/RootNode/AlienArmature/Skeleton3D" unique_id=1440442468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0023659319)
 visible = false
 material_overlay = SubResource("StandardMaterial3D_0whn2")
 mesh = SubResource("ArrayMesh_7x82w")
@@ -6070,6 +6072,7 @@ libraries/ = SubResource("AnimationLibrary_nxecp")
 
 [node name="BossSprite" type="Node3D" parent="." unique_id=1604053161]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0.13741748, 0.17609614)
+visible = false
 
 [node name="RootNode" type="Node3D" parent="BossSprite" unique_id=467068380]
 

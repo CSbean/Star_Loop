@@ -38,7 +38,7 @@ func _ready() -> void:
 		spd = 4
 		health = 500
 		dmg = 50
-		collision_shape_3d.global_position.y += 2
+		collision_shape_3d.global_position.y += 1.7
 		collision_shape_3d.scale *= Vector3(2,2,2)
 		enemy_sprite.visible = false 
 		boss_sprite.visible = true
@@ -63,7 +63,7 @@ func _physics_process(delta: float) -> void:
 		var direction = local_destination.normalized()
 		
 		self.velocity = direction * spd
-		
+		self.velocity.y = 0
 		look_at(player.global_position, Vector3.UP)
 		
 		if not is_on_floor():
