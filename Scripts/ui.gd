@@ -6,6 +6,7 @@ var nearby : bool
 const SHOTGUN_BG_REMOVE = preload("uid://c3m5nexfrrm82")
 const AR_REMOVE_BG = preload("uid://68vculh1mfde")
 const PISTIOLIMG_REMOVEBG_PREVIEW = preload("uid://cg00fy1425cuc")
+@onready var health_img: Sprite2D = $Heartbeat/HealthImg
 
 @onready var heartbeat: AnimationPlayer = $Heartbeat
 @onready var error: AnimationPlayer = $Error

@@ -5611,11 +5611,10 @@ size = Vector3(0.05, 0.05, 0.05)
 [node name="Enemy" type="CharacterBody3D" unique_id=888042827]
 collision_layer = 3
 script = ExtResource("1_hghv2")
-boss = null
 sound_pool = Array[AudioStream]([ExtResource("2_8cim4"), ExtResource("3_7x82w"), ExtResource("4_iatxd"), ExtResource("5_qqxsh"), ExtResource("6_0whn2"), ExtResource("7_bx1xr"), ExtResource("8_n85mp"), ExtResource("9_nxecp"), ExtResource("10_6jaer"), ExtResource("11_ve8xs"), ExtResource("12_q0iv8"), ExtResource("13_c1gwg"), ExtResource("14_3mxp7"), ExtResource("15_5a56t"), ExtResource("16_a6sir"), ExtResource("17_8ej4m"), ExtResource("18_bwheg"), ExtResource("19_iol0x"), ExtResource("20_ofqcr"), ExtResource("21_nus6a"), ExtResource("22_imgxb"), ExtResource("23_pyrvc"), ExtResource("24_pja2t"), ExtResource("25_jx5vc")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2019255691]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0092349, 0)
 shape = SubResource("CapsuleShape3D_afpow")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=827950979]
@@ -6499,6 +6498,7 @@ bone_idx = 44
 transform = Transform3D(1, 5.04871e-29, -1.0587912e-22, -5.04871e-29, 1, 5.293956e-23, 1.0587912e-22, -5.293956e-23, 1, 0, 0.0012686809, 0)
 
 [node name="BaseAlien" type="MeshInstance3D" parent="BossSprite/RootNode/AlienArmature/Skeleton3D" unique_id=1034896552]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3877788e-17, -0.0011248589)
 mesh = SubResource("ArrayMesh_0xpl0")
 skin = SubResource("Skin_8uq4g")
 skeleton = NodePath("..")

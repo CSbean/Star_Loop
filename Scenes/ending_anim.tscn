@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dp5tbc33xvv2a" path="res://Assets/Gun assets/Dingus the cat.glb" id="4_neu3e"]
 [ext_resource type="ArrayMesh" uid="uid://3yti4qrgdsb1" path="res://Assets/saberncc61947.obj" id="5_65x38"]
 [ext_resource type="FontFile" uid="uid://h6cviqo5s1e3" path="res://Assets/SFX & VFX/Orbitron,Saira_Stencil/Orbitron/Orbitron-VariableFont_wght.ttf" id="6_3h6ls"]
+[ext_resource type="PackedScene" uid="uid://cd2r8ccrcojic" path="res://Scenes/player.tscn" id="7_xbx7f"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_861la"]
 panorama = ExtResource("2_3h6ls")
@@ -190,6 +191,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 616.0
+offset_bottom = 616.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -239,4 +242,18 @@ text = "#Ship Assets by Quaternius
 #Ammo Sniper by CreativeTrio
 #"
 
+[node name="Timer" type="Timer" parent="EndCredits" unique_id=1884506503]
+wait_time = 12.0
+one_shot = true
+autostart = true
+
+[node name="Timer2" type="Timer" parent="EndCredits" unique_id=1709234264]
+wait_time = 45.0
+one_shot = true
+
+[node name="Player" parent="." unique_id=11007485 instance=ExtResource("7_xbx7f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5489.569, 0, -356.5917)
+
 [connection signal="current_animation_changed" from="AnimationPlayer" to="." method="_on_animation_player_current_animation_changed"]
+[connection signal="timeout" from="EndCredits/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="EndCredits/Timer2" to="." method="_on_timer_2_timeout"]

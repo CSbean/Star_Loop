@@ -38,6 +38,8 @@ func _ready() -> void:
 		spd = 4
 		health = 500
 		dmg = 50
+		collision_shape_3d.global_position.y += 2
+		collision_shape_3d.scale *= Vector3(2,2,2)
 		enemy_sprite.visible = false 
 		boss_sprite.visible = true
 	else:
