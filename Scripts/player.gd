@@ -115,6 +115,7 @@ func _process(_delta: float) -> void:
 			if (inventorySlot == 1):
 				if (shotgunRounds > 0):
 					shotgunRounds -= 1
+					print(ray_cast_3d.get_collider())
 					if(GameManager.playAudio):
 						shotgun_shoot_audio.play()
 					if (ray_cast_3d.get_collider() is Enemy):
@@ -122,6 +123,7 @@ func _process(_delta: float) -> void:
 			elif (inventorySlot == 2):
 				if (pistolRounds > 0):
 					pistolRounds -= 1
+					print(ray_cast_3d.get_collider())
 					if (ray_cast_3d.get_collider() !=null):
 						ray_cast_3d.get_collider().takeDamage(40)
 					if (GameManager.playAudio):

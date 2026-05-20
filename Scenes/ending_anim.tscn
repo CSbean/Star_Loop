@@ -7,6 +7,8 @@
 [ext_resource type="ArrayMesh" uid="uid://3yti4qrgdsb1" path="res://Assets/saberncc61947.obj" id="5_65x38"]
 [ext_resource type="FontFile" uid="uid://h6cviqo5s1e3" path="res://Assets/SFX & VFX/Orbitron,Saira_Stencil/Orbitron/Orbitron-VariableFont_wght.ttf" id="6_3h6ls"]
 [ext_resource type="PackedScene" uid="uid://cd2r8ccrcojic" path="res://Scenes/player.tscn" id="7_xbx7f"]
+[ext_resource type="AudioStream" uid="uid://cbsir10o3dhlc" path="res://Assets/SFX & VFX/774270__thelittlecrow__rocket-launch-boost-and-burning-version-b.wav" id="8_neu3e"]
+[ext_resource type="AudioStream" uid="uid://pbsfxbukce6p" path="res://Assets/SFX & VFX/sfx/credits_song.wav" id="9_65x38"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_861la"]
 panorama = ExtResource("2_3h6ls")
@@ -103,6 +105,30 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector3(-0.019742358, -2.8416378, 0.2700387)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("spaceship vroom:volume_db")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("credits:volume_db")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-80.0]
+}
 
 [sub_resource type="Animation" id="Animation_lvvls"]
 resource_name = "win_anim"
@@ -143,6 +169,30 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(-0.019742358, -2.8416378, 0.2700387), Vector3(-0.83538854, 1.1218385, 0.6889156), Vector3(0.10297442, -0.23561946, -0.15707964)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("spaceship vroom:volume_db")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(5, 10.933333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -80.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("credits:volume_db")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(10.0002985, 120),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-80.0, 0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7yx6n"]
@@ -253,6 +303,14 @@ one_shot = true
 
 [node name="Player" parent="." unique_id=11007485 instance=ExtResource("7_xbx7f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5489.569, 0, -356.5917)
+
+[node name="spaceship vroom" type="AudioStreamPlayer" parent="." unique_id=1716702318]
+stream = ExtResource("8_neu3e")
+autoplay = true
+
+[node name="credits" type="AudioStreamPlayer" parent="." unique_id=1335603413]
+stream = ExtResource("9_65x38")
+volume_db = -80.0
 
 [connection signal="current_animation_changed" from="AnimationPlayer" to="." method="_on_animation_player_current_animation_changed"]
 [connection signal="timeout" from="EndCredits/Timer" to="." method="_on_timer_timeout"]

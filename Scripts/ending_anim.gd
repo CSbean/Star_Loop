@@ -5,6 +5,7 @@ var showCredits := false
 @onready var end_credits: Control = $EndCredits
 @onready var timer_2: Timer = $EndCredits/Timer2
 @onready var player2: Player = $Player
+@onready var spaceship_vroom: AudioStreamPlayer = $"spaceship vroom"
 
 func _ready() -> void:
 	camera_3d.current = true
