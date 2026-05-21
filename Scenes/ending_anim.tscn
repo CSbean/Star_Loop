@@ -189,10 +189,10 @@ tracks/4/path = NodePath("credits:volume_db")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(10.0002985, 120),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(10.0002985, 19.8, 119.86667),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [-80.0, 0.0]
+"values": [-80.0, 0.0, 0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7yx6n"]
@@ -311,6 +311,7 @@ autoplay = true
 [node name="credits" type="AudioStreamPlayer" parent="." unique_id=1335603413]
 stream = ExtResource("9_65x38")
 volume_db = -80.0
+autoplay = true
 
 [connection signal="current_animation_changed" from="AnimationPlayer" to="." method="_on_animation_player_current_animation_changed"]
 [connection signal="timeout" from="EndCredits/Timer" to="." method="_on_timer_timeout"]

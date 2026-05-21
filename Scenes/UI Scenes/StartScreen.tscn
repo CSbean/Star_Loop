@@ -200,7 +200,6 @@ offset_top = 128.0
 offset_right = 318.0
 offset_bottom = 181.0
 theme_override_font_sizes/font_size = 32
-button_pressed = true
 text = "Developer Mode Buttons "
 
 [node name="CreditsMenu" type="Panel" parent="." unique_id=922866904]

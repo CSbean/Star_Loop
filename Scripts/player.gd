@@ -65,7 +65,7 @@ func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("reset") && dev_mode):
 		get_tree().reload_current_scene()
 		GameManager.paused = false
-	if (Input.is_action_just_pressed("quit")):
+	if (Input.is_action_just_pressed("quit") && dev_mode):
 		get_tree().quit()
 	if (Input.is_action_just_pressed("dev") && dev_mode):
 		GameManager.keycardNum = 4
